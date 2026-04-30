@@ -1,0 +1,167 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Apr 30 11:25:36 2026
+# Process ID: 2360
+# Current directory: D:/ayxtk/chiplab/fpga/loongson/2023.2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24700 D:\ayxtk\chiplab\fpga\loongson\2023.2\system_run.xpr
+# Log file: D:/ayxtk/chiplab/fpga/loongson/2023.2/vivado.log
+# Journal file: D:/ayxtk/chiplab/fpga/loongson/2023.2\vivado.jou
+# Running On: lch-LAPTOP-V8BK1R8N, OS: Windows, CPU Frequency: 3187 MHz, CPU Physical cores: 12, Host memory: 16890 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.xpr
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kc705:part0:1.6 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kc705/1.6/board.xml as part xc7k325tffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.6 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.6/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu105:part0:1.7 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu105/1.7/board.xml as part xcku040-ffva1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:kcu1500:part0:1.2 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/kcu1500/1.2/board.xml as part xcku115-flvb2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc707:part0:1.4 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc707/1.4/board.xml as part xc7vx485tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vc709:part0:1.8 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vc709/1.8/board.xml as part xc7vx690tffg1761-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:2.2 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/2.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.0 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.1 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190:part0:3.2 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190/production/3.2/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.0 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.0/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vck190_newl:part0:1.1 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vck190_newl/production/1.1/board.xml as part xcvc1902-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.6 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.6/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu108:part0:1.7 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu108/1.7/board.xml as part xcvu095-ffva2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu110:part0:1.4 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu110/1.4/board.xml as part xcvu190-flgc2104-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.0 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.0/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.3 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.3/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu118:part0:2.4 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu118/2.4/board.xml as part xcvu9p-flga2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu129:part0:1.0 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu129/production/1.0/board.xml as part xcvu29p-fsga2577-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vcu1525:part0:1.3 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vcu1525/1.3/board.xml as part xcvu9p-fsgd2104-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280:part0:1.0 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/production/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.0 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.0/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es:part0:1.1 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_a/1.1/board.xml as part xcve2802-vsvh1760-2lp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.0 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.0/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vek280_es_revb:part0:1.1 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vek280/es/rev_b/1.1/board.xml as part xcve2802-vsvh1760-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_mpsoc:part0:1.0 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_mpsoc/1.0/board.xml as part xczu19eg-ffvd1760-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vermeo_t1_rfsoc:part0:1.0 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vermeo_t1_rfsoc/1.0/board.xml as part xczu21dr-ffvd1156-2l-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.0 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158:part0:1.1 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/production/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.0 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.0/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vhk158_es:part0:1.1 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vhk158/es/1.1/board.xml as part xcvh1582-vsva3697-2mp-e-s-es1 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:2.2 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/2.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.0 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.1 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180:part0:3.2 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180/production/3.2/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.0 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.0/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vmk180_newl:part0:1.1 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vmk180_newl/production/1.1/board.xml as part xcvm1802-vsva2197-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.0 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.0/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.1 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.1/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk120:part0:1.2 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk120/production/1.2/board.xml as part xcvp1202-vsva2785-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.0 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.0/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:vpk180:part0:1.1 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/vpk180/production/1.1/board.xml as part xcvp1802-lsvc4072-2mp-e-s specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zc706:part0:1.4 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zc706/1.4/board.xml as part xc7z045ffg900-2 specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.3 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.3/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu102:part0:3.4 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu102/3.4/board.xml as part xczu9eg-ffvb1156-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.2 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.2/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.3 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.3/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu111:part0:1.4 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu111/1.4/board.xml as part xczu28dr-ffvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1275:part0:1.0 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1275/1.0/board.xml as part xczu29dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu1285:part0:1.0 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu1285/1.0/board.xml as part xczu39dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208:part0:2.0 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208/production/2.0/board.xml as part xczu48dr-fsvg1517-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu208ld:part0:2.0 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu208ld/production/2.0/board.xml as part xczu58dr-fsvg1517-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216:part0:2.0 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216/production/2.0/board.xml as part xczu49dr-ffvf1760-2-e specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu216ld:part0:2.0 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu216ld/production/2.0/board.xml as part xczu59dr-ffvf1760-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670:part0:2.0 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670/2.0/board.xml as part xczu67dr-fsve1156-2-i specified in board_part file is either invalid or not available
+WARNING: [Board 49-26] cannot add Board Part xilinx.com:zcu670ld:part0:1.0 available at D:/Vivado/2023.2/data/xhub/boards/XilinxBoardStore/boards/Xilinx/zcu670ld/1.0/board.xml as part xczu57dr-fsve1156-2-i specified in board_part file is either invalid or not available
+INFO: [Project 1-313] Project file moved from '/home/seoyoung/Desktop/chiplab_soft/fpga/loongson/2023.2' since last save.
+INFO: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.gen/sources_1'.
+WARNING: [filemgmt 56-3] IPUserFilesDir: Could not find the directory 'D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.ip_user_files'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Vivado/2023.2/data/ip'.
+INFO: [Device 21-403] Loading part xc7a200tfbg676-2
+open_project: Time (s): cpu = 00:00:43 ; elapsed = 00:00:42 . Memory (MB): peak = 2120.941 ; gain = 980.262
+update_compile_order -fileset sources_1
+add_files -norecurse {D:/ayxtk/chiplab/IP/myCPU/mycpu.h D:/ayxtk/chiplab/IP/myCPU/csr.h}
+add_files -norecurse {D:/ayxtk/chiplab/IP/myCPU/addr_trans.v D:/ayxtk/chiplab/IP/myCPU/axi_bridge.v D:/ayxtk/chiplab/IP/myCPU/btb.v D:/ayxtk/chiplab/IP/myCPU/if_stage.v D:/ayxtk/chiplab/IP/myCPU/div.v D:/ayxtk/chiplab/IP/myCPU/regfile.v D:/ayxtk/chiplab/IP/myCPU/wb_stage.v D:/ayxtk/chiplab/IP/myCPU/dcache.v D:/ayxtk/chiplab/IP/myCPU/tlb_entry.v D:/ayxtk/chiplab/IP/myCPU/my_csr.v D:/ayxtk/chiplab/IP/myCPU/exe_stage.v D:/ayxtk/chiplab/IP/myCPU/alu.v D:/ayxtk/chiplab/IP/myCPU/mycpu_top.v D:/ayxtk/chiplab/IP/myCPU/mul.v D:/ayxtk/chiplab/IP/myCPU/mem_stage.v D:/ayxtk/chiplab/IP/myCPU/tools.v D:/ayxtk/chiplab/IP/myCPU/id_stage.v D:/ayxtk/chiplab/IP/myCPU/icache.v D:/ayxtk/chiplab/IP/myCPU/perf_counter.v}
+add_files -norecurse {D:/ayxtk/chiplab/IP/myCPU/IP/data_bank_sram.xcix D:/ayxtk/chiplab/IP/myCPU/IP/tagv_sram.xcix}
+export_ip_user_files -of_objects  [get_files  {D:/ayxtk/chiplab/IP/myCPU/IP/data_bank_sram/data_bank_sram.xci D:/ayxtk/chiplab/IP/myCPU/IP/tagv_sram/tagv_sram.xci}] -lib_map_path [list {modelsim=D:/ayxtk/Modeltech_pe_edu_10.4a/xilinx_lib} {questa=D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.cache/compile_simlib/questa} {riviera=D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.cache/compile_simlib/riviera} {activehdl=D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.cache/compile_simlib/activehdl}] -force -quiet
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {data_bank_sram tagv_sram}] -log ip_upgrade.log
+Upgrading 'data_bank_sram'
+INFO: [IP_Flow 19-3422] Upgraded data_bank_sram (Block Memory Generator 8.4) from revision 3 to revision 7
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'data_bank_sram'...
+Upgrading 'tagv_sram'
+INFO: [IP_Flow 19-3422] Upgraded tagv_sram (Block Memory Generator 8.4) from revision 3 to revision 7
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'tagv_sram'...
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/ayxtk/chiplab/fpga/loongson/2023.2/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips {data_bank_sram tagv_sram}] -no_script -sync -force -quiet
+generate_target all [get_files  {D:/ayxtk/chiplab/IP/myCPU/IP/data_bank_sram/data_bank_sram.xci D:/ayxtk/chiplab/IP/myCPU/IP/tagv_sram/tagv_sram.xci}]
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'data_bank_sram'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'data_bank_sram'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'data_bank_sram'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'data_bank_sram'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'tagv_sram'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'tagv_sram'...
+INFO: [IP_Flow 19-1686] Generating 'Miscellaneous' target for IP 'tagv_sram'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'tagv_sram'...
+catch { config_ip_cache -export [get_ips -all data_bank_sram] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: data_bank_sram
+catch { config_ip_cache -export [get_ips -all tagv_sram] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: tagv_sram
+export_ip_user_files -of_objects [get_files D:/ayxtk/chiplab/IP/myCPU/IP/data_bank_sram/data_bank_sram.xci] -no_script -sync -force -quiet
+export_ip_user_files -of_objects [get_files D:/ayxtk/chiplab/IP/myCPU/IP/tagv_sram/tagv_sram.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/ayxtk/chiplab/IP/myCPU/IP/data_bank_sram/data_bank_sram.xci]
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/ayxtk/chiplab/IP/myCPU/IP/tagv_sram/tagv_sram.xci]
+launch_runs data_bank_sram_synth_1 tagv_sram_synth_1 -jobs 8
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: data_bank_sram
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: tagv_sram
+[Thu Apr 30 11:28:02 2026] Launched data_bank_sram_synth_1, tagv_sram_synth_1...
+Run output will be captured here:
+data_bank_sram_synth_1: D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.runs/data_bank_sram_synth_1/runme.log
+tagv_sram_synth_1: D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.runs/tagv_sram_synth_1/runme.log
+export_simulation -of_objects [get_files D:/ayxtk/chiplab/IP/myCPU/IP/data_bank_sram/data_bank_sram.xci] -directory D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.ip_user_files/sim_scripts -ip_user_files_dir D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.ip_user_files -ipstatic_source_dir D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/ayxtk/Modeltech_pe_edu_10.4a/xilinx_lib} {questa=D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.cache/compile_simlib/questa} {riviera=D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.cache/compile_simlib/riviera} {activehdl=D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+export_simulation -of_objects [get_files D:/ayxtk/chiplab/IP/myCPU/IP/tagv_sram/tagv_sram.xci] -directory D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.ip_user_files/sim_scripts -ip_user_files_dir D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.ip_user_files -ipstatic_source_dir D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/ayxtk/Modeltech_pe_edu_10.4a/xilinx_lib} {questa=D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.cache/compile_simlib/questa} {riviera=D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.cache/compile_simlib/riviera} {activehdl=D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+set_property -dict [list \
+  CONFIG.CLKOUT1_JITTER {333.104} \
+  CONFIG.CLKOUT1_PHASE_ERROR {261.747} \
+  CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {33} \
+  CONFIG.CLKOUT2_JITTER {333.104} \
+  CONFIG.CLKOUT2_PHASE_ERROR {261.747} \
+  CONFIG.MMCM_CLKOUT0_DIVIDE_F {25} \
+  CONFIG.MMCM_CLKOUT1_DIVIDE {25} \
+  CONFIG.MMCM_DIVCLK_DIVIDE {4} \
+] [get_ips clk_pll_33]
+generate_target all [get_files  D:/ayxtk/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33.xci]
+INFO: [IP_Flow 19-1686] Generating 'Instantiation Template' target for IP 'clk_pll_33'...
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'clk_pll_33'...
+INFO: [IP_Flow 19-1686] Generating 'Simulation' target for IP 'clk_pll_33'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'clk_pll_33'...
+INFO: [IP_Flow 19-1686] Generating 'Change Log' target for IP 'clk_pll_33'...
+catch { config_ip_cache -export [get_ips -all clk_pll_33] }
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: clk_pll_33
+export_ip_user_files -of_objects [get_files D:/ayxtk/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/ayxtk/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33.xci]
+launch_runs clk_pll_33_synth_1 -jobs 8
+INFO: [IP_Flow 19-6924] IPCACHE: Running cache check for IP inst: clk_pll_33
+[Thu Apr 30 11:28:26 2026] Launched clk_pll_33_synth_1...
+Run output will be captured here: D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.runs/clk_pll_33_synth_1/runme.log
+export_simulation -of_objects [get_files D:/ayxtk/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33.xci] -directory D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.ip_user_files/sim_scripts -ip_user_files_dir D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.ip_user_files -ipstatic_source_dir D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/ayxtk/Modeltech_pe_edu_10.4a/xilinx_lib} {questa=D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.cache/compile_simlib/questa} {riviera=D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.cache/compile_simlib/riviera} {activehdl=D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+ERROR: unexpected exception: HUTLifeCheck::aliveOrThrow - called on dead object
+report_ip_status -name ip_status 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+ERROR: unexpected exception: HUTLifeCheck::aliveOrThrow - called on dead object
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'mig_axi_32'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'mig_axi_32'...
+ERROR: unexpected exception: HUTLifeCheck::aliveOrThrow - called on dead object
+open_hw_manager
+close_hw_manager
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+ERROR: unexpected exception: HUTLifeCheck::aliveOrThrow - called on dead object
+launch_runs synth_1 -jobs 8
+INFO: [IP_Flow 19-1686] Generating 'Synthesis' target for IP 'axi_interconnect_0'...
+INFO: [IP_Flow 19-1686] Generating 'Implementation' target for IP 'axi_interconnect_0'...
+ERROR: unexpected exception: HUTLifeCheck::aliveOrThrow - called on dead object
+exit
+INFO: [Common 17-206] Exiting Vivado at Thu Apr 30 11:34:05 2026...

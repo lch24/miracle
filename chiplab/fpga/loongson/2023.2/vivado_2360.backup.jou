@@ -1,0 +1,61 @@
+#-----------------------------------------------------------
+# Vivado v2023.2 (64-bit)
+# SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
+# IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
+# SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+# Start of session at: Thu Apr 30 11:25:36 2026
+# Process ID: 2360
+# Current directory: D:/ayxtk/chiplab/fpga/loongson/2023.2
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent24700 D:\ayxtk\chiplab\fpga\loongson\2023.2\system_run.xpr
+# Log file: D:/ayxtk/chiplab/fpga/loongson/2023.2/vivado.log
+# Journal file: D:/ayxtk/chiplab/fpga/loongson/2023.2\vivado.jou
+# Running On: lch-LAPTOP-V8BK1R8N, OS: Windows, CPU Frequency: 3187 MHz, CPU Physical cores: 12, Host memory: 16890 MB
+#-----------------------------------------------------------
+start_gui
+open_project D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.xpr
+update_compile_order -fileset sources_1
+add_files -norecurse {D:/ayxtk/chiplab/IP/myCPU/mycpu.h D:/ayxtk/chiplab/IP/myCPU/csr.h}
+add_files -norecurse {D:/ayxtk/chiplab/IP/myCPU/addr_trans.v D:/ayxtk/chiplab/IP/myCPU/axi_bridge.v D:/ayxtk/chiplab/IP/myCPU/btb.v D:/ayxtk/chiplab/IP/myCPU/if_stage.v D:/ayxtk/chiplab/IP/myCPU/div.v D:/ayxtk/chiplab/IP/myCPU/regfile.v D:/ayxtk/chiplab/IP/myCPU/wb_stage.v D:/ayxtk/chiplab/IP/myCPU/dcache.v D:/ayxtk/chiplab/IP/myCPU/tlb_entry.v D:/ayxtk/chiplab/IP/myCPU/my_csr.v D:/ayxtk/chiplab/IP/myCPU/exe_stage.v D:/ayxtk/chiplab/IP/myCPU/alu.v D:/ayxtk/chiplab/IP/myCPU/mycpu_top.v D:/ayxtk/chiplab/IP/myCPU/mul.v D:/ayxtk/chiplab/IP/myCPU/mem_stage.v D:/ayxtk/chiplab/IP/myCPU/tools.v D:/ayxtk/chiplab/IP/myCPU/id_stage.v D:/ayxtk/chiplab/IP/myCPU/icache.v D:/ayxtk/chiplab/IP/myCPU/perf_counter.v}
+add_files -norecurse {D:/ayxtk/chiplab/IP/myCPU/IP/data_bank_sram.xcix D:/ayxtk/chiplab/IP/myCPU/IP/tagv_sram.xcix}
+export_ip_user_files -of_objects  [get_files  {D:/ayxtk/chiplab/IP/myCPU/IP/data_bank_sram/data_bank_sram.xci D:/ayxtk/chiplab/IP/myCPU/IP/tagv_sram/tagv_sram.xci}] -lib_map_path [list {modelsim=D:/ayxtk/Modeltech_pe_edu_10.4a/xilinx_lib} {questa=D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.cache/compile_simlib/questa} {riviera=D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.cache/compile_simlib/riviera} {activehdl=D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.cache/compile_simlib/activehdl}] -force -quiet
+report_ip_status -name ip_status 
+upgrade_ip [get_ips  {data_bank_sram tagv_sram}] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips {data_bank_sram tagv_sram}] -no_script -sync -force -quiet
+generate_target all [get_files  {D:/ayxtk/chiplab/IP/myCPU/IP/data_bank_sram/data_bank_sram.xci D:/ayxtk/chiplab/IP/myCPU/IP/tagv_sram/tagv_sram.xci}]
+catch { config_ip_cache -export [get_ips -all data_bank_sram] }
+catch { config_ip_cache -export [get_ips -all tagv_sram] }
+export_ip_user_files -of_objects [get_files D:/ayxtk/chiplab/IP/myCPU/IP/data_bank_sram/data_bank_sram.xci] -no_script -sync -force -quiet
+export_ip_user_files -of_objects [get_files D:/ayxtk/chiplab/IP/myCPU/IP/tagv_sram/tagv_sram.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/ayxtk/chiplab/IP/myCPU/IP/data_bank_sram/data_bank_sram.xci]
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/ayxtk/chiplab/IP/myCPU/IP/tagv_sram/tagv_sram.xci]
+launch_runs data_bank_sram_synth_1 tagv_sram_synth_1 -jobs 8
+wait_on_run data_bank_sram_synth_1
+wait_on_run tagv_sram_synth_1
+export_simulation -of_objects [get_files D:/ayxtk/chiplab/IP/myCPU/IP/data_bank_sram/data_bank_sram.xci] -directory D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.ip_user_files/sim_scripts -ip_user_files_dir D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.ip_user_files -ipstatic_source_dir D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/ayxtk/Modeltech_pe_edu_10.4a/xilinx_lib} {questa=D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.cache/compile_simlib/questa} {riviera=D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.cache/compile_simlib/riviera} {activehdl=D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+export_simulation -of_objects [get_files D:/ayxtk/chiplab/IP/myCPU/IP/tagv_sram/tagv_sram.xci] -directory D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.ip_user_files/sim_scripts -ip_user_files_dir D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.ip_user_files -ipstatic_source_dir D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/ayxtk/Modeltech_pe_edu_10.4a/xilinx_lib} {questa=D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.cache/compile_simlib/questa} {riviera=D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.cache/compile_simlib/riviera} {activehdl=D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+report_ip_status -name ip_status 
+set_property -dict [list \
+  CONFIG.CLKOUT1_JITTER {333.104} \
+  CONFIG.CLKOUT1_PHASE_ERROR {261.747} \
+  CONFIG.CLKOUT1_REQUESTED_OUT_FREQ {33} \
+  CONFIG.CLKOUT2_JITTER {333.104} \
+  CONFIG.CLKOUT2_PHASE_ERROR {261.747} \
+  CONFIG.MMCM_CLKOUT0_DIVIDE_F {25} \
+  CONFIG.MMCM_CLKOUT1_DIVIDE {25} \
+  CONFIG.MMCM_DIVCLK_DIVIDE {4} \
+] [get_ips clk_pll_33]
+generate_target all [get_files  D:/ayxtk/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33.xci]
+catch { config_ip_cache -export [get_ips -all clk_pll_33] }
+export_ip_user_files -of_objects [get_files D:/ayxtk/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33.xci] -no_script -sync -force -quiet
+create_ip_run [get_files -of_objects [get_fileset sources_1] D:/ayxtk/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33.xci]
+launch_runs clk_pll_33_synth_1 -jobs 8
+wait_on_run clk_pll_33_synth_1
+export_simulation -of_objects [get_files D:/ayxtk/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33.xci] -directory D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.ip_user_files/sim_scripts -ip_user_files_dir D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.ip_user_files -ipstatic_source_dir D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/ayxtk/Modeltech_pe_edu_10.4a/xilinx_lib} {questa=D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.cache/compile_simlib/questa} {riviera=D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.cache/compile_simlib/riviera} {activehdl=D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+report_ip_status -name ip_status 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+open_hw_manager
+close_hw_manager
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+launch_runs synth_1 -jobs 8
