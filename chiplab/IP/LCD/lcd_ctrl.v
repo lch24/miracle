@@ -132,6 +132,8 @@ reg [15:0] fsm_data;      // data to write
 always @(posedge aclk) begin
     if (~aresetn) begin
         fsm_state <= FSM_IDLE;
+        fsm_rs    <= 1'b0;
+        fsm_data  <= 16'd0;
         lcd_wr    <= 1'b1;
         lcd_rs    <= 1'b0;
         lcd_data  <= 16'd0;
@@ -140,7 +142,16 @@ always @(posedge aclk) begin
         case (fsm_state)
             FSM_IDLE: begin
                 lcd_wr <= 1'b1;
-                // Transitions triggered by w_enter below
+                if (write_cmd && !fsm_busy) begin
+                    fsm_rs    <= 1'b0;       // RS=0: command
+                    fsm_data  <= s_wdata[15:0];
+                    fsm_state <= FSM_SETUP;
+                end
+                else if (write_data && !fsm_busy) begin
+                    fsm_rs    <= 1'b1;       // RS=1: data
+                    fsm_data  <= s_wdata[15:0];
+                    fsm_state <= FSM_SETUP;
+                end
             end
             FSM_SETUP: begin
                 lcd_rs   <= fsm_rs;
@@ -176,7 +187,7 @@ reg  ctrl_bl;      // bit1: 0=backlight off, 1=on
 
 // STAT_REG bits
 wire stat_busy = fsm_busy;    // bit0: 8080 FSM busy
-reg  stat_init_done;           // bit1: (reserved for future auto-init)
+reg  stat_init_done = 1'b0;      // bit1: (reserved for future auto-init)
 
 // Write registers on w_enter
 wire write_cmd  = w_enter & (buf_addr[3:2] == `CMD_REG_ADDR);
@@ -207,24 +218,6 @@ always @(posedge aclk) begin
         lcd_bl_ctr <= 1'b1;
     else
         lcd_bl_ctr <= ctrl_bl;
-end
-
-// Trigger 8080 FSM on CMD/DATA register writes
-always @(posedge aclk) begin
-    if (~aresetn) begin
-        fsm_rs   <= 1'b0;
-        fsm_data <= 16'd0;
-    end
-    else if (write_cmd && !fsm_busy) begin
-        fsm_rs   <= 1'b0;       // RS=0: command
-        fsm_data <= s_wdata[15:0];
-        fsm_state <= FSM_SETUP;
-    end
-    else if (write_data && !fsm_busy) begin
-        fsm_rs   <= 1'b1;       // RS=1: data
-        fsm_data <= s_wdata[15:0];
-        fsm_state <= FSM_SETUP;
-    end
 end
 
 //----------------------------------------------------------------------------
