@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.runs/impl_1/soc_top.tcl"
+  variable script "D:/ayxtk/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/impl_1/soc_top.tcl"
   variable category "vivado_impl"
 }
 
@@ -115,6 +115,7 @@ proc step_failed { step } {
 OPTRACE "impl_1" END { }
 }
 
+set_msg_config -id {Common 17-41} -limit 10000000
 
 OPTRACE "impl_1" START { ROLLUP_1 }
 OPTRACE "Phase: Init Design" START { ROLLUP_AUTO }
@@ -123,6 +124,7 @@ set ACTIVE_STEP init_design
 set rc [catch {
   create_msg_db init_design.pb
   set_param chipscope.maxJobs 4
+  set_param xicom.use_bs_reader 1
   set_param runs.launchOptions { -jobs 8  }
 OPTRACE "create in-memory project" START { }
   create_project -in_memory -part xc7a200tfbg676-2
@@ -130,25 +132,25 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.cache/wt [current_project]
-  set_property parent.project_path D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.xpr [current_project]
-  set_property ip_output_repo D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.cache/ip [current_project]
+  set_property webtalk.parent_dir D:/ayxtk/miracle/chiplab/fpga/loongson/2023.2/system_run.cache/wt [current_project]
+  set_property parent.project_path D:/ayxtk/miracle/chiplab/fpga/loongson/2023.2/system_run.xpr [current_project]
+  set_property ip_output_repo D:/ayxtk/miracle/chiplab/fpga/loongson/2023.2/system_run.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.runs/synth_1/soc_top.dcp
-  read_ip -quiet D:/ayxtk/chiplab/IP/myCPU/IP/data_bank_sram/data_bank_sram.xci
-  read_ip -quiet D:/ayxtk/chiplab/IP/myCPU/IP/tagv_sram/tagv_sram.xci
-  read_ip -quiet D:/ayxtk/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33.xci
-  read_ip -quiet D:/ayxtk/chiplab/IP/xilinx_ip/2023.2/axi_clock_converter_0/axi_clock_converter_0/axi_clock_converter_0.xci
-  read_ip -quiet D:/ayxtk/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32.xci
-  read_ip -quiet D:/ayxtk/chiplab/IP/xilinx_ip/2023.2/axi_interconnect_0/axi_interconnect_0.xci
-  read_ip -quiet D:/ayxtk/chiplab/IP/xilinx_ip/2023.2/dpram_512x32/dpram_512x32.xci
-  read_ip -quiet D:/ayxtk/chiplab/IP/xilinx_ip/2023.2/clk_wiz_0_loongson/clk_wiz_0.xci
-  read_ip -quiet D:/ayxtk/chiplab/IP/xilinx_ip/2023.2/axi_2x1_mux/axi_2x1_mux.xci
+  add_files -quiet D:/ayxtk/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_1/soc_top.dcp
+  read_ip -quiet D:/ayxtk/miracle/chiplab/IP/myCPU/IP/data_bank_sram/data_bank_sram.xci
+  read_ip -quiet D:/ayxtk/miracle/chiplab/IP/myCPU/IP/tagv_sram/tagv_sram.xci
+  read_ip -quiet D:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33.xci
+  read_ip -quiet D:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_clock_converter_0/axi_clock_converter_0/axi_clock_converter_0.xci
+  read_ip -quiet D:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32.xci
+  read_ip -quiet D:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_interconnect_0/axi_interconnect_0.xci
+  read_ip -quiet D:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/dpram_512x32/dpram_512x32.xci
+  read_ip -quiet D:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/clk_wiz_0_loongson/clk_wiz_0.xci
+  read_ip -quiet D:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_2x1_mux/axi_2x1_mux.xci
 OPTRACE "read constraints: implementation" START { }
-  read_xdc D:/ayxtk/chiplab/fpga/loongson/soc_up.xdc
+  read_xdc D:/ayxtk/miracle/chiplab/fpga/loongson/soc_up.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "read constraints: implementation_pre" START { }
 OPTRACE "read constraints: implementation_pre" END { }

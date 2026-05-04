@@ -25,7 +25,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.runs/impl_1'
+HD_PWD='D:/ayxtk/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

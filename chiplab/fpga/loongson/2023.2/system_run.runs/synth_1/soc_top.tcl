@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.runs/synth_1/soc_top.tcl"
+  variable script "D:/ayxtk/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_1/soc_top.tcl"
   variable category "vivado_synth"
 }
 
@@ -70,6 +70,8 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7a200tfbg676-2
 
@@ -77,124 +79,125 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.cache/wt [current_project]
-set_property parent.project_path D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.xpr [current_project]
+set_property webtalk.parent_dir D:/ayxtk/miracle/chiplab/fpga/loongson/2023.2/system_run.cache/wt [current_project]
+set_property parent.project_path D:/ayxtk/miracle/chiplab/fpga/loongson/2023.2/system_run.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo d:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.cache/ip [current_project]
+set_property ip_output_repo d:/ayxtk/miracle/chiplab/fpga/loongson/2023.2/system_run.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
 read_verilog {
-  D:/ayxtk/chiplab/IP/myCPU/csr.h
-  D:/ayxtk/chiplab/chip/soc_demo/loongson/config.h
-  D:/ayxtk/chiplab/IP/myCPU/mycpu.h
-  D:/ayxtk/chiplab/IP/APB_DEV/URT/uart_defines.h
+  D:/ayxtk/miracle/chiplab/IP/myCPU/csr.h
+  D:/ayxtk/miracle/chiplab/chip/soc_demo/loongson/config.h
+  D:/ayxtk/miracle/chiplab/IP/myCPU/mycpu.h
+  D:/ayxtk/miracle/chiplab/IP/APB_DEV/URT/uart_defines.h
 }
-set_property file_type "Verilog Header" [get_files D:/ayxtk/chiplab/IP/myCPU/csr.h]
-set_property file_type "Verilog Header" [get_files D:/ayxtk/chiplab/chip/soc_demo/loongson/config.h]
-set_property file_type "Verilog Header" [get_files D:/ayxtk/chiplab/IP/myCPU/mycpu.h]
-set_property file_type "Verilog Header" [get_files D:/ayxtk/chiplab/IP/APB_DEV/URT/uart_defines.h]
+set_property file_type "Verilog Header" [get_files D:/ayxtk/miracle/chiplab/IP/myCPU/csr.h]
+set_property file_type "Verilog Header" [get_files D:/ayxtk/miracle/chiplab/chip/soc_demo/loongson/config.h]
+set_property file_type "Verilog Header" [get_files D:/ayxtk/miracle/chiplab/IP/myCPU/mycpu.h]
+set_property file_type "Verilog Header" [get_files D:/ayxtk/miracle/chiplab/IP/APB_DEV/URT/uart_defines.h]
 read_verilog -library xil_defaultlib {
-  D:/ayxtk/chiplab/IP/myCPU/addr_trans.v
-  D:/ayxtk/chiplab/IP/myCPU/alu.v
-  D:/ayxtk/chiplab/IP/APB_DEV/apb_dev_top_with_nand.v
-  D:/ayxtk/chiplab/IP/APB_DEV/apb_mux2.v
-  D:/ayxtk/chiplab/IP/AMBA/axi2apb.v
-  D:/ayxtk/chiplab/IP/myCPU/axi_bridge.v
-  D:/ayxtk/chiplab/IP/AMBA/axi_mux_syn.v
-  D:/ayxtk/chiplab/IP/MAC/utility.v
-  D:/ayxtk/chiplab/IP/MAC/bd.v
-  D:/ayxtk/chiplab/IP/myCPU/btb.v
-  D:/ayxtk/chiplab/IP/CONFREG/confreg_syn.v
-  D:/ayxtk/chiplab/IP/MAC/csr.v
-  D:/ayxtk/chiplab/IP/myCPU/dcache.v
-  D:/ayxtk/chiplab/IP/DEBUG/debug_sram.v
-  D:/ayxtk/chiplab/IP/DEBUG/debug_top.v
-  D:/ayxtk/chiplab/IP/myCPU/div.v
-  D:/ayxtk/chiplab/IP/DMA/dma.v
-  D:/ayxtk/chiplab/IP/MAC/dma.v
-  D:/ayxtk/chiplab/IP/MAC/ethernet_top.v
-  D:/ayxtk/chiplab/IP/myCPU/exe_stage.v
-  D:/ayxtk/chiplab/IP/SPI/godson_sbridge_spi.v
-  D:/ayxtk/chiplab/IP/myCPU/icache.v
-  D:/ayxtk/chiplab/IP/myCPU/id_stage.v
-  D:/ayxtk/chiplab/IP/myCPU/if_stage.v
-  D:/ayxtk/chiplab/IP/MAC/mac.v
-  D:/ayxtk/chiplab/IP/MAC/mac2axi.v
-  D:/ayxtk/chiplab/IP/MAC/mac_axi.v
-  D:/ayxtk/chiplab/IP/MAC/mac_top.v
-  D:/ayxtk/chiplab/IP/MAC/maccsr2axi.v
-  D:/ayxtk/chiplab/IP/MAC/macdata2axi.v
-  D:/ayxtk/chiplab/IP/myCPU/mem_stage.v
-  D:/ayxtk/chiplab/IP/myCPU/mul.v
-  D:/ayxtk/chiplab/IP/myCPU/my_csr.v
-  D:/ayxtk/chiplab/IP/myCPU/mycpu_top.v
-  D:/ayxtk/chiplab/IP/APB_DEV/NAND/nand.v
-  D:/ayxtk/chiplab/IP/APB_DEV/nand_module.v
-  D:/ayxtk/chiplab/IP/myCPU/perf_counter.v
-  D:/ayxtk/chiplab/IP/APB_DEV/URT/raminfr.v
-  D:/ayxtk/chiplab/IP/MAC/rc.v
-  D:/ayxtk/chiplab/IP/myCPU/regfile.v
-  D:/ayxtk/chiplab/IP/MAC/rfifo.v
-  D:/ayxtk/chiplab/IP/MAC/rlsm.v
-  D:/ayxtk/chiplab/IP/MAC/rstc.v
-  D:/ayxtk/chiplab/IP/MAC/tc.v
-  D:/ayxtk/chiplab/IP/MAC/tfifo.v
-  D:/ayxtk/chiplab/IP/myCPU/tlb_entry.v
-  D:/ayxtk/chiplab/IP/MAC/tlsm.v
-  D:/ayxtk/chiplab/IP/myCPU/tools.v
-  D:/ayxtk/chiplab/IP/APB_DEV/URT/uart_receiver.v
-  D:/ayxtk/chiplab/IP/APB_DEV/URT/uart_regs.v
-  D:/ayxtk/chiplab/IP/APB_DEV/URT/uart_rfifo.v
-  D:/ayxtk/chiplab/IP/APB_DEV/URT/uart_sync_flops.v
-  D:/ayxtk/chiplab/IP/APB_DEV/URT/uart_tfifo.v
-  D:/ayxtk/chiplab/IP/APB_DEV/URT/uart_top.v
-  D:/ayxtk/chiplab/IP/APB_DEV/URT/uart_transmitter.v
-  D:/ayxtk/chiplab/IP/myCPU/wb_stage.v
-  D:/ayxtk/chiplab/chip/soc_demo/loongson/soc_top.v
+  D:/ayxtk/miracle/chiplab/IP/myCPU/addr_trans.v
+  D:/ayxtk/miracle/chiplab/IP/myCPU/alu.v
+  D:/ayxtk/miracle/chiplab/IP/APB_DEV/apb_dev_top_with_nand.v
+  D:/ayxtk/miracle/chiplab/IP/APB_DEV/apb_mux2.v
+  D:/ayxtk/miracle/chiplab/IP/AMBA/axi2apb.v
+  D:/ayxtk/miracle/chiplab/IP/myCPU/axi_bridge.v
+  D:/ayxtk/miracle/chiplab/IP/AMBA/axi_mux_syn.v
+  D:/ayxtk/miracle/chiplab/IP/MAC/utility.v
+  D:/ayxtk/miracle/chiplab/IP/MAC/bd.v
+  D:/ayxtk/miracle/chiplab/IP/myCPU/btb.v
+  D:/ayxtk/miracle/chiplab/IP/CONFREG/confreg_syn.v
+  D:/ayxtk/miracle/chiplab/IP/MAC/csr.v
+  D:/ayxtk/miracle/chiplab/IP/myCPU/dcache.v
+  D:/ayxtk/miracle/chiplab/IP/DEBUG/debug_sram.v
+  D:/ayxtk/miracle/chiplab/IP/DEBUG/debug_top.v
+  D:/ayxtk/miracle/chiplab/IP/myCPU/div.v
+  D:/ayxtk/miracle/chiplab/IP/DMA/dma.v
+  D:/ayxtk/miracle/chiplab/IP/MAC/dma.v
+  D:/ayxtk/miracle/chiplab/IP/MAC/ethernet_top.v
+  D:/ayxtk/miracle/chiplab/IP/myCPU/exe_stage.v
+  D:/ayxtk/miracle/chiplab/IP/SPI/godson_sbridge_spi.v
+  D:/ayxtk/miracle/chiplab/IP/myCPU/icache.v
+  D:/ayxtk/miracle/chiplab/IP/myCPU/id_stage.v
+  D:/ayxtk/miracle/chiplab/IP/myCPU/if_stage.v
+  D:/ayxtk/miracle/chiplab/IP/LCD/lcd_ctrl.v
+  D:/ayxtk/miracle/chiplab/IP/MAC/mac.v
+  D:/ayxtk/miracle/chiplab/IP/MAC/mac2axi.v
+  D:/ayxtk/miracle/chiplab/IP/MAC/mac_axi.v
+  D:/ayxtk/miracle/chiplab/IP/MAC/mac_top.v
+  D:/ayxtk/miracle/chiplab/IP/MAC/maccsr2axi.v
+  D:/ayxtk/miracle/chiplab/IP/MAC/macdata2axi.v
+  D:/ayxtk/miracle/chiplab/IP/myCPU/mem_stage.v
+  D:/ayxtk/miracle/chiplab/IP/myCPU/mul.v
+  D:/ayxtk/miracle/chiplab/IP/myCPU/my_csr.v
+  D:/ayxtk/miracle/chiplab/IP/myCPU/mycpu_top.v
+  D:/ayxtk/miracle/chiplab/IP/APB_DEV/NAND/nand.v
+  D:/ayxtk/miracle/chiplab/IP/APB_DEV/nand_module.v
+  D:/ayxtk/miracle/chiplab/IP/myCPU/perf_counter.v
+  D:/ayxtk/miracle/chiplab/IP/APB_DEV/URT/raminfr.v
+  D:/ayxtk/miracle/chiplab/IP/MAC/rc.v
+  D:/ayxtk/miracle/chiplab/IP/myCPU/regfile.v
+  D:/ayxtk/miracle/chiplab/IP/MAC/rfifo.v
+  D:/ayxtk/miracle/chiplab/IP/MAC/rlsm.v
+  D:/ayxtk/miracle/chiplab/IP/MAC/rstc.v
+  D:/ayxtk/miracle/chiplab/IP/MAC/tc.v
+  D:/ayxtk/miracle/chiplab/IP/MAC/tfifo.v
+  D:/ayxtk/miracle/chiplab/IP/myCPU/tlb_entry.v
+  D:/ayxtk/miracle/chiplab/IP/MAC/tlsm.v
+  D:/ayxtk/miracle/chiplab/IP/myCPU/tools.v
+  D:/ayxtk/miracle/chiplab/IP/APB_DEV/URT/uart_receiver.v
+  D:/ayxtk/miracle/chiplab/IP/APB_DEV/URT/uart_regs.v
+  D:/ayxtk/miracle/chiplab/IP/APB_DEV/URT/uart_rfifo.v
+  D:/ayxtk/miracle/chiplab/IP/APB_DEV/URT/uart_sync_flops.v
+  D:/ayxtk/miracle/chiplab/IP/APB_DEV/URT/uart_tfifo.v
+  D:/ayxtk/miracle/chiplab/IP/APB_DEV/URT/uart_top.v
+  D:/ayxtk/miracle/chiplab/IP/APB_DEV/URT/uart_transmitter.v
+  D:/ayxtk/miracle/chiplab/IP/myCPU/wb_stage.v
+  D:/ayxtk/miracle/chiplab/chip/soc_demo/loongson/soc_top.v
 }
-read_ip -quiet D:/ayxtk/chiplab/IP/myCPU/IP/data_bank_sram/data_bank_sram.xci
-set_property used_in_implementation false [get_files -all d:/ayxtk/chiplab/IP/myCPU/IP/data_bank_sram/data_bank_sram_ooc.xdc]
+read_ip -quiet D:/ayxtk/miracle/chiplab/IP/myCPU/IP/data_bank_sram/data_bank_sram.xci
+set_property used_in_implementation false [get_files -all d:/ayxtk/miracle/chiplab/IP/myCPU/IP/data_bank_sram/data_bank_sram_ooc.xdc]
 
-read_ip -quiet D:/ayxtk/chiplab/IP/myCPU/IP/tagv_sram/tagv_sram.xci
-set_property used_in_implementation false [get_files -all d:/ayxtk/chiplab/IP/myCPU/IP/tagv_sram/tagv_sram_ooc.xdc]
+read_ip -quiet D:/ayxtk/miracle/chiplab/IP/myCPU/IP/tagv_sram/tagv_sram.xci
+set_property used_in_implementation false [get_files -all d:/ayxtk/miracle/chiplab/IP/myCPU/IP/tagv_sram/tagv_sram_ooc.xdc]
 
-read_ip -quiet D:/ayxtk/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33.xci
-set_property used_in_implementation false [get_files -all d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33_board.xdc]
-set_property used_in_implementation false [get_files -all d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33.xdc]
-set_property used_in_implementation false [get_files -all d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33_ooc.xdc]
+read_ip -quiet D:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33.xci
+set_property used_in_implementation false [get_files -all d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33_board.xdc]
+set_property used_in_implementation false [get_files -all d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33.xdc]
+set_property used_in_implementation false [get_files -all d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33_ooc.xdc]
 
-read_ip -quiet D:/ayxtk/chiplab/IP/xilinx_ip/2023.2/axi_clock_converter_0/axi_clock_converter_0/axi_clock_converter_0.xci
-set_property used_in_synthesis false [get_files -all d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/axi_clock_converter_0/axi_clock_converter_0/axi_clock_converter_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/axi_clock_converter_0/axi_clock_converter_0/axi_clock_converter_0_clocks.xdc]
-set_property used_in_implementation false [get_files -all d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/axi_clock_converter_0/axi_clock_converter_0/axi_clock_converter_0_ooc.xdc]
+read_ip -quiet D:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_clock_converter_0/axi_clock_converter_0/axi_clock_converter_0.xci
+set_property used_in_synthesis false [get_files -all d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_clock_converter_0/axi_clock_converter_0/axi_clock_converter_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_clock_converter_0/axi_clock_converter_0/axi_clock_converter_0_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_clock_converter_0/axi_clock_converter_0/axi_clock_converter_0_ooc.xdc]
 
-read_ip -quiet D:/ayxtk/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32.xci
-set_property used_in_implementation false [get_files -all d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32/user_design/constraints/mig_axi_32.xdc]
-set_property used_in_implementation false [get_files -all d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32/user_design/constraints/mig_axi_32_ooc.xdc]
+read_ip -quiet D:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32.xci
+set_property used_in_implementation false [get_files -all d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32/user_design/constraints/mig_axi_32.xdc]
+set_property used_in_implementation false [get_files -all d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32/user_design/constraints/mig_axi_32_ooc.xdc]
 
-read_ip -quiet D:/ayxtk/chiplab/IP/xilinx_ip/2023.2/axi_interconnect_0/axi_interconnect_0.xci
-set_property used_in_synthesis false [get_files -all d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/axi_interconnect_0/axi_interconnect_0_impl_clocks.xdc]
-set_property used_in_implementation false [get_files -all d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/axi_interconnect_0/axi_interconnect_0_impl_clocks.xdc]
-set_property used_in_implementation false [get_files -all d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/axi_interconnect_0/axi_interconnect_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/axi_interconnect_0/axi_interconnect_0_clocks.xdc]
+read_ip -quiet D:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_interconnect_0/axi_interconnect_0.xci
+set_property used_in_synthesis false [get_files -all d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_interconnect_0/axi_interconnect_0_impl_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_interconnect_0/axi_interconnect_0_impl_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_interconnect_0/axi_interconnect_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_interconnect_0/axi_interconnect_0_clocks.xdc]
 
-read_ip -quiet D:/ayxtk/chiplab/IP/xilinx_ip/2023.2/dpram_512x32/dpram_512x32.xci
-set_property used_in_implementation false [get_files -all d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/dpram_512x32/dpram_512x32_ooc.xdc]
+read_ip -quiet D:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/dpram_512x32/dpram_512x32.xci
+set_property used_in_implementation false [get_files -all d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/dpram_512x32/dpram_512x32_ooc.xdc]
 
-read_ip -quiet D:/ayxtk/chiplab/IP/xilinx_ip/2023.2/clk_wiz_0_loongson/clk_wiz_0.xci
-set_property used_in_implementation false [get_files -all d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/clk_wiz_0_loongson/clk_wiz_0_board.xdc]
-set_property used_in_implementation false [get_files -all d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/clk_wiz_0_loongson/clk_wiz_0.xdc]
-set_property used_in_implementation false [get_files -all d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/clk_wiz_0_loongson/clk_wiz_0_late.xdc]
-set_property used_in_implementation false [get_files -all d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/clk_wiz_0_loongson/clk_wiz_0_ooc.xdc]
+read_ip -quiet D:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/clk_wiz_0_loongson/clk_wiz_0.xci
+set_property used_in_implementation false [get_files -all d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/clk_wiz_0_loongson/clk_wiz_0_board.xdc]
+set_property used_in_implementation false [get_files -all d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/clk_wiz_0_loongson/clk_wiz_0.xdc]
+set_property used_in_implementation false [get_files -all d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/clk_wiz_0_loongson/clk_wiz_0_late.xdc]
+set_property used_in_implementation false [get_files -all d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/clk_wiz_0_loongson/clk_wiz_0_ooc.xdc]
 
-read_ip -quiet D:/ayxtk/chiplab/IP/xilinx_ip/2023.2/axi_2x1_mux/axi_2x1_mux.xci
-set_property used_in_synthesis false [get_files -all d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/axi_2x1_mux/axi_2x1_mux_impl_clocks.xdc]
-set_property used_in_implementation false [get_files -all d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/axi_2x1_mux/axi_2x1_mux_impl_clocks.xdc]
-set_property used_in_implementation false [get_files -all d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/axi_2x1_mux/axi_2x1_mux_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/axi_2x1_mux/axi_2x1_mux_clocks.xdc]
+read_ip -quiet D:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_2x1_mux/axi_2x1_mux.xci
+set_property used_in_synthesis false [get_files -all d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_2x1_mux/axi_2x1_mux_impl_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_2x1_mux/axi_2x1_mux_impl_clocks.xdc]
+set_property used_in_implementation false [get_files -all d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_2x1_mux/axi_2x1_mux_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_2x1_mux/axi_2x1_mux_clocks.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -205,8 +208,8 @@ OPTRACE "Adding files" END { }
 foreach dcp [get_files -quiet -all -filter file_type=="Design\ Checkpoint"] {
   set_property used_in_implementation false $dcp
 }
-read_xdc D:/ayxtk/chiplab/fpga/loongson/soc_up.xdc
-set_property used_in_implementation false [get_files D:/ayxtk/chiplab/fpga/loongson/soc_up.xdc]
+read_xdc D:/ayxtk/miracle/chiplab/fpga/loongson/soc_up.xdc
+set_property used_in_implementation false [get_files D:/ayxtk/miracle/chiplab/fpga/loongson/soc_up.xdc]
 
 set_param ips.enableIPCacheLiteLoad 1
 close [open __synthesis_is_running__ w]
