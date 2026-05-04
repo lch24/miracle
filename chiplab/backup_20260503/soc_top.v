@@ -111,20 +111,7 @@ module soc_top(
     output        SPI_CLK,
     output        SPI_CS,
     inout         SPI_MISO,
-    inout         SPI_MOSI,
-
-    //------lcd-------
-    output        lcd_rst,       // LCD reset (active low)
-    output        lcd_cs,        // LCD chip select (active low, tied to 0)
-    output        lcd_rs,        // LCD command/data select (0=cmd, 1=data)
-    output        lcd_wr,        // LCD write strobe (active low)
-    output        lcd_rd,        // LCD read strobe (tied to 1)
-    output        lcd_bl_ctr,    // LCD backlight control
-    output [15:0] lcd_data,      // LCD 16-bit data bus (DB1-DB17)
-    input         lcd_t_pen,     // Touch screen interrupt
-    inout         lcd_t_mosi,    // Touch screen SPI data
-    output        lcd_t_clk,     // Touch screen SPI clock
-    output        lcd_t_cs_rst   // Touch screen chip select/reset
+    inout         SPI_MOSI
 );
 wire        aclk;
 wire        aresetn;
@@ -315,43 +302,6 @@ wire [`Lrresp      -1 :0] mac_s_rresp;
 wire                      mac_s_rlast;
 wire                      mac_s_rvalid;
 wire                      mac_s_rready;
-
-wire [`LID         -1 :0] lcd_s_awid;
-wire [`Lawaddr     -1 :0] lcd_s_awaddr;
-wire [`Lawlen      -1 :0] lcd_s_awlen;
-wire [`Lawsize     -1 :0] lcd_s_awsize;
-wire [`Lawburst    -1 :0] lcd_s_awburst;
-wire [`Lawlock     -1 :0] lcd_s_awlock;
-wire [`Lawcache    -1 :0] lcd_s_awcache;
-wire [`Lawprot     -1 :0] lcd_s_awprot;
-wire                      lcd_s_awvalid;
-wire                      lcd_s_awready;
-wire [`LID         -1 :0] lcd_s_wid;
-wire [`Lwdata      -1 :0] lcd_s_wdata;
-wire [`Lwstrb      -1 :0] lcd_s_wstrb;
-wire                      lcd_s_wlast;
-wire                      lcd_s_wvalid;
-wire                      lcd_s_wready;
-wire [`LID         -1 :0] lcd_s_bid;
-wire [`Lbresp      -1 :0] lcd_s_bresp;
-wire                      lcd_s_bvalid;
-wire                      lcd_s_bready;
-wire [`LID         -1 :0] lcd_s_arid;
-wire [`Laraddr     -1 :0] lcd_s_araddr;
-wire [`Larlen      -1 :0] lcd_s_arlen;
-wire [`Larsize     -1 :0] lcd_s_arsize;
-wire [`Larburst    -1 :0] lcd_s_arburst;
-wire [`Larlock     -1 :0] lcd_s_arlock;
-wire [`Larcache    -1 :0] lcd_s_arcache;
-wire [`Larprot     -1 :0] lcd_s_arprot;
-wire                      lcd_s_arvalid;
-wire                      lcd_s_arready;
-wire [`LID         -1 :0] lcd_s_rid;
-wire [`Lrdata      -1 :0] lcd_s_rdata;
-wire [`Lrresp      -1 :0] lcd_s_rresp;
-wire                      lcd_s_rlast;
-wire                      lcd_s_rvalid;
-wire                      lcd_s_rready;
 
 wire [`LID         -1 :0] mac_m_awid;
 wire [`Lawaddr     -1 :0] mac_m_awaddr;
@@ -1294,43 +1244,6 @@ axi_slave_mux AXI_SLAVE_MUX
 .s4_rvalid         (mac_s_rvalid       ),
 .s4_rready         (mac_s_rready       ),
 
-.s5_awid           (lcd_s_awid         ),
-.s5_awaddr         (lcd_s_awaddr       ),
-.s5_awlen          (lcd_s_awlen        ),
-.s5_awsize         (lcd_s_awsize       ),
-.s5_awburst        (lcd_s_awburst      ),
-.s5_awlock         (lcd_s_awlock       ),
-.s5_awcache        (lcd_s_awcache      ),
-.s5_awprot         (lcd_s_awprot       ),
-.s5_awvalid        (lcd_s_awvalid      ),
-.s5_awready        (lcd_s_awready      ),
-.s5_wid            (lcd_s_wid          ),
-.s5_wdata          (lcd_s_wdata        ),
-.s5_wstrb          (lcd_s_wstrb        ),
-.s5_wlast          (lcd_s_wlast        ),
-.s5_wvalid         (lcd_s_wvalid       ),
-.s5_wready         (lcd_s_wready       ),
-.s5_bid            (lcd_s_bid          ),
-.s5_bresp          (lcd_s_bresp        ),
-.s5_bvalid         (lcd_s_bvalid       ),
-.s5_bready         (lcd_s_bready       ),
-.s5_arid           (lcd_s_arid         ),
-.s5_araddr         (lcd_s_araddr       ),
-.s5_arlen          (lcd_s_arlen        ),
-.s5_arsize         (lcd_s_arsize       ),
-.s5_arburst        (lcd_s_arburst      ),
-.s5_arlock         (lcd_s_arlock       ),
-.s5_arcache        (lcd_s_arcache      ),
-.s5_arprot         (lcd_s_arprot       ),
-.s5_arvalid        (lcd_s_arvalid      ),
-.s5_arready        (lcd_s_arready      ),
-.s5_rid            (lcd_s_rid          ),
-.s5_rdata          (lcd_s_rdata        ),
-.s5_rresp          (lcd_s_rresp        ),
-.s5_rlast          (lcd_s_rlast        ),
-.s5_rvalid         (lcd_s_rvalid       ),
-.s5_rready         (lcd_s_rready       ),
-
 .axi_s_aclk        (aclk                )
 );
 
@@ -2067,67 +1980,6 @@ axi2apb_misc APB_DEV
 
     // --- NAND中断 ---
 .nand_int           (nand_int         )  // output, NAND中断输出, 连接中断汇聚int_out[4]
-);
-
-//LCD
-lcd_ctrl LCD_CTRL(
-    // --- 全局信号 ---
-.aclk           (aclk              ),       // input,  工作时钟(33MHz), 来自clk_pll_33
-.aresetn        (aresetn           ),       // input,  复位(低有效), 来自外部引脚resetn
-    // --- AXI从端AW通道: 写请求 ← axi_slave_mux.S5 ---
-.s_awid         (lcd_s_awid        ),       // input,  写请求ID, 来自axi_slave_mux.s5_awid
-.s_awaddr       (lcd_s_awaddr      ),       // input,  写请求地址, 来自axi_slave_mux.s5_awaddr
-.s_awlen        (lcd_s_awlen       ),       // input,  写请求突发长度, 来自axi_slave_mux.s5_awlen
-.s_awsize       (lcd_s_awsize      ),       // input,  写请求数据宽度, 来自axi_slave_mux.s5_awsize
-.s_awburst      (lcd_s_awburst     ),       // input,  写请求突发类型, 来自axi_slave_mux.s5_awburst
-.s_awlock       (lcd_s_awlock      ),       // input,  写请求锁类型, 来自axi_slave_mux.s5_awlock
-.s_awcache      (lcd_s_awcache     ),       // input,  写请求Cache属性, 来自axi_slave_mux.s5_awcache
-.s_awprot       (lcd_s_awprot      ),       // input,  写请求保护类型, 来自axi_slave_mux.s5_awprot
-.s_awvalid      (lcd_s_awvalid     ),       // input,  写请求有效, 来自axi_slave_mux.s5_awvalid
-.s_awready      (lcd_s_awready     ),       // output, 写请求就绪, 连接axi_slave_mux.s5_awready
-    // --- AXI从端W通道: 写数据 ← axi_slave_mux.S5 ---
-.s_wready       (lcd_s_wready      ),       // output, 写数据就绪, 连接axi_slave_mux.s5_wready
-.s_wid          (lcd_s_wid         ),       // input,  写数据ID, 来自axi_slave_mux.s5_wid
-.s_wdata        (lcd_s_wdata       ),       // input,  写数据(命令/像素值), 来自axi_slave_mux.s5_wdata
-.s_wstrb        (lcd_s_wstrb       ),       // input,  写字节使能, 来自axi_slave_mux.s5_wstrb
-.s_wlast        (lcd_s_wlast       ),       // input,  写数据最后拍, 来自axi_slave_mux.s5_wlast
-.s_wvalid       (lcd_s_wvalid      ),       // input,  写数据有效, 来自axi_slave_mux.s5_wvalid
-    // --- AXI从端B通道: 写响应 → axi_slave_mux.S5 ---
-.s_bid          (lcd_s_bid         ),       // output, 写响应ID, 连接axi_slave_mux.s5_bid
-.s_bresp        (lcd_s_bresp       ),       // output, 写响应状态, 连接axi_slave_mux.s5_bresp
-.s_bvalid       (lcd_s_bvalid      ),       // output, 写响应有效, 连接axi_slave_mux.s5_bvalid
-.s_bready       (lcd_s_bready      ),       // input,  写响应就绪, 来自axi_slave_mux.s5_bready
-    // --- AXI从端AR通道: 读请求 ← axi_slave_mux.S5 ---
-.s_arid         (lcd_s_arid        ),       // input,  读请求ID, 来自axi_slave_mux.s5_arid
-.s_araddr       (lcd_s_araddr      ),       // input,  读请求地址, 来自axi_slave_mux.s5_araddr
-.s_arlen        (lcd_s_arlen       ),       // input,  读请求突发长度, 来自axi_slave_mux.s5_arlen
-.s_arsize       (lcd_s_arsize      ),       // input,  读请求数据宽度, 来自axi_slave_mux.s5_arsize
-.s_arburst      (lcd_s_arburst     ),       // input,  读请求突发类型, 来自axi_slave_mux.s5_arburst
-.s_arlock       (lcd_s_arlock      ),       // input,  读请求锁类型, 来自axi_slave_mux.s5_arlock
-.s_arcache      (lcd_s_arcache     ),       // input,  读请求Cache属性, 来自axi_slave_mux.s5_arcache
-.s_arprot       (lcd_s_arprot      ),       // input,  读请求保护类型, 来自axi_slave_mux.s5_arprot
-.s_arvalid      (lcd_s_arvalid     ),       // input,  读请求有效, 来自axi_slave_mux.s5_arvalid
-.s_arready      (lcd_s_arready     ),       // output, 读请求就绪, 连接axi_slave_mux.s5_arready
-    // --- AXI从端R通道: 读响应 → axi_slave_mux.S5 ---
-.s_rready       (lcd_s_rready      ),       // input,  读响应就绪, 来自axi_slave_mux.s5_rready
-.s_rid          (lcd_s_rid         ),       // output, 读响应ID, 连接axi_slave_mux.s5_rid
-.s_rdata        (lcd_s_rdata       ),       // output, 读响应数据(状态/控制寄存器), 连接axi_slave_mux.s5_rdata
-.s_rresp        (lcd_s_rresp       ),       // output, 读响应状态, 连接axi_slave_mux.s5_rresp
-.s_rlast        (lcd_s_rlast       ),       // output, 读响应最后拍, 连接axi_slave_mux.s5_rlast
-.s_rvalid       (lcd_s_rvalid      ),       // output, 读响应有效, 连接axi_slave_mux.s5_rvalid
-    // --- LCD 8080并行接口 → SSD1963 ---
-.lcd_rst        (lcd_rst           ),       // output, LCD复位(低有效), 连接外部引脚lcd_rst
-.lcd_cs         (lcd_cs            ),       // output, LCD片选(常低), 连接外部引脚lcd_cs
-.lcd_rs         (lcd_rs            ),       // output, LCD命令/数据选择, 连接外部引脚lcd_rs
-.lcd_wr         (lcd_wr            ),       // output, LCD写信号(低有效), 连接外部引脚lcd_wr
-.lcd_rd         (lcd_rd            ),       // output, LCD读信号(常高), 连接外部引脚lcd_rd
-.lcd_bl_ctr     (lcd_bl_ctr        ),       // output, LCD背光控制, 连接外部引脚lcd_bl_ctr
-.lcd_data       (lcd_data          ),       // output, LCD 16位数据总线, 连接外部引脚lcd_data[15:0]
-    // --- 触摸屏接口 → 外部触摸控制器 ---
-.lcd_t_pen      (lcd_t_pen         ),       // input,  触摸中断, 来自外部引脚lcd_t_pen
-.lcd_t_mosi     (lcd_t_mosi        ),       // inout,  触摸SPI数据, 连接外部引脚lcd_t_mosi
-.lcd_t_clk      (lcd_t_clk         ),       // output, 触摸SPI时钟, 连接外部引脚lcd_t_clk
-.lcd_t_cs_rst   (lcd_t_cs_rst      )        // output, 触摸片选/复位, 连接外部引脚lcd_t_cs_rst
 );
 endmodule
 

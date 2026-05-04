@@ -31,8 +31,8 @@ THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 --------------------------------------------------------------------------------
 ------------------------------------------------------------------------------*/
 
-`define SLV_MUX_6
-`define SLV_MUX_NUM  6
+`define SLV_MUX_5
+`define SLV_MUX_NUM  5
 `include "config.h"
 module axi_slave_mux(
 spi_boot,
@@ -256,43 +256,6 @@ s4_rresp,
 s4_rlast,
 s4_rvalid,
 s4_rready,
-
-s5_awid,
-s5_awaddr,
-s5_awlen,
-s5_awsize,
-s5_awburst,
-s5_awlock,
-s5_awcache,
-s5_awprot,
-s5_awvalid,
-s5_awready,
-s5_wid,
-s5_wdata,
-s5_wstrb,
-s5_wlast,
-s5_wvalid,
-s5_wready,
-s5_bid,
-s5_bresp,
-s5_bvalid,
-s5_bready,
-s5_arid,
-s5_araddr,
-s5_arlen,
-s5_arsize,
-s5_arburst,
-s5_arlock,
-s5_arcache,
-s5_arprot,
-s5_arvalid,
-s5_arready,
-s5_rid,
-s5_rdata,
-s5_rresp,
-s5_rlast,
-s5_rvalid,
-s5_rready,
 
 axi_s_aresetn
 );
@@ -528,44 +491,6 @@ input                       s4_rlast;
 input                       s4_rvalid;
 output                      s4_rready;
 
-
-output [`LID         -1 :0] s5_awid;
-output [`Lawaddr     -1 :0] s5_awaddr;
-output [`Lawlen      -1 :0] s5_awlen;
-output [`Lawsize     -1 :0] s5_awsize;
-output [`Lawburst    -1 :0] s5_awburst;
-output [`Lawlock     -1 :0] s5_awlock;
-output [`Lawcache    -1 :0] s5_awcache;
-output [`Lawprot     -1 :0] s5_awprot;
-output                      s5_awvalid;
-input                       s5_awready;
-output [`LID         -1 :0] s5_wid;
-output [`Lwdata      -1 :0] s5_wdata;
-output [`Lwstrb      -1 :0] s5_wstrb;
-output                      s5_wlast;
-output                      s5_wvalid;
-input                       s5_wready;
-input  [`LID         -1 :0] s5_bid;
-input  [`Lbresp      -1 :0] s5_bresp;
-input                       s5_bvalid;
-output                      s5_bready;
-output [`LID         -1 :0] s5_arid;
-output [`Laraddr     -1 :0] s5_araddr;
-output [`Larlen      -1 :0] s5_arlen;
-output [`Larsize     -1 :0] s5_arsize;
-output [`Larburst    -1 :0] s5_arburst;
-output [`Larlock     -1 :0] s5_arlock;
-output [`Larcache    -1 :0] s5_arcache;
-output [`Larprot     -1 :0] s5_arprot;
-output                      s5_arvalid;
-input                       s5_arready;
-input  [`LID         -1 :0] s5_rid;
-input  [`Lrdata      -1 :0] s5_rdata;
-input  [`Lrresp      -1 :0] s5_rresp;
-input                       s5_rlast;
-input                       s5_rvalid;
-output                      s5_rready;
-
 wire                clk;
 wire                rst_n;
 
@@ -726,31 +651,6 @@ assign s4_arburst = axi_s_arburst;
 assign s4_arlock  = axi_s_arlock;
 assign s4_arcache = axi_s_arcache;
 assign s4_arprot  = axi_s_arprot;
-wire s5_awvalid          ;
-wire s5_wvalid           ;
-wire s5_bready           ;
-wire s5_arvalid          ;
-wire s5_rready           ;
-assign s5_awid    = axi_s_awid;
-assign s5_awaddr  = axi_s_awaddr;
-assign s5_awlen   = axi_s_awlen;
-assign s5_awsize  = axi_s_awsize;
-assign s5_awburst = axi_s_awburst;
-assign s5_awlock  = axi_s_awlock;
-assign s5_awcache = axi_s_awcache;
-assign s5_awprot  = axi_s_awprot;
-assign s5_wid     = axi_s_wid;
-assign s5_wdata   = axi_s_wdata;
-assign s5_wstrb   = axi_s_wstrb;
-assign s5_wlast   = axi_s_wlast;
-assign s5_arid    = axi_s_arid;
-assign s5_araddr  = axi_s_araddr;
-assign s5_arlen   = axi_s_arlen;
-assign s5_arsize  = axi_s_arsize;
-assign s5_arburst = axi_s_arburst;
-assign s5_arlock  = axi_s_arlock;
-assign s5_arcache = axi_s_arcache;
-assign s5_arprot  = axi_s_arprot;
 
 reg [`SLV_MUX_NUM-1:0] s_awvalid;
 reg [`SLV_MUX_NUM-1:0] s_wvalid ;
@@ -785,12 +685,6 @@ assign s4_wvalid           =        s_wvalid [4]  ;
 assign s4_bready           =        s_bready [4]  ;
 assign s4_arvalid          =        s_arvalid[4]  ;
 assign s4_rready           =        s_rready [4]  ;
-
-assign s5_awvalid          =        s_awvalid[5]  ;
-assign s5_wvalid           =        s_wvalid [5]  ;
-assign s5_bready           =        s_bready [5]  ;
-assign s5_arvalid          =        s_arvalid[5]  ;
-assign s5_rready           =        s_rready [5]  ;
 
 assign s_awready[0]  = s0_awready  ;
 assign s_wready[0]   = s0_wready   ;
@@ -848,18 +742,6 @@ assign s_rdata[4]    = s4_rdata    ;
 assign s_rresp[4]    = s4_rresp    ;
 assign s_rlast[4]    = s4_rlast    ;
 assign s_rvalid[4]   = s4_rvalid   ;
-
-assign s_awready[5]  = s5_awready  ;
-assign s_wready[5]   = s5_wready   ;
-assign s_bid[5]      = s5_bid      ;
-assign s_bresp[5]    = s5_bresp    ;
-assign s_bvalid[5]   = s5_bvalid   ;
-assign s_arready[5]  = s5_arready  ;
-assign s_rid[5]      = s5_rid      ;
-assign s_rdata[5]    = s5_rdata    ;
-assign s_rresp[5]    = s5_rresp    ;
-assign s_rlast[5]    = s5_rlast    ;
-assign s_rvalid[5]   = s5_rvalid   ;
 
 wire [4:0]BASE_ADDR [`SLV_MUX_NUM-1:0];
 wire [2:0]wr_sel_group_0;
@@ -969,15 +851,13 @@ begin
         wr_data_s_hit[w_ad_int]  =  (!wr_fifo_empty && wr_data_dir == w_ad_int);
 end
 
-assign wr_addr_hit[1] = 1'b0;
-
-assign wr_addr_hit[2] = axi_s_awaddr[31:16]==16'h1fe0;   //UART
-
-assign wr_addr_hit[3] = axi_s_awaddr[28:16]==16'h1fd0 ||
-						axi_s_awaddr[28:16]==16'h1faf ;  //CONF
-assign wr_addr_hit[4] = 1'b0;
-assign wr_addr_hit[5] = 1'b0;  //LCD disabled in sim
-assign wr_addr_hit[0] = ~|wr_addr_hit[5:1];             //DDR3
+assign wr_addr_hit[1] = axi_s_awaddr[31:20]==12'h1c0 ||
+                        axi_s_awaddr[31:16]==16'h1fe8;  //SPI
+assign wr_addr_hit[2] = axi_s_awaddr[31:16]==16'h1fe0 ||
+                        axi_s_awaddr[31:16]==16'h1fe7 ; //APB: uart and nand
+assign wr_addr_hit[3] = axi_s_awaddr[31:16]==16'h1fd0;  //CONF
+assign wr_addr_hit[4] = axi_s_awaddr[31:16]==16'h1ff0;  //MAC
+assign wr_addr_hit[0] = ~|wr_addr_hit[4:1];             //DDR3
 
 nb_sync_fifo_mux wr_fifo
 (
@@ -1063,17 +943,12 @@ begin
         s_arvalid [rd_arvalid_int] = !rd_fifo_full && rd_addr_hit[rd_arvalid_int]  && axi_s_arvalid;
 end
 
-//assign rd_addr_hit[1] = ((axi_s_araddr[31:16]) ==16'h1fe8) || ((axi_s_araddr[31:20])==12'h1fc);  //SPI
-assign rd_addr_hit[1] = 1'b0;
-assign rd_addr_hit[2] = (axi_s_araddr[31:16]) ==16'h1fe0;
-                        //(axi_s_araddr[31:16]) ==16'h1fe0;  //APB:uart and nand
-assign rd_addr_hit[3] = (axi_s_araddr[28:16]) == 16'h1faf ||
-			(axi_s_araddr[28:16]) == 16'h1fd0 ;  //CONF
-//assign rd_addr_hit[4] = (axi_s_araddr[31:16]) == 16'h1ff0; //MAC
-assign rd_addr_hit[4] = 1'b0;
-assign rd_addr_hit[5] = 1'b0;  //LCD disabled in sim
-wire rd_addr_hit_temp = ~(((axi_s_araddr[28:16]) == 16'h1faf || (axi_s_araddr[28:16]) == 16'h1fd0) | ((axi_s_araddr[31:16]) ==16'h1fe0));//~|rd_addr_hit[5:1];
-assign rd_addr_hit[0] = rd_addr_hit_temp;                //DDR3
+assign rd_addr_hit[1] = ((axi_s_araddr[31:16]) ==16'h1fe8) || ((axi_s_araddr[31:20])==12'h1c0);  //SPI
+assign rd_addr_hit[2] = (axi_s_araddr[31:16]) ==16'h1fe0 ||
+                        (axi_s_araddr[31:16]) ==16'h1fe7  ;//APB:uart and nand
+assign rd_addr_hit[3] = (axi_s_araddr[31:16]) ==16'h1fd0;  //CONF
+assign rd_addr_hit[4] = (axi_s_araddr[31:16]) == 16'h1ff0; //MAC
+assign rd_addr_hit[0] = ~|rd_addr_hit[4:1];                //DDR3
 
 integer rd_addr_dir_int;
 always @(rd_addr_hit)
@@ -1153,7 +1028,7 @@ end
 endfunction 
 endmodule
 
-`undef SLV_MUX_6
+`undef SLV_MUX_5
 `undef SLV_MUX_NUM
 
 module nb_sync_fifo_mux
