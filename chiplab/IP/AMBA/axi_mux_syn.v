@@ -862,20 +862,26 @@ assign s_rlast[5]    = s5_rlast    ;
 assign s_rvalid[5]   = s5_rvalid   ;
 
 wire [4:0]BASE_ADDR [`SLV_MUX_NUM-1:0];
-wire [2:0]wr_sel_group_0;
-wire [2:0]wr_sel_group_1;
-wire [2:0]bvalid_group_0;
-wire [2:0]bvalid_group_1;
+wire [3:0]wr_sel_group_0;
+wire [3:0]wr_sel_group_1;
+wire [3:0]wr_sel_group_2;
+wire [3:0]bvalid_group_0;
+wire [3:0]bvalid_group_1;
+wire [3:0]bvalid_group_2;
 
-wire [2:0]rd_sel_group_0;
-wire [2:0]rd_sel_group_1;
-wire [2:0]rd_valid_group_0;
-wire [2:0]rd_valid_group_1;
+wire [3:0]rd_sel_group_0;
+wire [3:0]rd_sel_group_1;
+wire [3:0]rd_sel_group_2;
+wire [3:0]rd_valid_group_0;
+wire [3:0]rd_valid_group_1;
+wire [3:0]rd_valid_group_2;
 
 assign bvalid_group_0 = s_bvalid[2:0];
 assign bvalid_group_1 = {1'b0,s_bvalid[4:3]};
+assign bvalid_group_2 = {2'b00,s_bvalid[5]};
 assign rd_valid_group_0 = s_rvalid[2:0];
 assign rd_valid_group_1 = {1'b0,s_rvalid[4:3]};
+assign rd_valid_group_2 = {2'b00,s_rvalid[5]};
 
 wire                wr_fifo_empty;
 wire                wr_fifo_full;
@@ -892,12 +898,12 @@ reg [`LID -1:0] axi_s_bid;
 reg [1:0]       axi_s_bresp; 
 wire        wr_dir_ins;
 wire        wr_dir_del;
-wire [2:0]  wr_data_dir;
-reg  [2:0]  wr_addr_dir;
-reg  [2:0]  wr_resp_pre_sel;
+wire [3:0]  wr_data_dir;
+reg  [3:0]  wr_addr_dir;
+reg  [3:0]  wr_resp_pre_sel;
 reg         wr_resp_prog;
-reg  [2:0]  wr_resp_sel_reg;
-wire [2:0]  wr_resp_sel;
+reg  [3:0]  wr_resp_sel_reg;
+wire [3:0]  wr_resp_sel;
 
 integer axi_s_awready_int; 
 always @(s_awready or wr_fifo_full or wr_addr_hit)
@@ -924,12 +930,23 @@ begin
         wr_resp_s_hit [resp_int]  =  !wr_resp_prog && wr_resp_sel == resp_int|| wr_resp_prog && wr_resp_sel_reg == resp_int;
 end
 
-assign wr_sel_group_0=get_num(bvalid_group_0,wr_resp_pre_sel,2'h0); 
-assign wr_sel_group_1=get_num(bvalid_group_1,wr_resp_pre_sel,2'h3); 
-assign wr_resp_sel= ((wr_sel_group_0== 3'h7)  && (wr_sel_group_1== 3'h7) ) ? 3'h7:  
-                    ((wr_sel_group_0!= 3'h7)  && (wr_sel_group_1== 3'h7) ) ?wr_sel_group_0:  
-                    ((wr_sel_group_0== 3'h7)  && (wr_sel_group_1!= 3'h7) ) ?wr_sel_group_1:  
-                    (wr_resp_pre_sel > 2'h2) ? wr_sel_group_0 : wr_sel_group_1;
+assign wr_sel_group_0=get_num6(bvalid_group_0,wr_resp_pre_sel,4'h0);  // S0-S2
+assign wr_sel_group_1=get_num6(bvalid_group_1,wr_resp_pre_sel,4'h3);  // S3-S4
+assign wr_sel_group_2=get_num6(bvalid_group_2,wr_resp_pre_sel,4'h5);  // S5
+
+// 3-group priority arbitration for B channel
+// NOVALID=4'hF means no slave in that group is asserting bvalid
+assign wr_resp_sel= ((wr_sel_group_0== 4'hF) && (wr_sel_group_1== 4'hF) && (wr_sel_group_2== 4'hF)) ? 4'hF:
+                    ((wr_sel_group_0!= 4'hF) && (wr_sel_group_1== 4'hF) && (wr_sel_group_2== 4'hF)) ? wr_sel_group_0:
+                    ((wr_sel_group_0== 4'hF) && (wr_sel_group_1!= 4'hF) && (wr_sel_group_2== 4'hF)) ? wr_sel_group_1:
+                    ((wr_sel_group_0== 4'hF) && (wr_sel_group_1== 4'hF) && (wr_sel_group_2!= 4'hF)) ? wr_sel_group_2:
+                    // Two or three groups have valid: round-robin based on pre_sel
+                    (wr_resp_pre_sel < 4'h3) ? ((wr_sel_group_0!= 4'hF) ? wr_sel_group_0 :
+                                                 (wr_sel_group_1!= 4'hF) ? wr_sel_group_1 : wr_sel_group_2) :
+                    (wr_resp_pre_sel < 4'h5) ? ((wr_sel_group_1!= 4'hF) ? wr_sel_group_1 :
+                                                 (wr_sel_group_2!= 4'hF) ? wr_sel_group_2 : wr_sel_group_0) :
+                                               ((wr_sel_group_2!= 4'hF) ? wr_sel_group_2 :
+                                                 (wr_sel_group_0!= 4'hF) ? wr_sel_group_0 : wr_sel_group_1);
 
 integer axi_s_resp_int; 
 always @(*)
@@ -956,7 +973,7 @@ assign wr_dir_del = !wr_fifo_empty && axi_s_wvalid && axi_s_wready && axi_s_wlas
 integer w_addr_dir_int;
 always @(wr_addr_hit)
 begin
-        wr_addr_dir =  3'b0;
+        wr_addr_dir =  4'b0;
     for(w_addr_dir_int= 0 ; w_addr_dir_int< `SLV_MUX_NUM ;w_addr_dir_int= w_addr_dir_int+ 1)
         if(wr_addr_hit[w_addr_dir_int])
         wr_addr_dir =w_addr_dir_int;
@@ -995,7 +1012,7 @@ nb_sync_fifo_mux wr_fifo
 
 always@(posedge clk) begin
   if(!rst_n)
-    wr_resp_pre_sel <= 3'b0;
+    wr_resp_pre_sel <= 4'b0;
   else if(axi_s_bvalid && axi_s_bready)
     wr_resp_pre_sel <= wr_resp_sel; 
 end
@@ -1010,7 +1027,7 @@ end
 
 always@(posedge clk) begin
   if(!rst_n)
-    wr_resp_sel_reg <= 3'b0;
+    wr_resp_sel_reg <= 4'b0;
   else if(!wr_resp_prog && (|s_bvalid) )
     wr_resp_sel_reg <= wr_resp_sel;
 end
@@ -1036,12 +1053,12 @@ begin
 end
 
 
-wire [2:0] rd_data_sel; 
+wire [3:0] rd_data_sel; 
 wire       rd_dir_ins;
 wire       rd_dir_del;
-wire [2:0] rd_data_dir;
-reg  [2:0] rd_addr_dir;
-reg [2:0] rd_data_pre_sel;
+wire [3:0] rd_data_dir;
+reg  [3:0] rd_addr_dir;
+reg [3:0] rd_data_pre_sel;
 integer   rd_arready_int; 
 integer   rd_arvalid_int;
 integer   rd_addr_hit_int;
@@ -1073,7 +1090,7 @@ assign rd_addr_hit[0] = ~|rd_addr_hit[5:1];                //DDR3
 integer rd_addr_dir_int;
 always @(rd_addr_hit)
 begin
-        rd_addr_dir =  3'b0;
+        rd_addr_dir =  4'b0;
     for(rd_addr_dir_int= 0 ; rd_addr_dir_int< `SLV_MUX_NUM ;rd_addr_dir_int= rd_addr_dir_int+ 1)
         if(rd_addr_hit[rd_addr_dir_int])
         rd_addr_dir =rd_addr_dir_int;
@@ -1104,7 +1121,7 @@ end
 always@(posedge clk) begin
   if(!rst_n) 
       begin
-    rd_data_pre_sel<= 3'b0;
+    rd_data_pre_sel<= 4'b0;
     end
   else if(axi_s_rvalid && axi_s_rready)
       begin
@@ -1133,9 +1150,9 @@ assign rd_dir_ins = !rd_fifo_full && axi_s_arvalid && axi_s_arready;
 assign rd_dir_del = !rd_fifo_empty && axi_s_rvalid && axi_s_rready && axi_s_rlast;
 
 function [2:0] get_num;
-input [2:0]    valid;    
-input [2:0]    pre_num;  
-input [1:0]    group;    
+input [2:0]    valid;
+input [2:0]    pre_num;
+input [1:0]    group;
 begin
 get_num=(valid == 3'b001)? (3'h0+group) :
         (valid == 3'b010)? (3'h1+group) :
@@ -1144,6 +1161,25 @@ get_num=(valid == 3'b001)? (3'h0+group) :
         (valid == 3'b110)? (pre_num!=(3'h1+group))?(3'h1+group):(3'h2+group) :
         (valid == 3'b101)? (pre_num!=(3'h2+group))?(3'h2+group):(3'h0+group) :
         (valid == 3'b111)?((pre_num==(3'h0+group))?(3'h1+group):(pre_num==(3'h1+group))?(3'h2+group):(3'h0+group)):3'h7;
+end
+endfunction
+
+// 4-bit version of get_num for 6-slave mux
+// valid is 3-bit one-hot/combination from a group of up to 3 slaves
+// group is 4-bit base offset (0, 3, or 5)
+// Returns 4'hF if no valid, otherwise returns the selected slave index
+function [3:0] get_num6;
+input [2:0]    valid;
+input [3:0]    pre_num;
+input [3:0]    group;
+begin
+get_num6=(valid == 3'b001)? (4'h0+group) :
+         (valid == 3'b010)? (4'h1+group) :
+         (valid == 3'b100)? (4'h2+group) :
+         (valid == 3'b011)? (pre_num!=(4'h0+group))?(4'h0+group):(4'h1+group) :
+         (valid == 3'b110)? (pre_num!=(4'h1+group))?(4'h1+group):(4'h2+group) :
+         (valid == 3'b101)? (pre_num!=(4'h2+group))?(4'h2+group):(4'h0+group) :
+         (valid == 3'b111)?((pre_num==(4'h0+group))?(4'h1+group):(pre_num==(4'h1+group))?(4'h2+group):(4'h0+group)):4'hF;
 end
 endfunction 
 endmodule
@@ -1165,7 +1201,7 @@ data_in,
 shift_out,
 data_out
 );
-parameter FIFO_WIDTH = 3;
+parameter FIFO_WIDTH = 4;
 
 input                      clk;
 input                      rst_n;
@@ -1214,7 +1250,7 @@ integer i;
 always@(posedge clk) begin
   if(!rst_n)
     for(i=0;i<2;i=i+1)
-      fifo_ram[i] <= 2'b0;
+      fifo_ram[i] <= {(FIFO_WIDTH){1'b0}};
   else if(shift_in && ~full)
     fifo_ram[mem_wr_pos] <= data_in;
 end
