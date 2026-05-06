@@ -187,7 +187,23 @@ reg  ctrl_bl;      // bit1: 0=backlight off, 1=on
 
 // STAT_REG bits
 wire stat_busy = fsm_busy;    // bit0: 8080 FSM busy
-reg  stat_init_done = 1'b0;      // bit1: (reserved for future auto-init)
+reg  stat_init_done = 1'b0;   // bit1: (reserved for future auto-init)
+reg  fsm_started = 1'b0;      // bit2: sticky flag, 1=FSM ever left IDLE
+reg  [15:0] fsm_wr_cnt = 16'd0;  // bits[31:16]: 8080 write counter
+
+// Sticky flag: FSM ever started (set on SETUP, cleared only by reset)
+always @(posedge aclk)
+    if (~aresetn)
+        fsm_started <= 1'b0;
+    else if (fsm_state == FSM_SETUP)
+        fsm_started <= 1'b1;
+
+// Increment write counter when FSM completes a write (HOLD state)
+always @(posedge aclk)
+    if (~aresetn)
+        fsm_wr_cnt <= 16'd0;
+    else if (fsm_state == FSM_HOLD)
+        fsm_wr_cnt <= fsm_wr_cnt + 16'd1;
 
 // Write registers on w_enter
 wire write_cmd  = w_enter & (buf_addr[3:2] == `CMD_REG_ADDR);
@@ -223,7 +239,7 @@ end
 //----------------------------------------------------------------------------
 // Read path
 //----------------------------------------------------------------------------
-wire [31:0] rdata_d = (buf_addr[3:2] == `STAT_REG_ADDR) ? {30'd0, stat_init_done, stat_busy} :
+wire [31:0] rdata_d = (buf_addr[3:2] == `STAT_REG_ADDR) ? {fsm_wr_cnt, 13'd0, fsm_started, stat_init_done, stat_busy} :
                        (buf_addr[3:2] == `CTRL_REG_ADDR) ? {30'd0, ctrl_bl, ctrl_rst} :
                        32'd0;
 

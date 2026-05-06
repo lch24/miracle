@@ -16,6 +16,8 @@
 #define CTRL_RST_N      0x01    // bit0: 0=reset LCD, 1=normal
 #define CTRL_BL_ON      0x02    // bit1: 0=backlight off, 1=on
 #define STAT_BUSY       0x01    // bit0: 8080 FSM busy
+#define STAT_STARTED    0x04    // bit2: sticky, FSM ever started
+#define STAT_WR_CNT_SHIFT 16    // bits[31:16]: 8080 write counter
 
 static volatile unsigned int *lcd_base;
 
@@ -112,6 +114,9 @@ static void ssd1963_init(void)
     delay_us(50000);
 
     printf("LCD: Init complete!\n");
+    unsigned int stat = lcd_base[LCD_STAT_OFF / 4];
+    printf("After init: STAT=0x%08x, started=%u, wr_cnt=%u\n",
+           stat, (stat & STAT_STARTED) ? 1 : 0, (stat >> STAT_WR_CNT_SHIFT) & 0xFFFF);
 }
 
 static void lcd_fill(unsigned short color)
@@ -134,6 +139,7 @@ static void lcd_fill(unsigned short color)
 
 int main(void)
 {
+    unsigned int stat;
     int fd = open("/dev/mem", O_RDWR | O_SYNC);
     if (fd < 0) {
         perror("open /dev/mem");
@@ -165,8 +171,11 @@ int main(void)
     printf("Step 3: Fill RED (0xF800)\n");
     lcd_fill(0xF800);
     printf("Done! Screen should be red.\n");
+    stat = lcd_base[LCD_STAT_OFF / 4];
+    printf("After fill: STAT=0x%08x, started=%u, wr_cnt=%u\n",
+           stat, (stat & STAT_STARTED) ? 1 : 0, (stat >> STAT_WR_CNT_SHIFT) & 0xFFFF);
 
-    munmap(lcd_base, LCD_PHYS_LEN);
+    munmap((void *)lcd_base, LCD_PHYS_LEN);
     close(fd);
     return 0;
 }
