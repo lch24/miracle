@@ -209,6 +209,9 @@ always @(posedge aclk) begin
         rx_bit_cnt   <= 3'd0;
         rx_parity_acc <= 1'b0;
         rx_push      <= 1'b0;
+        stat_rx_overflow <= 1'b0;
+        stat_rx_parity   <= 1'b0;
+        stat_rx_frame    <= 1'b0;
     end
     else begin
         rx_push <= 1'b0;
@@ -257,6 +260,12 @@ always @(posedge aclk) begin
                     end
                 end
             endcase
+        end
+        // Override: clear sticky RX status on CTRL write
+        if (w_enter && reg_sel == REG_CTRL) begin
+            if (s_wdata[2]) stat_rx_overflow <= 1'b0;
+            if (s_wdata[4]) stat_rx_parity   <= 1'b0;
+            if (s_wdata[5]) stat_rx_frame    <= 1'b0;
         end
     end
 end
@@ -377,6 +386,9 @@ always @(posedge aclk) begin
         // Override: clear tx_done_flag on STAT read
         if (r_retire && reg_sel == REG_STAT)
             tx_done_flag <= 1'b0;
+        // Override: clear stat_tx_nack on CTRL write
+        if (w_enter && reg_sel == REG_CTRL && s_wdata[3])
+            stat_tx_nack <= 1'b0;
     end
 end
 
@@ -415,10 +427,6 @@ always @(posedge aclk) begin
         ctrl_rx_int_en  <= 1'b0;
         ctrl_tx_int_en  <= 1'b0;
         ctrl_rx_en      <= 1'b1;
-        stat_rx_overflow <= 1'b0;
-        stat_tx_nack     <= 1'b0;
-        stat_rx_parity   <= 1'b0;
-        stat_rx_frame    <= 1'b0;
         tx_data_buf      <= 8'd0;
     end
     else if (w_enter) begin
@@ -429,10 +437,6 @@ always @(posedge aclk) begin
             REG_CTRL: begin
                 ctrl_rx_int_en <= s_wdata[0];
                 ctrl_tx_int_en <= s_wdata[1];
-                if (s_wdata[2]) stat_rx_overflow <= 1'b0;
-                if (s_wdata[3]) stat_tx_nack     <= 1'b0;
-                if (s_wdata[4]) stat_rx_parity   <= 1'b0;
-                if (s_wdata[5]) stat_rx_frame    <= 1'b0;
                 ctrl_rx_en <= s_wdata[7];
             end
         endcase
