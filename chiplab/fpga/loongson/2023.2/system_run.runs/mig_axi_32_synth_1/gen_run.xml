@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="mig_axi_32_synth_1" LaunchPart="xc7a200tfbg676-2" LaunchTime="1777520161">
-  <File Type="PA-TCL" Name="mig_axi_32.tcl"/>
-  <File Type="REPORTS-TCL" Name="mig_axi_32_reports.tcl"/>
+<GenRun Id="mig_axi_32_synth_1" LaunchPart="xc7a200tfbg676-2" LaunchTime="1778673395">
+  <File Type="RDS-DCP" Name="mig_axi_32.dcp"/>
   <File Type="RDS-RDS" Name="mig_axi_32.vds"/>
   <File Type="RDS-UTIL" Name="mig_axi_32_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="mig_axi_32_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="mig_axi_32.dcp"/>
+  <File Type="PA-TCL" Name="mig_axi_32.tcl"/>
+  <File Type="REPORTS-TCL" Name="mig_axi_32_reports.tcl"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/mig_axi_32" RelGenDir="$PGENDIR/mig_axi_32">
     <File Path="$PPRDIR/../../../IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32.xci">
       <FileInfo>
@@ -39,7 +39,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

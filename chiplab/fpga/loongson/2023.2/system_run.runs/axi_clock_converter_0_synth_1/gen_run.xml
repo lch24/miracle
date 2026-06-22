@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="axi_clock_converter_0_synth_1" LaunchPart="xc7a200tfbg676-2" LaunchTime="1777520160">
-  <File Type="PA-TCL" Name="axi_clock_converter_0.tcl"/>
-  <File Type="REPORTS-TCL" Name="axi_clock_converter_0_reports.tcl"/>
+<GenRun Id="axi_clock_converter_0_synth_1" LaunchPart="xc7a200tfbg676-2" LaunchTime="1778673395">
+  <File Type="RDS-DCP" Name="axi_clock_converter_0.dcp"/>
   <File Type="RDS-RDS" Name="axi_clock_converter_0.vds"/>
   <File Type="RDS-UTIL" Name="axi_clock_converter_0_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="axi_clock_converter_0_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="axi_clock_converter_0.dcp"/>
+  <File Type="PA-TCL" Name="axi_clock_converter_0.tcl"/>
+  <File Type="REPORTS-TCL" Name="axi_clock_converter_0_reports.tcl"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/axi_clock_converter_0" RelGenDir="$PGENDIR/axi_clock_converter_0">
     <File Path="$PPRDIR/../../../IP/xilinx_ip/2023.2/axi_clock_converter_0/axi_clock_converter_0/axi_clock_converter_0.xci">
       <FileInfo>
@@ -53,7 +53,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

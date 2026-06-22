@@ -1,11 +1,11 @@
 // Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-// Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+// Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
-// Tool Version: Vivado v.2023.2 (win64) Build 4029153 Fri Oct 13 20:14:34 MDT 2023
-// Date        : Thu Apr 30 11:29:05 2026
-// Host        : lch-LAPTOP-V8BK1R8N running 64-bit major release  (build 9200)
+// Tool Version: Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+// Date        : Wed May 13 19:56:53 2026
+// Host        : loong-arch-mini running 64-bit Ubuntu 24.04.4 LTS
 // Command     : write_verilog -force -mode funcsim
-//               d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33_sim_netlist.v
+//               /home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33_sim_netlist.v
 // Design      : clk_pll_33
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.

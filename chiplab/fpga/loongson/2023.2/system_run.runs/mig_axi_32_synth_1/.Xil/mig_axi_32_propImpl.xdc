@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32/user_design/constraints/mig_axi_32.xdc rfile:../../../../../../IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32/user_design/constraints/mig_axi_32.xdc id:1 order:EARLY} [current_design]
+set_property SRC_FILE_INFO {cfile:/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32/user_design/constraints/mig_axi_32.xdc rfile:../../../../../../IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32/user_design/constraints/mig_axi_32.xdc id:1 order:EARLY} [current_design]
 set_property src_info {type:XDC file:1 line:41 export:INPUT save:INPUT read:READ} [current_design]
 set_property PACKAGE_PIN E20 [get_ports {ddr3_dq[0]}]
 set_property src_info {type:XDC file:1 line:47 export:INPUT save:INPUT read:READ} [current_design]
@@ -127,8 +127,6 @@ set_property src_info {type:XDC file:1 line:327 export:INPUT save:INPUT read:REA
 set_property LOC PLLE2_ADV_X0Y4 [get_cells -hier -filter {NAME =~ */u_ddr3_infrastructure/plle2_i}]
 set_property src_info {type:XDC file:1 line:328 export:INPUT save:INPUT read:READ} [current_design]
 set_property LOC MMCME2_ADV_X0Y4 [get_cells -hier -filter {NAME =~ */u_ddr3_infrastructure/gen_mmcm.mmcm_i}]
-set_property src_info {type:XDC file:1 line:336 export:INPUT save:INPUT read:READ} [current_design]
-set_multicycle_path -through [get_pins -filter {NAME =~ */OSERDESRST} -of [get_cells -hier -filter {REF_NAME == PHASER_OUT_PHY}]] -hold 1 -start
 set_property src_info {type:XDC file:1 line:340 export:INPUT save:INPUT read:READ} [current_design]
 set_max_delay -from [get_cells -hier *rstdiv0_sync_r1_reg*] -to [get_pins -filter {NAME =~ */RESET} -of [get_cells -hier -filter {REF_NAME == PHY_CONTROL}]] -datapath_only 5
 set_property src_info {type:XDC file:1 line:344 export:INPUT save:INPUT read:READ} [current_design]

@@ -3,112 +3,97 @@
     with args -log soc_top.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source soc_top.tcl -notrace
 
 
-ECHO 处于关闭状态。
-ECHO 处于关闭状态。
-
-****** Vivado v2023.2 (64-bit)
-  **** SW Build 4029153 on Fri Oct 13 20:14:34 MDT 2023
-  **** IP Build 4028589 on Sat Oct 14 00:45:43 MDT 2023
-  **** SharedData Build 4025554 on Tue Oct 10 17:18:54 MDT 2023
+****** Vivado v2025.2 (64-bit)
+  **** SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+  **** IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+  **** SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+  **** Start of session at: Mon Jun 22 14:26:01 2026
     ** Copyright 1986-2022 Xilinx, Inc. All Rights Reserved.
-    ** Copyright 2022-2023 Advanced Micro Devices, Inc. All Rights Reserved.
+    ** Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
 
 source soc_top.tcl -notrace
-create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 483.836 ; gain = 178.594
 Command: link_design -top soc_top -part xc7a200tfbg676-2
 Design is defaulting to srcset: sources_1
 Design is defaulting to constrset: constrs_1
 INFO: [Device 21-403] Loading part xc7a200tfbg676-2
-INFO: [Project 1-454] Reading design checkpoint 'D:/ayxtk/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/impl_1/.Xil/Vivado-13464-lch-LAPTOP-V8BK1R8N/axi_clock_converter_0/axi_clock_converter_0.dcp' for cell 'AXI_CLK_CONVERTER'
-INFO: [Project 1-454] Reading design checkpoint 'd:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/clk_wiz_0_loongson/clk_wiz_0.dcp' for cell 'clk_pll_1'
-INFO: [Project 1-454] Reading design checkpoint 'd:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33.dcp' for cell 'clk_pll_33'
-INFO: [Project 1-454] Reading design checkpoint 'd:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32.dcp' for cell 'mig_axi'
-INFO: [Project 1-454] Reading design checkpoint 'd:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_interconnect_0/axi_interconnect_0.dcp' for cell 'mig_axi_interconnect'
-INFO: [Project 1-454] Reading design checkpoint 'd:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_2x1_mux/axi_2x1_mux.dcp' for cell 'u_axi_2x1_mux'
-INFO: [Project 1-454] Reading design checkpoint 'd:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/dpram_512x32/dpram_512x32.dcp' for cell 'ETHERNET_TOP/dpram_512x32_rx'
-INFO: [Project 1-454] Reading design checkpoint 'D:/ayxtk/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/impl_1/.Xil/Vivado-13464-lch-LAPTOP-V8BK1R8N/data_bank_sram/data_bank_sram.dcp' for cell 'cpu_mid/dcache/data_ram_way[0].data_ram_bank[0].u'
-INFO: [Project 1-454] Reading design checkpoint 'D:/ayxtk/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/impl_1/.Xil/Vivado-13464-lch-LAPTOP-V8BK1R8N/tagv_sram/tagv_sram.dcp' for cell 'cpu_mid/dcache/tagv_ram_way[0].u'
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.526 . Memory (MB): peak = 1109.223 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 2433 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
-INFO: [Project 1-479] Netlist was created with Vivado 2023.2
+INFO: [Project 1-5699] Read binary netlist with skipMacroContent - 1
+INFO: [Project 1-454] Reading design checkpoint '/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/impl_1/.Xil/Vivado-111636-loong-arch-mini/axi_clock_converter_0/axi_clock_converter_0.dcp' for cell 'AXI_CLK_CONVERTER'
+INFO: [Project 1-454] Reading design checkpoint '/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/clk_wiz_0_loongson/clk_wiz_0.dcp' for cell 'clk_pll_1'
+INFO: [Project 1-454] Reading design checkpoint '/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33.dcp' for cell 'clk_pll_33'
+INFO: [Project 1-454] Reading design checkpoint '/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32.dcp' for cell 'mig_axi'
+INFO: [Project 1-454] Reading design checkpoint '/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/axi_interconnect_0/axi_interconnect_0.dcp' for cell 'mig_axi_interconnect'
+INFO: [Project 1-454] Reading design checkpoint '/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/axi_2x1_mux/axi_2x1_mux.dcp' for cell 'u_axi_2x1_mux'
+INFO: [Project 1-454] Reading design checkpoint '/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/dpram_512x32/dpram_512x32.dcp' for cell 'ETHERNET_TOP/dpram_512x32_rx'
+INFO: [Project 1-454] Reading design checkpoint '/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/impl_1/.Xil/Vivado-111636-loong-arch-mini/data_bank_sram/data_bank_sram.dcp' for cell 'cpu_mid/dcache/data_ram_way[0].data_ram_bank[0].u'
+INFO: [Project 1-454] Reading design checkpoint '/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/impl_1/.Xil/Vivado-111636-loong-arch-mini/tagv_sram/tagv_sram.dcp' for cell 'cpu_mid/dcache/tagv_ram_way[0].u'
+Netlist sorting complete. Time (s): cpu = 00:00:00.25 ; elapsed = 00:00:00.25 . Memory (MB): peak = 1905.555 ; gain = 0.000 ; free physical = 76072 ; free virtual = 90151
+INFO: [Netlist 29-17] Analyzing 2416 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2025.2
 INFO: [Project 1-570] Preparing netlist for logic optimization
-Parsing XDC File [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33_board.xdc] for cell 'clk_pll_33/inst'
-Finished Parsing XDC File [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33_board.xdc] for cell 'clk_pll_33/inst'
-Parsing XDC File [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33.xdc] for cell 'clk_pll_33/inst'
-Finished Parsing XDC File [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33.xdc] for cell 'clk_pll_33/inst'
-Parsing XDC File [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32/user_design/constraints/mig_axi_32.xdc] for cell 'mig_axi'
-Finished Parsing XDC File [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32/user_design/constraints/mig_axi_32.xdc] for cell 'mig_axi'
-Parsing XDC File [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/clk_wiz_0_loongson/clk_wiz_0_board.xdc] for cell 'clk_pll_1/inst'
-Finished Parsing XDC File [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/clk_wiz_0_loongson/clk_wiz_0_board.xdc] for cell 'clk_pll_1/inst'
-Parsing XDC File [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/clk_wiz_0_loongson/clk_wiz_0.xdc] for cell 'clk_pll_1/inst'
-Finished Parsing XDC File [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/clk_wiz_0_loongson/clk_wiz_0.xdc] for cell 'clk_pll_1/inst'
-Parsing XDC File [D:/ayxtk/miracle/chiplab/fpga/loongson/soc_up.xdc]
-WARNING: [Vivado 12-507] No nets matched 'EJTAG_TCK_IBUF'. [D:/ayxtk/miracle/chiplab/fpga/loongson/soc_up.xdc:192]
-CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [D:/ayxtk/miracle/chiplab/fpga/loongson/soc_up.xdc:192]
+Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32/user_design/constraints/mig_axi_32.xdc] for cell 'mig_axi'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32/user_design/constraints/mig_axi_32.xdc] for cell 'mig_axi'
+Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33_board.xdc] for cell 'clk_pll_33/inst'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33_board.xdc] for cell 'clk_pll_33/inst'
+Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33.xdc] for cell 'clk_pll_33/inst'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33.xdc] for cell 'clk_pll_33/inst'
+Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/clk_wiz_0_loongson/clk_wiz_0_board.xdc] for cell 'clk_pll_1/inst'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/clk_wiz_0_loongson/clk_wiz_0_board.xdc] for cell 'clk_pll_1/inst'
+Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/clk_wiz_0_loongson/clk_wiz_0.xdc] for cell 'clk_pll_1/inst'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/clk_wiz_0_loongson/clk_wiz_0.xdc] for cell 'clk_pll_1/inst'
+Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc]
+WARNING: [Vivado 12-507] No nets matched 'EJTAG_TCK_IBUF'. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:192]
+CRITICAL WARNING: [Common 17-55] 'set_property' expects at least one object. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:192]
 Resolution: If [get_<value>] was used to populate the object, check to make sure this command returns at least one valid object.
-INFO: [Timing 38-35] Done setting XDC timing constraints. [D:/ayxtk/miracle/chiplab/fpga/loongson/soc_up.xdc:237]
-INFO: [Timing 38-2] Deriving generated clocks [D:/ayxtk/miracle/chiplab/fpga/loongson/soc_up.xdc:237]
-get_clocks: Time (s): cpu = 00:00:08 ; elapsed = 00:00:08 . Memory (MB): peak = 1947.035 ; gain = 620.039
-Finished Parsing XDC File [D:/ayxtk/miracle/chiplab/fpga/loongson/soc_up.xdc]
-Parsing XDC File [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_clock_converter_0/axi_clock_converter_0/axi_clock_converter_0_clocks.xdc] for cell 'AXI_CLK_CONVERTER/inst'
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_clock_converter_0/axi_clock_converter_0/axi_clock_converter_0_clocks.xdc:35]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_clock_converter_0/axi_clock_converter_0/axi_clock_converter_0_clocks.xdc:39]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_clock_converter_0/axi_clock_converter_0/axi_clock_converter_0_clocks.xdc:42]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_clock_converter_0/axi_clock_converter_0/axi_clock_converter_0_clocks.xdc:45]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-10' -to list should not be empty. [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_clock_converter_0/axi_clock_converter_0/axi_clock_converter_0_clocks.xdc:49]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_clock_converter_0/axi_clock_converter_0/axi_clock_converter_0_clocks.xdc:52]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_clock_converter_0/axi_clock_converter_0/axi_clock_converter_0_clocks.xdc:56]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_clock_converter_0/axi_clock_converter_0/axi_clock_converter_0_clocks.xdc:60]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_clock_converter_0/axi_clock_converter_0/axi_clock_converter_0_clocks.xdc:63]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-1' -to list should not be empty. [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_clock_converter_0/axi_clock_converter_0/axi_clock_converter_0_clocks.xdc:66]
-WARNING: [Vivado_Tcl 4-921] Waiver ID 'CDC-2' -to list should not be empty. [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_clock_converter_0/axi_clock_converter_0/axi_clock_converter_0_clocks.xdc:70]
-Finished Parsing XDC File [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_clock_converter_0/axi_clock_converter_0/axi_clock_converter_0_clocks.xdc] for cell 'AXI_CLK_CONVERTER/inst'
-Parsing XDC File [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_interconnect_0/axi_interconnect_0_impl_clocks.xdc] for cell 'mig_axi_interconnect/inst'
-Finished Parsing XDC File [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_interconnect_0/axi_interconnect_0_impl_clocks.xdc] for cell 'mig_axi_interconnect/inst'
-Parsing XDC File [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_interconnect_0/axi_interconnect_0_clocks.xdc] for cell 'mig_axi_interconnect/inst'
-Finished Parsing XDC File [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_interconnect_0/axi_interconnect_0_clocks.xdc] for cell 'mig_axi_interconnect/inst'
-Parsing XDC File [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/clk_wiz_0_loongson/clk_wiz_0_late.xdc] for cell 'clk_pll_1/inst'
-Finished Parsing XDC File [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/clk_wiz_0_loongson/clk_wiz_0_late.xdc] for cell 'clk_pll_1/inst'
-Parsing XDC File [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_2x1_mux/axi_2x1_mux_impl_clocks.xdc] for cell 'u_axi_2x1_mux/inst'
-Finished Parsing XDC File [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_2x1_mux/axi_2x1_mux_impl_clocks.xdc] for cell 'u_axi_2x1_mux/inst'
-Parsing XDC File [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_2x1_mux/axi_2x1_mux_clocks.xdc] for cell 'u_axi_2x1_mux/inst'
-Finished Parsing XDC File [d:/ayxtk/miracle/chiplab/IP/xilinx_ip/2023.2/axi_2x1_mux/axi_2x1_mux_clocks.xdc] for cell 'u_axi_2x1_mux/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:237]
+INFO: [Timing 38-2] Deriving generated clocks [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:237]
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc]
+Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/axi_interconnect_0/axi_interconnect_0_impl_clocks.xdc] for cell 'mig_axi_interconnect/inst'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/axi_interconnect_0/axi_interconnect_0_impl_clocks.xdc] for cell 'mig_axi_interconnect/inst'
+Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/axi_interconnect_0/axi_interconnect_0_clocks.xdc] for cell 'mig_axi_interconnect/inst'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/axi_interconnect_0/axi_interconnect_0_clocks.xdc] for cell 'mig_axi_interconnect/inst'
+Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/axi_2x1_mux/axi_2x1_mux_impl_clocks.xdc] for cell 'u_axi_2x1_mux/inst'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/axi_2x1_mux/axi_2x1_mux_impl_clocks.xdc] for cell 'u_axi_2x1_mux/inst'
+Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/axi_2x1_mux/axi_2x1_mux_clocks.xdc] for cell 'u_axi_2x1_mux/inst'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/axi_2x1_mux/axi_2x1_mux_clocks.xdc] for cell 'u_axi_2x1_mux/inst'
+Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/clk_wiz_0_loongson/clk_wiz_0_late.xdc] for cell 'clk_pll_1/inst'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/clk_wiz_0_loongson/clk_wiz_0_late.xdc] for cell 'clk_pll_1/inst'
+Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/axi_clock_converter_0/axi_clock_converter_0/axi_clock_converter_0_clocks.xdc] for cell 'AXI_CLK_CONVERTER/inst'
+WARNING: [Vivado_Tcl 4-2057] Waiver ID 'LUTAR-1' object list specifies likely unusable hierarchical instance 'AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi'. [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/axi_clock_converter_0/axi_clock_converter_0/axi_clock_converter_0_clocks.xdc:30]
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/axi_clock_converter_0/axi_clock_converter_0/axi_clock_converter_0_clocks.xdc] for cell 'AXI_CLK_CONVERTER/inst'
 INFO: [Project 1-1714] 143 XPM XDC files have been applied to the design.
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-INFO: [Project 1-1687] 22 scoped IP constraints or related sub-commands were skipped due to synthesis logic optimizations usually triggered by constant connectivity or unconnected output pins. To review the skipped constraints and messages, run the command 'set_param netlist.IPMsgFiltering false' before opening the design.
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1956.711 ; gain = 0.000
+INFO: [Project 1-1687] 6 scoped IP constraints or related sub-commands were skipped due to synthesis logic optimizations usually triggered by constant connectivity or unconnected output pins. To review the skipped constraints and messages, run the command 'set_param netlist.IPMsgFiltering false' before opening the design.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 2724.020 ; gain = 0.000 ; free physical = 75775 ; free virtual = 89873
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 499 instances were transformed.
-  IOBUF => IOBUF (IBUF, OBUFT): 30 instances
+  A total of 500 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 32 instances
   IOBUFDS_DIFF_OUT_INTERMDISABLE => IOBUFDS_DIFF_OUT_INTERMDISABLE (IBUFDS_INTERMDISABLE_INT(x2), INV, OBUFTDS(x2)): 2 instances
   LUT6_2 => LUT6_2 (LUT5, LUT6): 24 instances
   OBUFDS => OBUFDS_DUAL_BUF (INV, OBUFDS(x2)): 1 instance 
   RAM128X1D => RAM128X1D (MUXF7(x2), RAMD64E(x4)): 8 instances
-  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 362 instances
-  RAM32X1D => RAM32X1D (RAMD32(x2)): 72 instances
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 363 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 70 instances
 
-系统找不到指定的路径。
-20 Infos, 12 Warnings, 1 Critical Warnings and 0 Errors encountered.
+21 Infos, 2 Warnings, 1 Critical Warnings and 0 Errors encountered.
 link_design completed successfully
-link_design: Time (s): cpu = 00:00:22 ; elapsed = 00:00:26 . Memory (MB): peak = 1956.711 ; gain = 1436.430
+link_design: Time (s): cpu = 00:00:11 ; elapsed = 00:00:09 . Memory (MB): peak = 2724.055 ; gain = 1102.930 ; free physical = 75775 ; free virtual = 89873
 Command: opt_design
 Attempting to get a license for feature 'Implementation' and/or device 'xc7a200t'
 INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7a200t'
 Running DRC as a precondition to command opt_design
 
 Starting DRC Task
-INFO: [DRC 23-27] Running DRC with 2 threads
-ERROR: [DRC MDRV-1] Multiple Driver Nets: Net LCD_CTRL/fsm_state[0] has multiple drivers: LCD_CTRL/fsm_state_reg[0]/Q, and LCD_CTRL/fsm_state_reg[0]__0/Q.
-ERROR: [DRC MDRV-1] Multiple Driver Nets: Net LCD_CTRL/fsm_state[1] has multiple drivers: LCD_CTRL/fsm_state_reg[1]/Q, and LCD_CTRL/fsm_state_reg[1]__0/Q.
-INFO: [Project 1-461] DRC finished with 2 Errors
+INFO: [DRC 23-27] Running DRC with 8 threads
+ERROR: [DRC MDRV-1] Multiple Driver Nets: Net PS2_CTRL/tx_done_flag has multiple drivers: PS2_CTRL/tx_done_flag_reg/Q, and PS2_CTRL/tx_done_flag_reg__0/Q.
+INFO: [Project 1-461] DRC finished with 1 Errors
 INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
 ERROR: [Vivado_Tcl 4-78] Error(s) found during DRC. Opt_design not run.
 
-Time (s): cpu = 00:00:02 ; elapsed = 00:00:01 . Memory (MB): peak = 1956.711 ; gain = 0.000
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.34 . Memory (MB): peak = 2724.055 ; gain = 0.000 ; free physical = 75748 ; free virtual = 89845
 INFO: [Common 17-83] Releasing license: Implementation
-25 Infos, 12 Warnings, 1 Critical Warnings and 3 Errors encountered.
+26 Infos, 2 Warnings, 1 Critical Warnings and 2 Errors encountered.
 opt_design failed
 ERROR: [Common 17-39] 'opt_design' failed due to earlier errors.
 
-INFO: [Common 17-206] Exiting Vivado at Mon May  4 22:00:26 2026...
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 22 14:26:13 2026...

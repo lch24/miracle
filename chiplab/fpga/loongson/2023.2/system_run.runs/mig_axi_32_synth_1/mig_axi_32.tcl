@@ -4,7 +4,7 @@
 
 set TIME_start [clock seconds] 
 namespace eval ::optrace {
-  variable script "D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.runs/mig_axi_32_synth_1/mig_axi_32.tcl"
+  variable script "/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/mig_axi_32_synth_1/mig_axi_32.tcl"
   variable category "vivado_synth"
 }
 
@@ -55,21 +55,8 @@ if {$::dispatch::connected} {
   }
 }
 
-proc create_report { reportName command } {
-  set status "."
-  append status $reportName ".fail"
-  if { [file exists $status] } {
-    eval file delete [glob $status]
-  }
-  send_msg_id runtcl-4 info "Executing : $command"
-  set retval [eval catch { $command } msg]
-  if { $retval != 0 } {
-    set fp [open $status w]
-    close $fp
-    send_msg_id runtcl-5 warning "$msg"
-  }
-}
 OPTRACE "mig_axi_32_synth_1" START { ROLLUP_AUTO }
+set_param general.usePosixSpawnForFork 1
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -79,18 +66,18 @@ set_param project.singleFileAddWarning.threshold 0
 set_param project.compositeFile.enableAutoGeneration 0
 set_param synth.vivado.isSynthRun true
 set_msg_config -source 4 -id {IP_Flow 19-2162} -severity warning -new_severity info
-set_property webtalk.parent_dir D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.cache/wt [current_project]
-set_property parent.project_path D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.xpr [current_project]
+set_property webtalk.parent_dir /home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.cache/wt [current_project]
+set_property parent.project_path /home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.xpr [current_project]
 set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language Verilog [current_project]
-set_property ip_output_repo d:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.cache/ip [current_project]
+set_property ip_output_repo /home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet D:/ayxtk/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32.xci
-set_property used_in_implementation false [get_files -all d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32/user_design/constraints/mig_axi_32.xdc]
-set_property used_in_implementation false [get_files -all d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32/user_design/constraints/mig_axi_32_ooc.xdc]
+read_ip -quiet /home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32.xci
+set_property used_in_implementation false [get_files -all /home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32/user_design/constraints/mig_axi_32_ooc.xdc]
+set_property used_in_implementation false [get_files -all /home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32/user_design/constraints/mig_axi_32.xdc]
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being
@@ -119,49 +106,49 @@ set_param constraints.enableBinaryConstraints false
 write_checkpoint -force -noxdef mig_axi_32.dcp
 OPTRACE "write_checkpoint" END { }
 OPTRACE "synth reports" START { REPORT }
-create_report "mig_axi_32_synth_1_synth_report_utilization_0" "report_utilization -file mig_axi_32_utilization_synth.rpt -pb mig_axi_32_utilization_synth.pb"
+generate_parallel_reports -reports { "report_utilization -file mig_axi_32_utilization_synth.rpt -pb mig_axi_32_utilization_synth.pb"  } 
 OPTRACE "synth reports" END { }
 
 if { [catch {
-  file copy -force D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.runs/mig_axi_32_synth_1/mig_axi_32.dcp d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32.dcp
+  file copy -force /home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/mig_axi_32_synth_1/mig_axi_32.dcp /home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32.dcp
 } _RESULT ] } { 
   send_msg_id runtcl-3 status "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
   error "ERROR: Unable to successfully create or copy the sub-design checkpoint file."
 }
 
 if { [catch {
-  write_verilog -force -mode synth_stub d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32_stub.v
+  write_verilog -force -mode synth_stub /home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32_stub.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a Verilog synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode synth_stub d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32_stub.vhdl
+  write_vhdl -force -mode synth_stub /home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32_stub.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create a VHDL synthesis stub for the sub-design. This may lead to errors in top level synthesis of the design. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_verilog -force -mode funcsim d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32_sim_netlist.v
+  write_verilog -force -mode funcsim /home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32_sim_netlist.v
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the Verilog functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
 if { [catch {
-  write_vhdl -force -mode funcsim d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32_sim_netlist.vhdl
+  write_vhdl -force -mode funcsim /home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32_sim_netlist.vhdl
 } _RESULT ] } { 
   puts "CRITICAL WARNING: Unable to successfully create the VHDL functional simulation sub-design file. Post-Synthesis Functional Simulation with this file may not be possible or may give incorrect results. Error reported: $_RESULT"
 }
 
-if {[file isdir D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.ip_user_files/ip/mig_axi_32]} {
+if {[file isdir /home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.ip_user_files/ip/mig_axi_32]} {
   catch { 
-    file copy -force d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32_stub.v D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.ip_user_files/ip/mig_axi_32
+    file copy -force /home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32_stub.v /home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.ip_user_files/ip/mig_axi_32
   }
 }
 
-if {[file isdir D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.ip_user_files/ip/mig_axi_32]} {
+if {[file isdir /home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.ip_user_files/ip/mig_axi_32]} {
   catch { 
-    file copy -force d:/ayxtk/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32_stub.vhdl D:/ayxtk/chiplab/fpga/loongson/2023.2/system_run.ip_user_files/ip/mig_axi_32
+    file copy -force /home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32_stub.vhdl /home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.ip_user_files/ip/mig_axi_32
   }
 }
 file delete __synthesis_is_running__

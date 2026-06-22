@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="data_bank_sram_synth_1" LaunchPart="xc7a200tfbg676-2" LaunchTime="1777519681">
-  <File Type="PA-TCL" Name="data_bank_sram.tcl"/>
-  <File Type="REPORTS-TCL" Name="data_bank_sram_reports.tcl"/>
+<GenRun Id="data_bank_sram_synth_1" LaunchPart="xc7a200tfbg676-2" LaunchTime="1778673394">
+  <File Type="RDS-DCP" Name="data_bank_sram.dcp"/>
   <File Type="RDS-RDS" Name="data_bank_sram.vds"/>
   <File Type="RDS-UTIL" Name="data_bank_sram_utilization_synth.rpt"/>
   <File Type="RDS-UTIL-PB" Name="data_bank_sram_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="data_bank_sram.dcp"/>
+  <File Type="PA-TCL" Name="data_bank_sram.tcl"/>
+  <File Type="REPORTS-TCL" Name="data_bank_sram_reports.tcl"/>
   <FileSet Name="sources" Type="BlockSrcs" RelSrcDir="$PSRCDIR/data_bank_sram" RelGenDir="$PGENDIR/data_bank_sram">
     <File Path="$PPRDIR/../../../IP/myCPU/IP/data_bank_sram/data_bank_sram.xci">
       <FileInfo>
@@ -53,7 +53,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2023"/>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2025"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

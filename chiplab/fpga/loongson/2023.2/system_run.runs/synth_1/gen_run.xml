@@ -1,16 +1,54 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7a200tfbg676-2" LaunchTime="1777902879">
-  <File Type="PA-TCL" Name="soc_top.tcl"/>
-  <File Type="RDS-PROPCONSTRS" Name="soc_top_drc_synth.rpt"/>
-  <File Type="REPORTS-TCL" Name="soc_top_reports.tcl"/>
-  <File Type="RDS-RDS" Name="soc_top.vds"/>
-  <File Type="RDS-UTIL" Name="soc_top_utilization_synth.rpt"/>
-  <File Type="RDS-UTIL-PB" Name="soc_top_utilization_synth.pb"/>
-  <File Type="RDS-DCP" Name="soc_top.dcp"/>
-  <File Type="VDS-TIMINGSUMMARY" Name="soc_top_timing_summary_synth.rpt"/>
+<GenRun Id="synth_1" LaunchPart="xc7a200tfbg676-2" LaunchTime="1782109486">
   <File Type="VDS-TIMING-PB" Name="soc_top_timing_summary_synth.pb"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="soc_top_timing_summary_synth.rpt"/>
+  <File Type="RDS-DCP" Name="soc_top.dcp"/>
+  <File Type="RDS-UTIL-PB" Name="soc_top_utilization_synth.pb"/>
+  <File Type="RDS-UTIL" Name="soc_top_utilization_synth.rpt"/>
+  <File Type="RDS-PROPCONSTRS" Name="soc_top_drc_synth.rpt"/>
+  <File Type="RDS-RDS" Name="soc_top.vds"/>
+  <File Type="REPORTS-TCL" Name="soc_top_reports.tcl"/>
+  <File Type="PA-TCL" Name="soc_top.tcl"/>
   <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
     <Filter Type="Srcs"/>
+    <File Path="$PPRDIR/../../../IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_a.prj">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="ScopedToCell" Val="mig_axi_32"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../IP/xilinx_ip/2023.2/sram_32x52bit/sram_32x52bit.xci">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../IP/xilinx_ip/2023.2/sram_128x22/sram_128x22.xci">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../IP/xilinx_ip/2023.2/sram_128x32/sram_128x32.xci">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PPRDIR/../../../IP/xilinx_ip/2023.2/sram_128x64/sram_128x64.xci">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../../../IP/myCPU/csr.h">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -344,6 +382,13 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
+    <File Path="$PPRDIR/../../../IP/PS2/ps2_ctrl.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
     <File Path="$PPRDIR/../../../IP/APB_DEV/URT/raminfr.v">
       <FileInfo>
         <Attr Name="ImportPath" Val="$PPRDIR/../../../IP/APB_DEV/URT/raminfr.v"/>
@@ -525,44 +570,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PPRDIR/../../../IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_a.prj">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="ScopedToCell" Val="mig_axi_32"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../../../IP/xilinx_ip/2023.2/sram_32x52bit/sram_32x52bit.xci">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../../../IP/xilinx_ip/2023.2/sram_128x22/sram_128x22.xci">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../../../IP/xilinx_ip/2023.2/sram_128x32/sram_128x32.xci">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
-    <File Path="$PPRDIR/../../../IP/xilinx_ip/2023.2/sram_128x64/sram_128x64.xci">
-      <FileInfo>
-        <Attr Name="AutoDisabled" Val="1"/>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="implementation"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <Config>
       <Option Name="DesignMode" Val="RTL"/>
       <Option Name="TopModule" Val="soc_top"/>
@@ -593,13 +600,13 @@
     <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2019"/>
     <Step Id="synth_design"/>
   </Strategy>
-  <BlockFileSet Type="BlockSrcs" Name="data_bank_sram"/>
-  <BlockFileSet Type="BlockSrcs" Name="tagv_sram"/>
-  <BlockFileSet Type="BlockSrcs" Name="dpram_512x32"/>
-  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="axi_interconnect_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="clk_pll_33"/>
   <BlockFileSet Type="BlockSrcs" Name="axi_clock_converter_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="tagv_sram"/>
+  <BlockFileSet Type="BlockSrcs" Name="clk_pll_33"/>
   <BlockFileSet Type="BlockSrcs" Name="mig_axi_32"/>
+  <BlockFileSet Type="BlockSrcs" Name="clk_wiz_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="dpram_512x32"/>
+  <BlockFileSet Type="BlockSrcs" Name="data_bank_sram"/>
   <BlockFileSet Type="BlockSrcs" Name="axi_2x1_mux"/>
+  <BlockFileSet Type="BlockSrcs" Name="axi_interconnect_0"/>
 </GenRun>

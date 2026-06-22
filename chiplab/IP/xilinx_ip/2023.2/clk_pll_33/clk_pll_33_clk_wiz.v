@@ -74,6 +74,7 @@ module clk_pll_33_clk_wiz
   // Input buffering
   //------------------------------------
 wire clk_in1_clk_pll_33;
+wire clk_in1_clk_pll_33_buf;
 wire clk_in2_clk_pll_33;
   BUFG clkin1_bufg
    (.O (clk_in1_clk_pll_33),
