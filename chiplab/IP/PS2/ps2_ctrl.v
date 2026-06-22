@@ -374,6 +374,9 @@ always @(posedge aclk) begin
                     tx_timeout_cnt <= tx_timeout_cnt + 20'd1;
             end
         endcase
+        // Override: clear tx_done_flag on STAT read
+        if (r_retire && reg_sel == REG_STAT)
+            tx_done_flag <= 1'b0;
     end
 end
 
@@ -434,10 +437,6 @@ always @(posedge aclk) begin
             end
         endcase
     end
-    // Clear tx_done_flag on STAT read
-    else if (r_retire && reg_sel == REG_STAT) begin
-        tx_done_flag <= 1'b0;
-    end
 end
 
 //----------------------------------------------------------------------------
@@ -446,7 +445,7 @@ end
 wire [7:0] fifo_dout = rx_fifo[rx_tail];
 
 wire [31:0] rdata_d = (reg_sel == REG_DATA) ? {24'd0, fifo_dout} :
-                      (reg_sel == REG_STAT) ? {16'd0, 3'd0, rx_count, 3'd0, stat_rx_frame, stat_rx_parity, stat_tx_nack, stat_rx_overflow, tx_busy, rx_ready} :
+                      (reg_sel == REG_STAT) ? {16'd0, 3'd0, rx_count, 2'd0, stat_rx_frame, stat_rx_parity, stat_tx_nack, stat_rx_overflow, tx_busy, rx_ready} :
                       (reg_sel == REG_CTRL) ? {24'd0, ctrl_rx_en, 1'b0, 1'b0, 1'b0, 1'b0, ctrl_tx_int_en, ctrl_rx_int_en} :
                       (reg_sel == REG_TEST) ? {30'd0, ps2_data_sync, ps2_clk_sync} :
                       32'd0;
