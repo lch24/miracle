@@ -693,7 +693,7 @@ wire mac_int;
 wire ps2_int;
 wire [6:0] int_out;
 wire [6:0] int_n_i;
-assign int_out = {ps2_int,dma_int,nand_int,spi_inta_o,uart0_int,mac_int};
+assign int_out = {ps2_int, 1'b0, dma_int,nand_int,spi_inta_o,uart0_int,mac_int};
 assign int_n_i = ~int_out;
 
 reg cpu_aresetn_1;
