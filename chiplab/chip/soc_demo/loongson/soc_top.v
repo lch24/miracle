@@ -124,7 +124,11 @@ module soc_top(
     input         lcd_t_pen,     // Touch screen interrupt
     inout         lcd_t_mosi,    // Touch screen SPI data
     output        lcd_t_clk,     // Touch screen SPI clock
-    output        lcd_t_cs_rst   // Touch screen chip select/reset
+    output        lcd_t_cs_rst,   // Touch screen chip select/reset
+
+    //------ps2-------
+    inout         PS2_CLK,
+    inout         PS2_DATA
 );
 wire        aclk;
 wire        aresetn;
@@ -352,6 +356,43 @@ wire [`Lrresp      -1 :0] lcd_s_rresp;
 wire                      lcd_s_rlast;
 wire                      lcd_s_rvalid;
 wire                      lcd_s_rready;
+
+wire [`LID-1:0]        ps2_s_awid;
+wire [`Lawaddr-1:0]    ps2_s_awaddr;
+wire [`Lawlen-1:0]     ps2_s_awlen;
+wire [`Lawsize-1:0]    ps2_s_awsize;
+wire [`Lawburst-1:0]   ps2_s_awburst;
+wire [`Lawlock-1:0]    ps2_s_awlock;
+wire [`Lawcache-1:0]   ps2_s_awcache;
+wire [`Lawprot-1:0]    ps2_s_awprot;
+wire                   ps2_s_awvalid;
+wire                   ps2_s_awready;
+wire [`Lwid-1:0]       ps2_s_wid;
+wire [`Lwdata-1:0]     ps2_s_wdata;
+wire [`Lwstrb-1:0]     ps2_s_wstrb;
+wire                   ps2_s_wlast;
+wire                   ps2_s_wvalid;
+wire                   ps2_s_wready;
+wire [`Lbid-1:0]       ps2_s_bid;
+wire [`Lbresp-1:0]     ps2_s_bresp;
+wire                   ps2_s_bvalid;
+wire                   ps2_s_bready;
+wire [`Larid-1:0]      ps2_s_arid;
+wire [`Laraddr-1:0]    ps2_s_araddr;
+wire [`Larlen-1:0]     ps2_s_arlen;
+wire [`Larsize-1:0]    ps2_s_arsize;
+wire [`Larburst-1:0]   ps2_s_arburst;
+wire [`Larlock-1:0]    ps2_s_arlock;
+wire [`Larcache-1:0]   ps2_s_arcache;
+wire [`Larprot-1:0]    ps2_s_arprot;
+wire                   ps2_s_arvalid;
+wire                   ps2_s_arready;
+wire [`Lrid-1:0]       ps2_s_rid;
+wire [`Lrdata-1:0]     ps2_s_rdata;
+wire [`Lrresp-1:0]     ps2_s_rresp;
+wire                   ps2_s_rlast;
+wire                   ps2_s_rvalid;
+wire                   ps2_s_rready;
 
 wire [`LID         -1 :0] mac_m_awid;
 wire [`Lawaddr     -1 :0] mac_m_awaddr;
@@ -584,6 +625,13 @@ wire md_oe_0;     // MII data output enable (to I/O cell)
 IOBUF mac_mdio(.IO(mdio_0),.I(md_o_0),.T(~md_oe_0),.O(md_i_0));
 assign phy_rstn = aresetn;
 
+//ps2
+wire ps2_clk_i, ps2_clk_o, ps2_clk_oe;
+wire ps2_data_i, ps2_data_o, ps2_data_oe;
+
+IOBUF ps2_clk_iobuf(.IO(PS2_CLK), .I(ps2_clk_o), .T(~ps2_clk_oe), .O(ps2_clk_i));
+IOBUF ps2_data_iobuf(.IO(PS2_DATA), .I(ps2_data_o), .T(~ps2_data_oe), .O(ps2_data_i));
+
 //nand
 wire       nand_cle   ;
 wire       nand_ale   ;
@@ -642,9 +690,10 @@ assign     uart0_ri_i  = UART_RI ;
 
 //interrupt
 wire mac_int;
-wire [5:0] int_out;
-wire [5:0] int_n_i;
-assign int_out = {1'b0,dma_int,nand_int,spi_inta_o,uart0_int,mac_int};
+wire ps2_int;
+wire [6:0] int_out;
+wire [6:0] int_n_i;
+assign int_out = {ps2_int,dma_int,nand_int,spi_inta_o,uart0_int,mac_int};
 assign int_n_i = ~int_out;
 
 reg cpu_aresetn_1;
@@ -772,7 +821,7 @@ debug_sram u_debug_sram(
 // cpu
 core_top cpu_mid(
   .aclk             (cpu_clk),                    // input,  50MHz CPU时钟, 来自clk_pll_33
-  .intrpt           ({3'b0, int_out[4:0]}),       // input,  8位中断输入[4:0]有效, 来自中断汇聚(DMA/NAND/SPI/UART/MAC)
+  .intrpt           ({2'b0, int_out[6:0]}),       // input,  8位中断输入[6:0]有效, 来自中断汇聚(PS2/DMA/NAND/SPI/UART/MAC)
   //.nmi              (1'b1),
 
   .aresetn          (cpu_aresetn  ),              // input,  CPU复位(低有效,两级同步后), 来自resetn同步
@@ -1330,6 +1379,43 @@ axi_slave_mux AXI_SLAVE_MUX
 .s5_rlast          (lcd_s_rlast        ),
 .s5_rvalid         (lcd_s_rvalid       ),
 .s5_rready         (lcd_s_rready       ),
+
+.s6_awid           (ps2_s_awid),
+.s6_awaddr         (ps2_s_awaddr),
+.s6_awlen          (ps2_s_awlen),
+.s6_awsize         (ps2_s_awsize),
+.s6_awburst        (ps2_s_awburst),
+.s6_awlock         (ps2_s_awlock),
+.s6_awcache        (ps2_s_awcache),
+.s6_awprot         (ps2_s_awprot),
+.s6_awvalid        (ps2_s_awvalid),
+.s6_awready        (ps2_s_awready),
+.s6_wid            (ps2_s_wid),
+.s6_wdata          (ps2_s_wdata),
+.s6_wstrb          (ps2_s_wstrb),
+.s6_wlast          (ps2_s_wlast),
+.s6_wvalid         (ps2_s_wvalid),
+.s6_wready         (ps2_s_wready),
+.s6_bid            (ps2_s_bid),
+.s6_bresp          (ps2_s_bresp),
+.s6_bvalid         (ps2_s_bvalid),
+.s6_bready         (ps2_s_bready),
+.s6_arid           (ps2_s_arid),
+.s6_araddr         (ps2_s_araddr),
+.s6_arlen          (ps2_s_arlen),
+.s6_arsize         (ps2_s_arsize),
+.s6_arburst        (ps2_s_arburst),
+.s6_arlock         (ps2_s_arlock),
+.s6_arcache        (ps2_s_arcache),
+.s6_arprot         (ps2_s_arprot),
+.s6_arvalid        (ps2_s_arvalid),
+.s6_arready        (ps2_s_arready),
+.s6_rid            (ps2_s_rid),
+.s6_rdata          (ps2_s_rdata),
+.s6_rresp          (ps2_s_rresp),
+.s6_rlast          (ps2_s_rlast),
+.s6_rvalid         (ps2_s_rvalid),
+.s6_rready         (ps2_s_rready),
 
 .axi_s_aclk        (aclk                )
 );
@@ -2128,6 +2214,55 @@ lcd_ctrl LCD_CTRL(
 .lcd_t_mosi     (lcd_t_mosi        ),       // inout,  触摸SPI数据, 连接外部引脚lcd_t_mosi
 .lcd_t_clk      (lcd_t_clk         ),       // output, 触摸SPI时钟, 连接外部引脚lcd_t_clk
 .lcd_t_cs_rst   (lcd_t_cs_rst      )        // output, 触摸片选/复位, 连接外部引脚lcd_t_cs_rst
+);
+
+//PS2
+ps2_ctrl PS2_CTRL(
+    .aclk           (aclk),
+    .aresetn        (aresetn),
+    .s_awid         (ps2_s_awid),
+    .s_awaddr       (ps2_s_awaddr),
+    .s_awlen        (ps2_s_awlen),
+    .s_awsize       (ps2_s_awsize),
+    .s_awburst      (ps2_s_awburst),
+    .s_awlock       (ps2_s_awlock),
+    .s_awcache      (ps2_s_awcache),
+    .s_awprot       (ps2_s_awprot),
+    .s_awvalid      (ps2_s_awvalid),
+    .s_awready      (ps2_s_awready),
+    .s_wid          (ps2_s_wid),
+    .s_wdata        (ps2_s_wdata),
+    .s_wstrb        (ps2_s_wstrb),
+    .s_wlast        (ps2_s_wlast),
+    .s_wvalid       (ps2_s_wvalid),
+    .s_wready       (ps2_s_wready),
+    .s_bid          (ps2_s_bid),
+    .s_bresp        (ps2_s_bresp),
+    .s_bvalid       (ps2_s_bvalid),
+    .s_bready       (ps2_s_bready),
+    .s_arid         (ps2_s_arid),
+    .s_araddr       (ps2_s_araddr),
+    .s_arlen        (ps2_s_arlen),
+    .s_arsize       (ps2_s_arsize),
+    .s_arburst      (ps2_s_arburst),
+    .s_arlock       (ps2_s_arlock),
+    .s_arcache      (ps2_s_arcache),
+    .s_arprot       (ps2_s_arprot),
+    .s_arvalid      (ps2_s_arvalid),
+    .s_arready      (ps2_s_arready),
+    .s_rid          (ps2_s_rid),
+    .s_rdata        (ps2_s_rdata),
+    .s_rresp        (ps2_s_rresp),
+    .s_rlast        (ps2_s_rlast),
+    .s_rvalid       (ps2_s_rvalid),
+    .s_rready       (ps2_s_rready),
+    .ps2_clk_i      (ps2_clk_i),
+    .ps2_clk_o      (ps2_clk_o),
+    .ps2_clk_oe     (ps2_clk_oe),
+    .ps2_data_i     (ps2_data_i),
+    .ps2_data_o     (ps2_data_o),
+    .ps2_data_oe    (ps2_data_oe),
+    .ps2_int        (ps2_int)
 );
 endmodule
 
