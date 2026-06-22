@@ -191,6 +191,12 @@ set_property IOSTANDARD LVCMOS33 [get_ports EJTAG_TMS]
 set_property IOSTANDARD LVCMOS33 [get_ports EJTAG_TDO]
 set_property CLOCK_DEDICATED_ROUTE FALSE [get_nets EJTAG_TCK_IBUF]
 
+#PS2
+set_property PACKAGE_PIN Y2  [get_ports PS2_CLK]
+set_property PACKAGE_PIN AD1 [get_ports PS2_DATA]
+set_property IOSTANDARD LVCMOS33 [get_ports PS2_CLK]
+set_property IOSTANDARD LVCMOS33 [get_ports PS2_DATA]
+
 #LCD
 set_property PACKAGE_PIN J25 [get_ports lcd_rst]
 set_property PACKAGE_PIN H18 [get_ports lcd_cs]
