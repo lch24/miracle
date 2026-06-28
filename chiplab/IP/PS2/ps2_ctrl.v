@@ -398,9 +398,11 @@ reg [7:0] tx_data_buf;
 //----------------------------------------------------------------------------
 // PS/2 pin driving
 //----------------------------------------------------------------------------
-// TX_BITS/TX_PARITY: drive DATA based on current bit
+// TX_BITS/TX_PARITY: drive DATA based on current bit.
+// PS/2 uses odd parity, so the parity bit is the inverse of the
+// accumulated XOR of the 8 data bits.
 wire tx_data_bit = (tx_state == TX_BITS) ? tx_byte[tx_bit_cnt] :
-                   (tx_state == TX_PARITY) ? tx_parity_acc : 1'b1;
+                   (tx_state == TX_PARITY) ? ~tx_parity_acc : 1'b1;
 
 assign ps2_clk_o  = 1'b0;  // Only drive low (inhibit)
 assign ps2_data_o = (tx_state == TX_INHIBIT) ? 1'b1 :
