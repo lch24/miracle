@@ -350,6 +350,13 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PPRDIR/../../../IP/LCD/lcd_dma.v">
+        <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PPRDIR/../../../IP/MAC/mac.v">
         <FileInfo>
           <Attr Name="ImportPath" Val="$PPRDIR/../../../IP/MAC/mac.v"/>

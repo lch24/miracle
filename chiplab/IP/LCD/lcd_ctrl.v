@@ -61,7 +61,12 @@ module lcd_ctrl(
     input         lcd_t_pen,
     inout         lcd_t_mosi,
     output        lcd_t_clk,
-    output        lcd_t_cs_rst
+    output        lcd_t_cs_rst,
+
+    // Optional DMA pixel stream input (RGB565)
+    input  [15:0] dma_pixel_data,
+    input         dma_pixel_valid,
+    output        dma_pixel_ready
 );
 
 // LCD control signals hardwired (same as reference design)
@@ -150,9 +155,14 @@ always @(posedge aclk)
     else if (w_enter & s_wlast)
         s_wready <= 1'b0;
 
-wire fifo_push  = w_enter & write_targets_fifo;
+wire cpu_fifo_push = w_enter & write_targets_fifo;
+wire dma_fifo_push = dma_pixel_valid & dma_pixel_ready;
+wire fifo_push  = cpu_fifo_push | dma_fifo_push;
 wire fifo_pop;
-wire fifo_push_rs = (buf_addr[3:2] == `DATA_REG_ADDR);
+wire fifo_push_rs = cpu_fifo_push ? (buf_addr[3:2] == `DATA_REG_ADDR) : 1'b1;
+wire [15:0] fifo_push_data = cpu_fifo_push ? s_wdata[15:0] : dma_pixel_data;
+
+assign dma_pixel_ready = !fifo_full & !cpu_fifo_push;
 
 always @(posedge aclk) begin
     if (~aresetn) begin
@@ -163,7 +173,7 @@ always @(posedge aclk) begin
     else begin
         if (fifo_push) begin
             fifo_rs[fifo_wptr]   <= fifo_push_rs;
-            fifo_data[fifo_wptr] <= s_wdata[15:0];
+            fifo_data[fifo_wptr] <= fifo_push_data;
             fifo_wptr <= fifo_wptr + 1'b1;
         end
 

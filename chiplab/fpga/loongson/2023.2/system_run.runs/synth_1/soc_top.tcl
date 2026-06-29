@@ -109,6 +109,7 @@ read_verilog -library xil_defaultlib {
   /home/lch/work/miracle/chiplab/IP/myCPU/id_stage.v
   /home/lch/work/miracle/chiplab/IP/myCPU/if_stage.v
   /home/lch/work/miracle/chiplab/IP/LCD/lcd_ctrl.v
+  /home/lch/work/miracle/chiplab/IP/LCD/lcd_dma.v
   /home/lch/work/miracle/chiplab/IP/MAC/mac.v
   /home/lch/work/miracle/chiplab/IP/MAC/mac2axi.v
   /home/lch/work/miracle/chiplab/IP/MAC/mac_axi.v
