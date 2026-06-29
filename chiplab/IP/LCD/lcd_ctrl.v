@@ -73,6 +73,14 @@ assign lcd_t_clk    = 1'b0;
 assign lcd_t_cs_rst = 1'b1;
 
 //----------------------------------------------------------------------------
+// Register definitions
+//----------------------------------------------------------------------------
+`define CMD_REG_ADDR   4'h0   // 0x00: write command (RS=0)
+`define DATA_REG_ADDR  4'h1   // 0x04: write data (RS=1)
+`define STAT_REG_ADDR  4'h2   // 0x08: status register
+`define CTRL_REG_ADDR  4'h3   // 0x0C: control register
+
+//----------------------------------------------------------------------------
 // AXI protocol handling (pattern from CONFREG)
 //----------------------------------------------------------------------------
 reg busy, write, R_or_W;
@@ -112,10 +120,63 @@ always @(posedge aclk)
     else if (aw_enter) write <= 1'b1;
     else if (ar_enter) write <= 1'b0;
 
+//----------------------------------------------------------------------------
+// Command/data FIFO
+//----------------------------------------------------------------------------
+localparam FIFO_DEPTH = 16;
+localparam FIFO_AW    = 4;
+
+reg        fifo_rs [0:FIFO_DEPTH-1];
+reg [15:0] fifo_data [0:FIFO_DEPTH-1];
+reg [FIFO_AW-1:0] fifo_rptr;
+reg [FIFO_AW-1:0] fifo_wptr;
+reg [FIFO_AW:0]   fifo_count;
+
+wire fifo_empty = (fifo_count == 0);
+wire fifo_full  = (fifo_count == FIFO_DEPTH);
+
+wire aw_targets_fifo = (s_awaddr[3:2] == `CMD_REG_ADDR) |
+                       (s_awaddr[3:2] == `DATA_REG_ADDR);
+wire write_targets_fifo = write & ((buf_addr[3:2] == `CMD_REG_ADDR) |
+                                   (buf_addr[3:2] == `DATA_REG_ADDR));
+
 always @(posedge aclk)
-    if (~aresetn) s_wready <= 1'b0;
-    else if (aw_enter) s_wready <= 1'b1;
-    else if (w_enter & s_wlast) s_wready <= 1'b0;
+    if (~aresetn)
+        s_wready <= 1'b0;
+    else if (aw_enter)
+        s_wready <= !(aw_targets_fifo & fifo_full);
+    else if (write & !s_wready & write_targets_fifo & !fifo_full)
+        s_wready <= 1'b1;
+    else if (w_enter & s_wlast)
+        s_wready <= 1'b0;
+
+wire fifo_push  = w_enter & write_targets_fifo;
+wire fifo_pop;
+wire fifo_push_rs = (buf_addr[3:2] == `DATA_REG_ADDR);
+
+always @(posedge aclk) begin
+    if (~aresetn) begin
+        fifo_rptr  <= {FIFO_AW{1'b0}};
+        fifo_wptr  <= {FIFO_AW{1'b0}};
+        fifo_count <= {(FIFO_AW+1){1'b0}};
+    end
+    else begin
+        if (fifo_push) begin
+            fifo_rs[fifo_wptr]   <= fifo_push_rs;
+            fifo_data[fifo_wptr] <= s_wdata[15:0];
+            fifo_wptr <= fifo_wptr + 1'b1;
+        end
+
+        if (fifo_pop)
+            fifo_rptr <= fifo_rptr + 1'b1;
+
+        case ({fifo_push, fifo_pop})
+            2'b10: fifo_count <= fifo_count + 1'b1;
+            2'b01: fifo_count <= fifo_count - 1'b1;
+            default: fifo_count <= fifo_count;
+        endcase
+    end
+end
 
 //----------------------------------------------------------------------------
 // 8080 write timing FSM
@@ -142,14 +203,9 @@ always @(posedge aclk) begin
         case (fsm_state)
             FSM_IDLE: begin
                 lcd_wr <= 1'b1;
-                if (write_cmd && !fsm_busy) begin
-                    fsm_rs    <= 1'b0;       // RS=0: command
-                    fsm_data  <= s_wdata[15:0];
-                    fsm_state <= FSM_SETUP;
-                end
-                else if (write_data && !fsm_busy) begin
-                    fsm_rs    <= 1'b1;       // RS=1: data
-                    fsm_data  <= s_wdata[15:0];
+                if (!fifo_empty) begin
+                    fsm_rs    <= fifo_rs[fifo_rptr];
+                    fsm_data  <= fifo_data[fifo_rptr];
                     fsm_state <= FSM_SETUP;
                 end
             end
@@ -172,14 +228,7 @@ always @(posedge aclk) begin
 end
 
 wire fsm_busy = (fsm_state != FSM_IDLE);
-
-//----------------------------------------------------------------------------
-// Register definitions
-//----------------------------------------------------------------------------
-`define CMD_REG_ADDR   4'h0   // 0x00: write command (RS=0)
-`define DATA_REG_ADDR  4'h1   // 0x04: write data (RS=1)
-`define STAT_REG_ADDR  4'h2   // 0x08: status register
-`define CTRL_REG_ADDR  4'h3   // 0x0C: control register
+assign fifo_pop = (fsm_state == FSM_IDLE) & !fifo_empty;
 
 // CTRL_REG bits
 reg  ctrl_rst;     // bit0: 0=reset LCD, 1=normal
@@ -206,8 +255,6 @@ always @(posedge aclk)
         fsm_wr_cnt <= fsm_wr_cnt + 16'd1;
 
 // Write registers on w_enter
-wire write_cmd  = w_enter & (buf_addr[3:2] == `CMD_REG_ADDR);
-wire write_data = w_enter & (buf_addr[3:2] == `DATA_REG_ADDR);
 wire write_ctrl = w_enter & (buf_addr[3:2] == `CTRL_REG_ADDR);
 
 always @(posedge aclk) begin
@@ -239,7 +286,7 @@ end
 //----------------------------------------------------------------------------
 // Read path
 //----------------------------------------------------------------------------
-wire [31:0] rdata_d = (buf_addr[3:2] == `STAT_REG_ADDR) ? {fsm_wr_cnt, 13'd0, fsm_started, stat_init_done, stat_busy} :
+wire [31:0] rdata_d = (buf_addr[3:2] == `STAT_REG_ADDR) ? {fsm_wr_cnt, 3'd0, fifo_count, 3'd0, fifo_full, fifo_empty, fsm_started, stat_init_done, stat_busy} :
                        (buf_addr[3:2] == `CTRL_REG_ADDR) ? {30'd0, ctrl_bl, ctrl_rst} :
                        32'd0;
 
