@@ -2213,7 +2213,11 @@ lcd_ctrl LCD_CTRL(
 .lcd_t_pen      (lcd_t_pen         ),       // input,  触摸中断, 来自外部引脚lcd_t_pen
 .lcd_t_mosi     (lcd_t_mosi        ),       // inout,  触摸SPI数据, 连接外部引脚lcd_t_mosi
 .lcd_t_clk      (lcd_t_clk         ),       // output, 触摸SPI时钟, 连接外部引脚lcd_t_clk
-.lcd_t_cs_rst   (lcd_t_cs_rst      )        // output, 触摸片选/复位, 连接外部引脚lcd_t_cs_rst
+.lcd_t_cs_rst   (lcd_t_cs_rst      ),       // output, 触摸片选/复位, 连接外部引脚lcd_t_cs_rst
+    // --- LCD DMA像素流入口：当前未接DDR DMA，保持关闭 ---
+.dma_pixel_data (16'd0             ),       // input,  DMA像素数据(RGB565)
+.dma_pixel_valid(1'b0              ),       // input,  DMA像素有效
+.dma_pixel_ready(                  )        // output, DMA像素接收就绪
 );
 
 //PS2
@@ -2265,4 +2269,3 @@ ps2_ctrl PS2_CTRL(
     .ps2_int        (ps2_int)
 );
 endmodule
-
