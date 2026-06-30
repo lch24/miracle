@@ -632,31 +632,39 @@ reg [PTR_WIDTH-1:0] wr_bin;
 reg [PTR_WIDTH-1:0] wr_gray;
 reg [PTR_WIDTH-1:0] rd_bin;
 reg [PTR_WIDTH-1:0] rd_gray;
+reg                 wr_full_reg;
+reg                 rd_empty_reg;
 
 (* ASYNC_REG = "TRUE" *) reg [PTR_WIDTH-1:0] rd_gray_w1;
 (* ASYNC_REG = "TRUE" *) reg [PTR_WIDTH-1:0] rd_gray_w2;
 (* ASYNC_REG = "TRUE" *) reg [PTR_WIDTH-1:0] wr_gray_r1;
 (* ASYNC_REG = "TRUE" *) reg [PTR_WIDTH-1:0] wr_gray_r2;
 
-wire [PTR_WIDTH-1:0] wr_bin_next  = wr_bin + ((wr_en && !wr_full) ? 1'b1 : 1'b0);
+wire                 wr_push      = wr_en && !wr_full_reg;
+wire                 rd_pop       = rd_en && !rd_empty_reg;
+wire [PTR_WIDTH-1:0] wr_bin_next  = wr_bin + (wr_push ? 1'b1 : 1'b0);
 wire [PTR_WIDTH-1:0] wr_gray_next = (wr_bin_next >> 1) ^ wr_bin_next;
-wire [PTR_WIDTH-1:0] rd_bin_next  = rd_bin + ((rd_en && !rd_empty) ? 1'b1 : 1'b0);
+wire [PTR_WIDTH-1:0] rd_bin_next  = rd_bin + (rd_pop ? 1'b1 : 1'b0);
 wire [PTR_WIDTH-1:0] rd_gray_next = (rd_bin_next >> 1) ^ rd_bin_next;
+wire                 wr_full_next = (wr_gray_next == {~rd_gray_w2[PTR_WIDTH-1:PTR_WIDTH-2], rd_gray_w2[PTR_WIDTH-3:0]});
+wire                 rd_empty_next = (rd_gray_next == wr_gray_r2);
 
-assign wr_full  = (wr_gray_next == {~rd_gray_w2[PTR_WIDTH-1:PTR_WIDTH-2], rd_gray_w2[PTR_WIDTH-3:0]});
-assign rd_empty = (rd_gray == wr_gray_r2);
+assign wr_full  = wr_full_reg;
+assign rd_empty = rd_empty_reg;
 assign rd_data  = mem[rd_bin[ADDR_WIDTH-1:0]];
 
 always @(posedge wr_clk) begin
     if (!wr_rstn) begin
-        wr_bin    <= {PTR_WIDTH{1'b0}};
-        wr_gray   <= {PTR_WIDTH{1'b0}};
+        wr_bin      <= {PTR_WIDTH{1'b0}};
+        wr_gray     <= {PTR_WIDTH{1'b0}};
+        wr_full_reg <= 1'b0;
         rd_gray_w1 <= {PTR_WIDTH{1'b0}};
         rd_gray_w2 <= {PTR_WIDTH{1'b0}};
     end else begin
         rd_gray_w1 <= rd_gray;
         rd_gray_w2 <= rd_gray_w1;
-        if (wr_en && !wr_full) begin
+        wr_full_reg <= wr_full_next;
+        if (wr_push) begin
             mem[wr_bin[ADDR_WIDTH-1:0]] <= wr_data;
             wr_bin  <= wr_bin_next;
             wr_gray <= wr_gray_next;
@@ -666,14 +674,16 @@ end
 
 always @(posedge rd_clk) begin
     if (!rd_rstn) begin
-        rd_bin    <= {PTR_WIDTH{1'b0}};
-        rd_gray   <= {PTR_WIDTH{1'b0}};
+        rd_bin       <= {PTR_WIDTH{1'b0}};
+        rd_gray      <= {PTR_WIDTH{1'b0}};
+        rd_empty_reg <= 1'b1;
         wr_gray_r1 <= {PTR_WIDTH{1'b0}};
         wr_gray_r2 <= {PTR_WIDTH{1'b0}};
     end else begin
         wr_gray_r1 <= wr_gray;
         wr_gray_r2 <= wr_gray_r1;
-        if (rd_en && !rd_empty) begin
+        rd_empty_reg <= rd_empty_next;
+        if (rd_pop) begin
             rd_bin  <= rd_bin_next;
             rd_gray <= rd_gray_next;
         end
