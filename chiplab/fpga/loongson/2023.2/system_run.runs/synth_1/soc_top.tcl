@@ -142,14 +142,10 @@ read_verilog -library xil_defaultlib {
   /home/lch/work/miracle/chiplab/IP/APB_DEV/URT/uart_tfifo.v
   /home/lch/work/miracle/chiplab/IP/APB_DEV/URT/uart_top.v
   /home/lch/work/miracle/chiplab/IP/APB_DEV/URT/uart_transmitter.v
+  /home/lch/work/miracle/chiplab/IP/AXI/axi_interconnect_0.v
   /home/lch/work/miracle/chiplab/IP/myCPU/wb_stage.v
   /home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v
 }
-read_ip -quiet /home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/axi_interconnect_0/axi_interconnect_0.xci
-set_property used_in_synthesis false [get_files -all /home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/axi_interconnect_0/axi_interconnect_0_impl_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/axi_interconnect_0/axi_interconnect_0_impl_clocks.xdc]
-set_property used_in_implementation false [get_files -all /home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/axi_interconnect_0/axi_interconnect_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all /home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/axi_interconnect_0/axi_interconnect_0_clocks.xdc]
 
 read_ip -quiet /home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/axi_2x1_mux/axi_2x1_mux.xci
 set_property used_in_synthesis false [get_files -all /home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/axi_2x1_mux/axi_2x1_mux_impl_clocks.xdc]
