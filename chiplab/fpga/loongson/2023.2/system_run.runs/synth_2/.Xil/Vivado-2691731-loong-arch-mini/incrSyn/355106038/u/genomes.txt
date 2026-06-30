@@ -1,6 +1,0 @@
-core_top__GB0
-core_top__GB1
-core_top__GB2
-lcd_ctrl__GC0
-soc_top__GCB0
-soc_top__GCB1

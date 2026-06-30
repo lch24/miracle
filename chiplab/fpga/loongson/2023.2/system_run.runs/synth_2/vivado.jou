@@ -3,8 +3,8 @@
 # SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
 # IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
 # SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
-# Start of session at: Tue Jun 30 17:38:25 2026
-# Process ID         : 2691731
+# Start of session at: Tue Jun 30 17:45:49 2026
+# Process ID         : 2696688
 # Current directory  : /home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_2
 # Command line       : vivado -log soc_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source soc_top.tcl
 # Log file           : /home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_2/soc_top.vds
@@ -13,12 +13,12 @@
 # Platform           : Ubuntu
 # Operating System   : Ubuntu 24.04.4 LTS
 # Processor Detail   : AMD Ryzen 9 9950X3D 16-Core Processor
-# CPU Frequency      : 4011.289 MHz
+# CPU Frequency      : 5557.240 MHz
 # CPU Physical cores : 16
 # CPU Logical cores  : 32
 # Host memory        : 98761 MB
 # Swap memory        : 8589 MB
 # Total Virtual      : 107351 MB
-# Available Virtual  : 91033 MB
+# Available Virtual  : 91063 MB
 #-----------------------------------------------------------
 source soc_top.tcl -notrace
