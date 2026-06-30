@@ -240,12 +240,15 @@ set_property IOSTANDARD LVCMOS33 [get_ports lcd_t_cs_rst]
 create_clock -period 40.000 -name mrxclk_0 -waveform {0.000 20.000} [get_ports mrxclk_0]
 create_clock -period 40.000 -name mtxclk_0 -waveform {0.000 20.000} [get_ports mtxclk_0]
 
+# c1_clk0(clk_pll_i, MIG ui_clk) and the clk_pll_33 outputs are independent PLL/MMCM
+# domains. The DDR AXI bridge crosses them through async FIFOs; do not time the FIFO
+# RAM/pointer paths as single-cycle synchronous paths.
 set_false_path -from [get_clocks clk_pll_i] -to [get_clocks clk_out2_clk_pll_33]
+set_false_path -from [get_clocks clk_out2_clk_pll_33] -to [get_clocks clk_pll_i]
+set_false_path -from [get_clocks clk_pll_i] -to [get_clocks clk_out1_clk_pll_33]
 set_false_path -from [get_clocks mrxclk_0] -to [get_clocks clk_out2_clk_pll_33]
 set_false_path -from [get_clocks mtxclk_0] -to [get_clocks clk_out2_clk_pll_33]
 set_false_path -from [get_clocks clk_out2_clk_pll_33] -to [get_clocks clk_out1_clk_pll_33]
 set_false_path -from [get_clocks clk_out1_clk_pll_33] -to [get_clocks clk_out2_clk_pll_33]
 set_false_path -from [get_clocks clk_out2_clk_pll_33] -to [get_clocks mrxclk_0]
-set_false_path -from [get_clocks clk_out2_clk_pll_33] -to [get_clocks mrxclk_0]
-set_false_path -from [get_clocks clk_out2_clk_pll_33] -to [get_clocks mtxclk_0]
 set_false_path -from [get_clocks clk_out2_clk_pll_33] -to [get_clocks mtxclk_0]
