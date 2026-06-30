@@ -1,0 +1,3 @@
+soc_top: soc_top__GCB1, soc_top__GCB0, lcd_ctrl__GC0, core_top__GB2, core_top__GB1, core_top__GB0, 
+lcd_ctrl: lcd_ctrl__GC0, 
+core_top: core_top__GB2, core_top__GB1, core_top__GB0, 

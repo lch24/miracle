@@ -1,0 +1,209 @@
+xilinx rtfpga
+rt::do_reinfer_area_combined 1
+WARNING: [Synth 8-7129] Port tlbehi_in[12] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbehi_in[11] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbehi_in[10] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbehi_in[9] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbehi_in[8] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbehi_in[7] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbehi_in[6] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbehi_in[5] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbehi_in[4] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbehi_in[3] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbehi_in[2] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbehi_in[1] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbehi_in[0] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbelo0_in[31] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbelo0_in[30] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbelo0_in[29] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbelo0_in[28] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbelo0_in[7] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbelo1_in[31] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbelo1_in[30] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbelo1_in[29] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbelo1_in[28] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbelo1_in[7] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbidx_in[30] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbidx_in[23] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbidx_in[22] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbidx_in[21] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbidx_in[20] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbidx_in[19] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbidx_in[18] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbidx_in[17] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbidx_in[16] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbidx_in[15] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbidx_in[14] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbidx_in[13] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbidx_in[12] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbidx_in[11] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbidx_in[10] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbidx_in[9] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbidx_in[8] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbidx_in[7] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbidx_in[6] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port tlbidx_in[5] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw0[31] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw0[30] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw0[29] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw0[28] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw0[24] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw0[23] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw0[22] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw0[21] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw0[20] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw0[19] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw0[18] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw0[17] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw0[16] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw0[15] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw0[14] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw0[13] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw0[12] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw0[11] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw0[10] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw0[9] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw0[8] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw0[7] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw0[6] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw0[5] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw0[4] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw0[3] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw0[2] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw0[1] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw0[0] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw1[31] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw1[30] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw1[29] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw1[28] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw1[24] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw1[23] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw1[22] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw1[21] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw1[20] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw1[19] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw1[18] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw1[17] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw1[16] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw1[15] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw1[14] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw1[13] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw1[12] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw1[11] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw1[10] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw1[9] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw1[8] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw1[7] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw1[6] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw1[5] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw1[4] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw1[3] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw1[2] in module addr_trans is either unconnected or has no load
+WARNING: [Synth 8-7129] Port csr_dmw1[1] in module addr_trans is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3886] merging instance 'exe_stage/ds_to_es_bus_r_reg[246]' (FDE) to 'exe_stage/ds_to_es_bus_r_reg[195]'
+INFO: [Synth 8-3886] merging instance 'exe_stage/ds_to_es_bus_r_reg[247]' (FDE) to 'exe_stage/ds_to_es_bus_r_reg[196]'
+INFO: [Synth 8-3886] merging instance 'exe_stage/ds_to_es_bus_r_reg[248]' (FDE) to 'exe_stage/ds_to_es_bus_r_reg[197]'
+INFO: [Synth 8-3886] merging instance 'exe_stage/ds_to_es_bus_r_reg[249]' (FDE) to 'exe_stage/ds_to_es_bus_r_reg[198]'
+INFO: [Synth 8-3886] merging instance 'exe_stage/ds_to_es_bus_r_reg[250]' (FDE) to 'exe_stage/ds_to_es_bus_r_reg[199]'
+INFO: [Synth 8-3886] merging instance 'exe_stage/ds_to_es_bus_r_reg[251]' (FDE) to 'exe_stage/ds_to_es_bus_r_reg[200]'
+INFO: [Synth 8-3886] merging instance 'exe_stage/ds_to_es_bus_r_reg[252]' (FDE) to 'exe_stage/ds_to_es_bus_r_reg[201]'
+INFO: [Synth 8-3886] merging instance 'exe_stage/ds_to_es_bus_r_reg[253]' (FDE) to 'exe_stage/ds_to_es_bus_r_reg[202]'
+INFO: [Synth 8-3886] merging instance 'exe_stage/ds_to_es_bus_r_reg[254]' (FDE) to 'exe_stage/ds_to_es_bus_r_reg[203]'
+INFO: [Synth 8-3886] merging instance 'exe_stage/ds_to_es_bus_r_reg[255]' (FDE) to 'exe_stage/ds_to_es_bus_r_reg[204]'
+INFO: [Synth 8-3886] merging instance 'exe_stage/ds_to_es_bus_r_reg[256]' (FDE) to 'exe_stage/ds_to_es_bus_r_reg[205]'
+INFO: [Synth 8-3886] merging instance 'exe_stage/ds_to_es_bus_r_reg[257]' (FDE) to 'exe_stage/ds_to_es_bus_r_reg[206]'
+INFO: [Synth 8-3886] merging instance 'exe_stage/ds_to_es_bus_r_reg[258]' (FDE) to 'exe_stage/ds_to_es_bus_r_reg[207]'
+INFO: [Synth 8-3886] merging instance 'exe_stage/ds_to_es_bus_r_reg[259]' (FDE) to 'exe_stage/ds_to_es_bus_r_reg[208]'
+INFO: [Synth 8-3886] merging instance 'wb_stage/ms_to_ws_bus_r_reg[148]' (FDE) to 'wb_stage/ms_to_ws_bus_r_reg[229]'
+INFO: [Synth 8-3886] merging instance 'wb_stage/ms_to_ws_bus_r_reg[146]' (FDE) to 'wb_stage/ms_to_ws_bus_r_reg[227]'
+INFO: [Synth 8-3886] merging instance 'wb_stage/ms_to_ws_bus_r_reg[147]' (FDE) to 'wb_stage/ms_to_ws_bus_r_reg[228]'
+INFO: [Synth 8-3886] merging instance 'wb_stage/ms_to_ws_bus_r_reg[145]' (FDE) to 'wb_stage/ms_to_ws_bus_r_reg[226]'
+INFO: [Synth 8-3886] merging instance 'wb_stage/ms_to_ws_bus_r_reg[143]' (FDE) to 'wb_stage/ms_to_ws_bus_r_reg[224]'
+INFO: [Synth 8-3886] merging instance 'wb_stage/ms_to_ws_bus_r_reg[144]' (FDE) to 'wb_stage/ms_to_ws_bus_r_reg[225]'
+INFO: [Synth 8-3886] merging instance 'wb_stage/ms_to_ws_bus_r_reg[142]' (FDE) to 'wb_stage/ms_to_ws_bus_r_reg[223]'
+INFO: [Synth 8-3886] merging instance 'wb_stage/ms_to_ws_bus_r_reg[141]' (FDE) to 'wb_stage/ms_to_ws_bus_r_reg[222]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_crmd_reg[31]' (FDE) to 'u_csr/csr_dmw0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_cpucfg11_reg[31]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_cpucfg10_reg[31]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_cpucfg1_reg[31]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_llbctl_reg[31]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_cpuid_reg[31]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_asid_reg[31]' (FDE) to 'u_csr/csr_dmw0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_estat_reg[31]' (FDE) to 'u_csr/csr_dmw0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_ectl_reg[31]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_prmd_reg[31]' (FDE) to 'u_csr/csr_dmw0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_crmd_reg[30]' (FDE) to 'u_csr/csr_dmw0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_cpucfg11_reg[30]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_cpucfg10_reg[30]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_cpucfg1_reg[30]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_llbctl_reg[30]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_cpuid_reg[30]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_asid_reg[30]' (FDE) to 'u_csr/csr_dmw0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_tlbidx_reg[30]' (FDE) to 'u_csr/csr_dmw0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_estat_reg[30]' (FDE) to 'u_csr/csr_estat_reg[29]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_ectl_reg[30]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_prmd_reg[30]' (FDE) to 'u_csr/csr_dmw0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_crmd_reg[29]' (FDE) to 'u_csr/csr_dmw0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_cpucfg11_reg[29]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_cpucfg10_reg[29]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_cpucfg1_reg[29]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_llbctl_reg[29]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_cpuid_reg[29]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_asid_reg[29]' (FDE) to 'u_csr/csr_dmw0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_estat_reg[29]' (FDE) to 'u_csr/csr_estat_reg[27]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_ectl_reg[29]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_prmd_reg[29]' (FDE) to 'u_csr/csr_dmw0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_crmd_reg[27]' (FDE) to 'u_csr/csr_dmw0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_cpucfg11_reg[27]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_cpucfg10_reg[27]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_cpucfg1_reg[27]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_llbctl_reg[27]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_cpuid_reg[27]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_asid_reg[27]' (FDE) to 'u_csr/csr_dmw0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_estat_reg[27]' (FDE) to 'u_csr/csr_estat_reg[28]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_ectl_reg[27]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_prmd_reg[27]' (FDE) to 'u_csr/csr_dmw0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_crmd_reg[28]' (FDE) to 'u_csr/csr_dmw0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_cpucfg11_reg[28]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_cpucfg10_reg[28]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_cpucfg1_reg[28]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_dmw1_reg[28]' (FDE) to 'u_csr/csr_dmw0_reg[28]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_dmw0_reg[28]' (FDE) to 'u_csr/csr_dmw0_reg[24]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_llbctl_reg[28]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_cpuid_reg[28]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_asid_reg[28]' (FDE) to 'u_csr/csr_dmw0_reg[24]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_estat_reg[28]' (FDE) to 'u_csr/csr_estat_reg[26]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_ectl_reg[28]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_prmd_reg[28]' (FDE) to 'u_csr/csr_dmw0_reg[24]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_crmd_reg[26]' (FDE) to 'u_csr/csr_dmw0_reg[24]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_cpucfg11_reg[26]' (FDSE) to 'u_csr/csr_cpucfg10_reg[0]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_cpucfg10_reg[26]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_cpucfg1_reg[26]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_llbctl_reg[26]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_cpuid_reg[26]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_asid_reg[26]' (FDE) to 'u_csr/csr_dmw0_reg[24]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_estat_reg[26]' (FDE) to 'u_csr/csr_estat_reg[24]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_ectl_reg[26]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_prmd_reg[26]' (FDE) to 'u_csr/csr_dmw0_reg[24]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_crmd_reg[24]' (FDE) to 'u_csr/csr_dmw0_reg[24]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_cpucfg11_reg[24]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_cpucfg10_reg[24]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_cpucfg1_reg[24]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_dmw1_reg[24]' (FDE) to 'u_csr/csr_dmw0_reg[24]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_dmw0_reg[24]' (FDE) to 'u_csr/csr_dmw0_reg[23]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_llbctl_reg[24]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_cpuid_reg[24]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_asid_reg[24]' (FDE) to 'u_csr/csr_dmw0_reg[23]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_estat_reg[24]' (FDE) to 'u_csr/csr_estat_reg[25]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_ectl_reg[24]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_prmd_reg[24]' (FDE) to 'u_csr/csr_dmw0_reg[23]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_crmd_reg[25]' (FDE) to 'u_csr/csr_dmw0_reg[23]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_cpucfg11_reg[25]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Synth 8-3886] merging instance 'u_csr/csr_cpucfg10_reg[25]' (FDRE) to 'u_csr/csr_ectl_reg[10]'
+INFO: [Common 17-14] Message 'Synth 8-3886' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_csr/\csr_estat_reg[22] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u_csr/\csr_asid_reg[17] )
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (u_csr/\csr_cpucfg10_reg[0] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_csr/\csr_ectl_reg[10] )
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (u_csr/\csr_estat_reg[10] )

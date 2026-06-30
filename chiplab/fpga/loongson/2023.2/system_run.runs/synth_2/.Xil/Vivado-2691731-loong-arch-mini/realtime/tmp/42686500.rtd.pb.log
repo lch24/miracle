@@ -1,0 +1,76 @@
+xilinx rtfpga
+rt::do_reinfer_area_combined 1
+WARNING: [Synth 8-3917] design core_top__GB1 has port arburst[1] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port arburst[0] driven by constant 1
+WARNING: [Synth 8-3917] design core_top__GB1 has port arlock[1] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port arlock[0] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port arcache[3] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port arcache[2] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port arcache[1] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port arcache[0] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port arprot[2] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port arprot[1] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port arprot[0] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port awid[3] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port awid[2] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port awid[1] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port awid[0] driven by constant 1
+WARNING: [Synth 8-3917] design core_top__GB1 has port awlen[7] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port awlen[6] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port awlen[5] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port awlen[4] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port awlen[3] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port awlen[2] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port awburst[1] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port awburst[0] driven by constant 1
+WARNING: [Synth 8-3917] design core_top__GB1 has port awlock[1] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port awlock[0] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port awcache[3] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port awcache[2] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port awcache[1] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port awcache[0] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port awprot[2] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port awprot[1] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port awprot[0] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port wid[3] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port wid[2] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port wid[1] driven by constant 0
+WARNING: [Synth 8-3917] design core_top__GB1 has port wid[0] driven by constant 1
+WARNING: [Synth 8-7129] Port operate_pc[1] in module btb is either unconnected or has no load
+WARNING: [Synth 8-7129] Port operate_pc[0] in module btb is either unconnected or has no load
+WARNING: [Synth 8-7129] Port delete_entry in module btb is either unconnected or has no load
+WARNING: [Synth 8-7129] Port right_target[1] in module btb is either unconnected or has no load
+WARNING: [Synth 8-7129] Port right_target[0] in module btb is either unconnected or has no load
+WARNING: [Synth 8-7129] Port preld_hint[4] in module dcache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port preld_hint[3] in module dcache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port preld_hint[2] in module dcache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port preld_hint[1] in module dcache is either unconnected or has no load
+WARNING: [Synth 8-7129] Port preld_hint[0] in module dcache is either unconnected or has no load
+INFO: [Synth 8-3886] merging instance 'dcache/request_buffer_index_reg_rep[0]' (FDRE) to 'dcache/request_buffer_index_reg[0]'
+INFO: [Synth 8-3886] merging instance 'dcache/request_buffer_index_reg_rep[1]' (FDRE) to 'dcache/request_buffer_index_reg[1]'
+INFO: [Synth 8-3886] merging instance 'dcache/request_buffer_index_reg_rep[2]' (FDRE) to 'dcache/request_buffer_index_reg[2]'
+INFO: [Synth 8-3886] merging instance 'dcache/request_buffer_index_reg_rep[3]' (FDRE) to 'dcache/request_buffer_index_reg[3]'
+INFO: [Synth 8-3886] merging instance 'dcache/request_buffer_index_reg_rep[4]' (FDRE) to 'dcache/request_buffer_index_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/request_buffer_index_reg_rep[5]' (FDRE) to 'dcache/request_buffer_index_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dcache/request_buffer_index_reg_rep[6]' (FDRE) to 'dcache/request_buffer_index_reg[6]'
+INFO: [Synth 8-3886] merging instance 'dcache/request_buffer_index_reg_rep[7]' (FDRE) to 'dcache/request_buffer_index_reg[7]'
+INFO: [Synth 8-3886] merging instance 'dcache/write_buffer_index_reg_rep[0]' (FDRE) to 'dcache/write_buffer_index_reg[0]'
+INFO: [Synth 8-3886] merging instance 'dcache/write_buffer_index_reg_rep[1]' (FDRE) to 'dcache/write_buffer_index_reg[1]'
+INFO: [Synth 8-3886] merging instance 'dcache/write_buffer_index_reg_rep[2]' (FDRE) to 'dcache/write_buffer_index_reg[2]'
+INFO: [Synth 8-3886] merging instance 'dcache/write_buffer_index_reg_rep[3]' (FDRE) to 'dcache/write_buffer_index_reg[3]'
+INFO: [Synth 8-3886] merging instance 'dcache/write_buffer_index_reg_rep[4]' (FDRE) to 'dcache/write_buffer_index_reg[4]'
+INFO: [Synth 8-3886] merging instance 'dcache/write_buffer_index_reg_rep[5]' (FDRE) to 'dcache/write_buffer_index_reg[5]'
+INFO: [Synth 8-3886] merging instance 'dcache/write_buffer_index_reg_rep[6]' (FDRE) to 'dcache/write_buffer_index_reg[6]'
+INFO: [Synth 8-3886] merging instance 'dcache/write_buffer_index_reg_rep[7]' (FDRE) to 'dcache/write_buffer_index_reg[7]'
+INFO: [Synth 8-3886] merging instance 'axi_bridge/awlen_reg[0]' (FDE) to 'axi_bridge/awlen_reg[1]'
+INFO: [Synth 8-3333] propagating constant 1 across sequential element (\axi_bridge/rready_reg )
+INFO: [Synth 8-3886] merging instance 'axi_bridge/arlen_reg[0]' (FDE) to 'axi_bridge/arlen_reg[1]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\axi_bridge/arlen_reg[2] )
+INFO: [Synth 8-3886] merging instance 'axi_bridge/arlen_reg[3]' (FDRE) to 'axi_bridge/arlen_reg[4]'
+INFO: [Synth 8-3886] merging instance 'axi_bridge/arlen_reg[4]' (FDRE) to 'axi_bridge/arlen_reg[5]'
+INFO: [Synth 8-3886] merging instance 'axi_bridge/arlen_reg[5]' (FDRE) to 'axi_bridge/arlen_reg[6]'
+INFO: [Synth 8-3886] merging instance 'axi_bridge/arlen_reg[6]' (FDRE) to 'axi_bridge/arlen_reg[7]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\axi_bridge/arlen_reg[7] )
+INFO: [Synth 8-3886] merging instance 'axi_bridge/arid_reg[1]' (FDRE) to 'axi_bridge/arid_reg[2]'
+INFO: [Synth 8-3886] merging instance 'axi_bridge/arid_reg[2]' (FDRE) to 'axi_bridge/arid_reg[3]'
+INFO: [Synth 8-3333] propagating constant 0 across sequential element (\axi_bridge/arid_reg[3] )

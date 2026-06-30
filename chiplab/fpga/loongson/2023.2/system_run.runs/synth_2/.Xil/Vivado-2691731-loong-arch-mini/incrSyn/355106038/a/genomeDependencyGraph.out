@@ -1,0 +1,84 @@
+INST lcd_ctrl__GC0 PIN 65: INST soc_top__GCB0 PIN 364 TYPE 5
+INST lcd_ctrl__GC0 PIN 66: INST soc_top__GCB0 PIN 365 TYPE 5
+INST lcd_ctrl__GC0 PIN 67: INST soc_top__GCB0 PIN 366 TYPE 5
+INST lcd_ctrl__GC0 PIN 68: INST soc_top__GCB0 PIN 367 TYPE 5
+INST lcd_ctrl__GC0 PIN 69: INST soc_top__GCB0 PIN 368 TYPE 5
+INST lcd_ctrl__GC0 PIN 70: INST soc_top__GCB0 PIN 369 TYPE 5
+INST lcd_ctrl__GC0 PIN 71: INST soc_top__GCB0 PIN 370 TYPE 5
+INST lcd_ctrl__GC0 PIN 72: INST soc_top__GCB0 PIN 371 TYPE 5
+INST lcd_ctrl__GC0 PIN 73: INST soc_top__GCB0 PIN 372 TYPE 5
+INST lcd_ctrl__GC0 PIN 74: INST soc_top__GCB0 PIN 373 TYPE 5
+INST lcd_ctrl__GC0 PIN 75: INST soc_top__GCB0 PIN 374 TYPE 5
+INST lcd_ctrl__GC0 PIN 76: INST soc_top__GCB0 PIN 375 TYPE 5
+INST lcd_ctrl__GC0 PIN 77: INST soc_top__GCB0 PIN 376 TYPE 5
+INST lcd_ctrl__GC0 PIN 78: INST soc_top__GCB0 PIN 377 TYPE 5
+INST lcd_ctrl__GC0 PIN 79: INST soc_top__GCB0 PIN 378 TYPE 5
+INST lcd_ctrl__GC0 PIN 80: INST soc_top__GCB0 PIN 379 TYPE 5
+INST lcd_ctrl__GC0 PIN 81: INST soc_top__GCB0 PIN 380 TYPE 5
+INST lcd_ctrl__GC0 PIN 82: INST soc_top__GCB0 PIN 381 TYPE 5
+INST lcd_ctrl__GC0 PIN 83: INST soc_top__GCB0 PIN 382 TYPE 5
+INST lcd_ctrl__GC0 PIN 84: INST soc_top__GCB0 PIN 383 TYPE 5
+INST lcd_ctrl__GC0 PIN 85: INST soc_top__GCB0 PIN 384 TYPE 5
+INST lcd_ctrl__GC0 PIN 86: INST soc_top__GCB0 PIN 385 TYPE 5
+INST lcd_ctrl__GC0 PIN 87: INST soc_top__GCB0 PIN 386 TYPE 5
+INST lcd_ctrl__GC0 PIN 88: INST soc_top__GCB0 PIN 387 TYPE 5
+INST lcd_ctrl__GC0 PIN 89: INST soc_top__GCB0 PIN 388 TYPE 5
+INST lcd_ctrl__GC0 PIN 90: INST soc_top__GCB0 PIN 389 TYPE 5
+INST lcd_ctrl__GC0 PIN 91: INST soc_top__GCB0 PIN 390 TYPE 5
+INST lcd_ctrl__GC0 PIN 92: INST soc_top__GCB0 PIN 391 TYPE 5
+INST lcd_ctrl__GC0 PIN 95: INST soc_top__GCB0 PIN 394 TYPE 5
+INST lcd_ctrl__GC0 PIN 96: INST soc_top__GCB0 PIN 395 TYPE 5
+INST lcd_ctrl__GC0 PIN 97: INST soc_top__GCB0 PIN 461 TYPE 5
+INST lcd_ctrl__GC0 PIN 98: INST soc_top__GCB0 PIN 462 TYPE 5
+INST lcd_ctrl__GC0 PIN 99: INST soc_top__GCB0 PIN 463 TYPE 5
+INST lcd_ctrl__GC0 PIN 100: INST soc_top__GCB0 PIN 464 TYPE 5
+INST lcd_ctrl__GC0 PIN 101: INST soc_top__GCB0 PIN 465 TYPE 5
+INST lcd_ctrl__GC0 PIN 102: INST soc_top__GCB0 PIN 466 TYPE 5
+INST lcd_ctrl__GC0 PIN 103: INST soc_top__GCB0 PIN 467 TYPE 5
+INST lcd_ctrl__GC0 PIN 104: INST soc_top__GCB0 PIN 468 TYPE 5
+INST lcd_ctrl__GC0 PIN 105: INST soc_top__GCB0 PIN 469 TYPE 5
+INST lcd_ctrl__GC0 PIN 106: INST soc_top__GCB0 PIN 470 TYPE 5
+INST lcd_ctrl__GC0 PIN 107: INST soc_top__GCB0 PIN 471 TYPE 5
+INST lcd_ctrl__GC0 PIN 108: INST soc_top__GCB0 PIN 472 TYPE 5
+INST lcd_ctrl__GC0 PIN 109: INST soc_top__GCB0 PIN 473 TYPE 5
+INST lcd_ctrl__GC0 PIN 110: INST soc_top__GCB0 PIN 474 TYPE 5
+INST lcd_ctrl__GC0 PIN 111: INST soc_top__GCB0 PIN 475 TYPE 5
+INST lcd_ctrl__GC0 PIN 112: INST soc_top__GCB0 PIN 476 TYPE 5
+INST lcd_ctrl__GC0 PIN 113: INST soc_top__GCB0 PIN 477 TYPE 5
+INST lcd_ctrl__GC0 PIN 114: INST soc_top__GCB0 PIN 478 TYPE 5
+INST lcd_ctrl__GC0 PIN 115: INST soc_top__GCB0 PIN 479 TYPE 5
+INST lcd_ctrl__GC0 PIN 116: INST soc_top__GCB0 PIN 480 TYPE 5
+INST lcd_ctrl__GC0 PIN 117: INST soc_top__GCB0 PIN 481 TYPE 5
+INST lcd_ctrl__GC0 PIN 118: INST soc_top__GCB0 PIN 482 TYPE 5
+INST lcd_ctrl__GC0 PIN 119: INST soc_top__GCB0 PIN 483 TYPE 5
+INST lcd_ctrl__GC0 PIN 120: INST soc_top__GCB0 PIN 484 TYPE 5
+INST lcd_ctrl__GC0 PIN 121: INST soc_top__GCB0 PIN 485 TYPE 5
+INST lcd_ctrl__GC0 PIN 122: INST soc_top__GCB0 PIN 486 TYPE 5
+INST lcd_ctrl__GC0 PIN 123: INST soc_top__GCB0 PIN 487 TYPE 5
+INST lcd_ctrl__GC0 PIN 124: INST soc_top__GCB0 PIN 488 TYPE 5
+INST lcd_ctrl__GC0 PIN 127: INST soc_top__GCB0 PIN 491 TYPE 5
+INST lcd_ctrl__GC0 PIN 128: INST soc_top__GCB0 PIN 492 TYPE 5
+INST lcd_ctrl__GC0 PIN 27: INST soc_top__GCB0 PIN 1136 TYPE 0 GENOME lcd_ctrl__GC0 PIN 27
+INST lcd_ctrl__GC0 PIN 28: INST soc_top__GCB0 PIN 1137 TYPE 0 GENOME lcd_ctrl__GC0 PIN 28
+INST lcd_ctrl__GC0 PIN 29: INST soc_top__GCB0 PIN 1138 TYPE 0 GENOME lcd_ctrl__GC0 PIN 29
+INST lcd_ctrl__GC0 PIN 35: INST soc_top__GCB0 PIN 1144 TYPE 0 GENOME lcd_ctrl__GC0 PIN 35
+INST lcd_ctrl__GC0 PIN 36: INST soc_top__GCB0 PIN 1145 TYPE 0 GENOME lcd_ctrl__GC0 PIN 36
+INST lcd_ctrl__GC0 PIN 37: INST soc_top__GCB0 PIN 1146 TYPE 0 GENOME lcd_ctrl__GC0 PIN 37
+INST lcd_ctrl__GC0 PIN 1: GENOME lcd_ctrl__GC0 PIN 1
+INST lcd_ctrl__GC0 PIN 130: GENOME lcd_ctrl__GC0 PIN 130
+INST lcd_ctrl__GC0 PIN 160: GENOME lcd_ctrl__GC0 PIN 160
+INST lcd_ctrl__GC0 PIN 161: GENOME lcd_ctrl__GC0 PIN 161
+INST lcd_ctrl__GC0 PIN 162: GENOME lcd_ctrl__GC0 PIN 162
+INST lcd_ctrl__GC0 PIN 163: GENOME lcd_ctrl__GC0 PIN 163
+INST lcd_ctrl__GC0 PIN 164: GENOME lcd_ctrl__GC0 PIN 164
+INST lcd_ctrl__GC0 PIN 165: GENOME lcd_ctrl__GC0 PIN 165
+INST lcd_ctrl__GC0 PIN 166: GENOME lcd_ctrl__GC0 PIN 166
+INST lcd_ctrl__GC0 PIN 167: GENOME lcd_ctrl__GC0 PIN 167
+INST lcd_ctrl__GC0 PIN 168: GENOME lcd_ctrl__GC0 PIN 168
+INST lcd_ctrl__GC0 PIN 169: GENOME lcd_ctrl__GC0 PIN 169
+INST lcd_ctrl__GC0 PIN 170: GENOME lcd_ctrl__GC0 PIN 170
+INST lcd_ctrl__GC0 PIN 171: GENOME lcd_ctrl__GC0 PIN 171
+INST lcd_ctrl__GC0 PIN 172: GENOME lcd_ctrl__GC0 PIN 172
+INST lcd_ctrl__GC0 PIN 173: GENOME lcd_ctrl__GC0 PIN 173
+INST lcd_ctrl__GC0 PIN 174: GENOME lcd_ctrl__GC0 PIN 174
+INST lcd_ctrl__GC0 PIN 175: GENOME lcd_ctrl__GC0 PIN 175
