@@ -196,6 +196,8 @@ set_property PACKAGE_PIN Y2  [get_ports PS2_CLK]
 set_property PACKAGE_PIN AD1 [get_ports PS2_DATA]
 set_property IOSTANDARD LVCMOS33 [get_ports PS2_CLK]
 set_property IOSTANDARD LVCMOS33 [get_ports PS2_DATA]
+set_property PULLUP true [get_ports PS2_CLK]
+set_property PULLUP true [get_ports PS2_DATA]
 
 #LCD
 set_property PACKAGE_PIN J25 [get_ports lcd_rst]
