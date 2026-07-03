@@ -127,27 +127,48 @@ reg stat_rx_parity;   // bit4
 reg stat_rx_frame;    // bit5
 
 //----------------------------------------------------------------------------
-// PS/2 signal synchronization and edge detection
+// PS/2 signal synchronization, glitch filtering and edge detection
 //----------------------------------------------------------------------------
-reg ps2_clk_meta, ps2_clk_sync, ps2_clk_prev;
-reg ps2_data_meta, ps2_data_sync, ps2_data_prev;
+(* ASYNC_REG = "TRUE" *) reg ps2_clk_meta;
+(* ASYNC_REG = "TRUE" *) reg ps2_clk_raw;
+(* ASYNC_REG = "TRUE" *) reg ps2_data_meta;
+(* ASYNC_REG = "TRUE" *) reg ps2_data_raw;
+reg ps2_clk_sync, ps2_clk_prev;
+reg ps2_data_sync, ps2_data_prev;
+reg [3:0] ps2_clk_filter;
+reg [3:0] ps2_data_filter;
 
 always @(posedge aclk) begin
     if (~aresetn) begin
         ps2_clk_meta  <= 1'b1;
+        ps2_clk_raw   <= 1'b1;
         ps2_clk_sync  <= 1'b1;
         ps2_clk_prev  <= 1'b1;
+        ps2_clk_filter <= 4'hf;
         ps2_data_meta <= 1'b1;
+        ps2_data_raw  <= 1'b1;
         ps2_data_sync <= 1'b1;
         ps2_data_prev <= 1'b1;
+        ps2_data_filter <= 4'hf;
     end
     else begin
         ps2_clk_meta  <= ps2_clk_i;
-        ps2_clk_sync  <= ps2_clk_meta;
+        ps2_clk_raw   <= ps2_clk_meta;
+        ps2_clk_filter <= {ps2_clk_filter[2:0], ps2_clk_raw};
         ps2_clk_prev  <= ps2_clk_sync;
+        if (&ps2_clk_filter)
+            ps2_clk_sync <= 1'b1;
+        else if (~|ps2_clk_filter)
+            ps2_clk_sync <= 1'b0;
+
         ps2_data_meta <= ps2_data_i;
-        ps2_data_sync <= ps2_data_meta;
+        ps2_data_raw  <= ps2_data_meta;
+        ps2_data_filter <= {ps2_data_filter[2:0], ps2_data_raw};
         ps2_data_prev <= ps2_data_sync;
+        if (&ps2_data_filter)
+            ps2_data_sync <= 1'b1;
+        else if (~|ps2_data_filter)
+            ps2_data_sync <= 1'b0;
     end
 end
 
@@ -200,7 +221,12 @@ reg [1:0]  rx_state;
 reg [7:0]  rx_shift_reg;
 reg [2:0]  rx_bit_cnt;
 reg        rx_parity_acc;
+reg        rx_parity_ok;
 reg        rx_push;
+reg [16:0] rx_timeout_cnt;
+
+localparam [16:0] RX_TIMEOUT_CYCLES = 17'd66000;  // ~2ms @ 33MHz
+wire rx_timeout = (rx_state != RX_IDLE) && (rx_timeout_cnt == RX_TIMEOUT_CYCLES);
 
 always @(posedge aclk) begin
     if (~aresetn) begin
@@ -208,7 +234,9 @@ always @(posedge aclk) begin
         rx_shift_reg <= 8'd0;
         rx_bit_cnt   <= 3'd0;
         rx_parity_acc <= 1'b0;
+        rx_parity_ok <= 1'b0;
         rx_push      <= 1'b0;
+        rx_timeout_cnt <= 17'd0;
         stat_rx_overflow <= 1'b0;
         stat_rx_parity   <= 1'b0;
         stat_rx_frame    <= 1'b0;
@@ -218,48 +246,71 @@ always @(posedge aclk) begin
         if (tx_busy) begin
             // TX has control of the bus, suppress RX
             rx_state <= RX_IDLE;
+            rx_timeout_cnt <= 17'd0;
         end
         else if (ctrl_rx_en) begin
-            case (rx_state)
-                RX_IDLE: begin
-                    if (ps2_clk_falling && !ps2_data_sync) begin
-                        rx_state      <= RX_DATA;
-                        rx_shift_reg  <= 8'd0;
-                        rx_bit_cnt    <= 3'd0;
-                        rx_parity_acc <= 1'b0;
+            if (rx_state == RX_IDLE)
+                rx_timeout_cnt <= 17'd0;
+            else if (ps2_clk_falling)
+                rx_timeout_cnt <= 17'd0;
+            else if (!rx_timeout)
+                rx_timeout_cnt <= rx_timeout_cnt + 17'd1;
+
+            if (rx_timeout && !ps2_clk_falling) begin
+                rx_state <= RX_IDLE;
+                rx_timeout_cnt <= 17'd0;
+                stat_rx_frame <= 1'b1;
+            end
+            else begin
+                case (rx_state)
+                    RX_IDLE: begin
+                        if (ps2_clk_falling && !ps2_data_sync) begin
+                            rx_state      <= RX_DATA;
+                            rx_shift_reg  <= 8'd0;
+                            rx_bit_cnt    <= 3'd0;
+                            rx_parity_acc <= 1'b0;
+                            rx_parity_ok  <= 1'b0;
+                        end
                     end
-                end
-                RX_DATA: begin
-                    if (ps2_clk_falling) begin
-                        rx_shift_reg[rx_bit_cnt] <= ps2_data_sync;
-                        rx_parity_acc <= rx_parity_acc ^ ps2_data_sync;
-                        if (rx_bit_cnt == 3'd7)
-                            rx_state <= RX_PARITY;
-                        else
-                            rx_bit_cnt <= rx_bit_cnt + 3'd1;
+                    RX_DATA: begin
+                        if (ps2_clk_falling) begin
+                            rx_shift_reg[rx_bit_cnt] <= ps2_data_sync;
+                            rx_parity_acc <= rx_parity_acc ^ ps2_data_sync;
+                            if (rx_bit_cnt == 3'd7)
+                                rx_state <= RX_PARITY;
+                            else
+                                rx_bit_cnt <= rx_bit_cnt + 3'd1;
+                        end
                     end
-                end
-                RX_PARITY: begin
-                    if (ps2_clk_falling) begin
-                        if (rx_parity_acc ^ ps2_data_sync)
-                            stat_rx_parity <= 1'b0;
-                        else
-                            stat_rx_parity <= 1'b1;
-                        rx_state <= RX_STOP;
+                    RX_PARITY: begin
+                        if (ps2_clk_falling) begin
+                            rx_parity_ok <= rx_parity_acc ^ ps2_data_sync;
+                            if (rx_parity_acc ^ ps2_data_sync)
+                                stat_rx_parity <= 1'b0;
+                            else
+                                stat_rx_parity <= 1'b1;
+                            rx_state <= RX_STOP;
+                        end
                     end
-                end
-                RX_STOP: begin
-                    if (ps2_clk_falling) begin
-                        if (!ps2_data_sync)
-                            stat_rx_frame <= 1'b1;
-                        if (rx_fifo_full)
-                            stat_rx_overflow <= 1'b1;
-                        else
-                            rx_push <= 1'b1;
-                        rx_state <= RX_IDLE;
+                    RX_STOP: begin
+                        if (ps2_clk_falling) begin
+                            if (!ps2_data_sync)
+                                stat_rx_frame <= 1'b1;
+                            if (rx_parity_ok && ps2_data_sync) begin
+                                if (rx_fifo_full)
+                                    stat_rx_overflow <= 1'b1;
+                                else
+                                    rx_push <= 1'b1;
+                            end
+                            rx_state <= RX_IDLE;
+                        end
                     end
-                end
-            endcase
+                endcase
+            end
+        end
+        else begin
+            rx_state <= RX_IDLE;
+            rx_timeout_cnt <= 17'd0;
         end
         // Override: clear sticky RX status on CTRL write
         if (w_enter && reg_sel == REG_CTRL) begin
