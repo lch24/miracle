@@ -1,0 +1,1259 @@
+Copyright 1986-2022 Xilinx, Inc. All Rights Reserved. Copyright 2022-2025 Advanced Micro Devices, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2025.2 (lin64) Build 6299465 Fri Nov 14 12:34:56 MST 2025
+| Date         : Fri Jul  3 13:38:45 2026
+| Host         : loong-arch-mini running 64-bit Ubuntu 24.04.4 LTS
+| Command      : report_bus_skew -warn_on_violation -file soc_top_bus_skew_routed.rpt -pb soc_top_bus_skew_routed.pb -rpx soc_top_bus_skew_routed.rpx
+| Design       : soc_top
+| Device       : 7a200t-fbg676
+| Speed File   : -2  PRODUCTION 1.23 2018-06-13
+| Design State : Routed
+------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Bus Skew Report
+
+Table of Contents
+-----------------
+1. Bus Skew Report Summary
+2. Bus Skew Report Per Constraint
+
+1. Bus Skew Report Summary
+--------------------------
+
+Id  Position  From                            To                              Corner  Requirement(ns)  Actual(ns)  Slack(ns)
+--  --------  ------------------------------  ------------------------------  ------  ---------------  ----------  ---------
+1   34        [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]}]]
+                                              [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
+                                                                              Slow             30.303       0.780     29.523
+2   36        [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]}]]
+                                              [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
+                                                                              Slow             30.303       0.599     29.704
+3   38        [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]}]]
+                                              [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
+                                                                              Slow             30.303       0.546     29.757
+4   40        [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]}]]
+                                              [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
+                                                                              Slow             30.303       0.558     29.745
+5   42        [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]}]]
+                                              [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
+                                                                              Slow             30.303       0.581     29.722
+6   44        [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]}]]
+                                              [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
+                                                                              Slow             30.303       0.712     29.591
+7   46        [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]}]]
+                                              [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
+                                                                              Slow             30.303       0.607     29.696
+8   48        [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]}]]
+                                              [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
+                                                                              Slow             30.303       0.651     29.652
+9   50        [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]}]]
+                                              [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
+                                                                              Slow             30.303       0.581     29.722
+10  52        [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]}]]
+                                              [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]]
+                                                                              Slow             30.303       0.646     29.657
+
+
+2. Bus Skew Report Per Constraint
+---------------------------------
+
+Id: 1
+set_bus_skew -from [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]}]] -to [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]] 30.303
+Requirement: 30.303ns
+Endpoints: 4
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_out1_clk_pll_33   clk_out2_clk_pll_33   AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+                                                                            AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+                                                                                                            Slow         0.780     29.523
+
+
+Slack (MET) :             29.523ns  (requirement - actual skew)
+  Endpoint Source:        soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_pll_33)
+  Endpoint Destination:   soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out2_clk_pll_33)
+  Reference Source:       soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_pll_33)
+  Reference Destination:  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out2_clk_pll_33)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            30.303ns
+  Endpoint Relative Delay:    1.197ns
+  Reference Relative Delay:   0.156ns
+  Relative CRPR:              0.261ns
+  Actual Bus Skew:            0.780ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.416     1.416 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.602     4.018    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.536     5.635    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -3.173     2.461 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.557     4.018    clk_pll_33/inst/clk_out1_clk_pll_33
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkout1_buf/O
+                         net (fo=7157, routed)        1.497     5.596    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X23Y149        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y149        FDRE (Prop_fdre_C_Q)         0.348     5.944 r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.480     6.424    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X22Y150        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out2_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.350     1.350 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.471     3.821    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.434     5.331    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT1)
+                                                     -2.995     2.336 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.484     3.821    clk_pll_33/inst/clk_out2_clk_pll_33
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkout2_buf/O
+                         net (fo=6628, routed)        1.374     5.272    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X22Y150        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism              0.125     5.397    
+    SLICE_X22Y150        FDRE (Setup_fdre_C_D)       -0.170     5.227    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                           6.424    
+                         clock arrival                          5.227    
+  -------------------------------------------------------------------
+                         relative delay                         1.197    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.350     1.350 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.471     3.821    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.434     5.331    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -2.995     2.336 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.484     3.821    clk_pll_33/inst/clk_out1_clk_pll_33
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkout1_buf/O
+                         net (fo=7157, routed)        1.388     5.285    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X23Y149        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X23Y149        FDRE (Prop_fdre_C_Q)         0.304     5.589 r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.224     5.814    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X22Y149        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out2_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.416     1.416 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.602     4.018    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.536     5.635    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT1)
+                                                     -3.173     2.461 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.557     4.018    clk_pll_33/inst/clk_out2_clk_pll_33
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkout2_buf/O
+                         net (fo=6628, routed)        1.497     5.596    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X22Y149        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism             -0.125     5.471    
+    SLICE_X22Y149        FDRE (Hold_fdre_C_D)         0.187     5.658    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                           5.814    
+                         clock arrival                          5.658    
+  -------------------------------------------------------------------
+                         relative delay                         0.156    
+
+
+
+Id: 2
+set_bus_skew -from [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]}]] -to [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]] 30.303
+Requirement: 30.303ns
+Endpoints: 4
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_out2_clk_pll_33   clk_out1_clk_pll_33   AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+                                                                            AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+                                                                                                            Slow         0.599     29.704
+
+
+Slack (MET) :             29.704ns  (requirement - actual skew)
+  Endpoint Source:        soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out2_clk_pll_33)
+  Endpoint Destination:   soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_pll_33)
+  Reference Source:       soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out2_clk_pll_33)
+  Reference Destination:  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_pll_33)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            30.303ns
+  Endpoint Relative Delay:    1.083ns
+  Reference Relative Delay:   0.156ns
+  Relative CRPR:              0.327ns
+  Actual Bus Skew:            0.599ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out2_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.416     1.416 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.602     4.018    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.536     5.635    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT1)
+                                                     -3.173     2.461 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.557     4.018    clk_pll_33/inst/clk_out2_clk_pll_33
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkout2_buf/O
+                         net (fo=6628, routed)        1.411     5.510    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X43Y143        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y143        FDRE (Prop_fdre_C_Q)         0.348     5.858 r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.380     6.238    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X44Y143        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.350     1.350 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.471     3.821    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.434     5.331    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -2.995     2.336 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.484     3.821    clk_pll_33/inst/clk_out1_clk_pll_33
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkout1_buf/O
+                         net (fo=7157, routed)        1.303     5.200    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X44Y143        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism              0.125     5.325    
+    SLICE_X44Y143        FDRE (Setup_fdre_C_D)       -0.170     5.155    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                           6.238    
+                         clock arrival                          5.155    
+  -------------------------------------------------------------------
+                         relative delay                         1.083    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out2_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.350     1.350 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.471     3.821    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.434     5.331    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT1)
+                                                     -2.995     2.336 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.484     3.821    clk_pll_33/inst/clk_out2_clk_pll_33
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkout2_buf/O
+                         net (fo=6628, routed)        1.302     5.199    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X43Y143        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y143        FDRE (Prop_fdre_C_Q)         0.304     5.503 r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.224     5.728    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X42Y143        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.416     1.416 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.602     4.018    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.536     5.635    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -3.173     2.461 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.557     4.018    clk_pll_33/inst/clk_out1_clk_pll_33
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkout1_buf/O
+                         net (fo=7157, routed)        1.411     5.510    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X42Y143        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism             -0.125     5.385    
+    SLICE_X42Y143        FDRE (Hold_fdre_C_D)         0.187     5.572    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                           5.728    
+                         clock arrival                          5.572    
+  -------------------------------------------------------------------
+                         relative delay                         0.156    
+
+
+
+Id: 3
+set_bus_skew -from [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]}]] -to [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]] 30.303
+Requirement: 30.303ns
+Endpoints: 4
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_out2_clk_pll_33   clk_out1_clk_pll_33   AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+                                                                            AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+                                                                                                            Slow         0.546     29.757
+
+
+Slack (MET) :             29.757ns  (requirement - actual skew)
+  Endpoint Source:        soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out2_clk_pll_33)
+  Endpoint Destination:   soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_pll_33)
+  Reference Source:       soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out2_clk_pll_33)
+  Reference Destination:  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_pll_33)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            30.303ns
+  Endpoint Relative Delay:    1.126ns
+  Reference Relative Delay:   0.263ns
+  Relative CRPR:              0.316ns
+  Actual Bus Skew:            0.546ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out2_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.416     1.416 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.602     4.018    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.536     5.635    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT1)
+                                                     -3.173     2.461 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.557     4.018    clk_pll_33/inst/clk_out2_clk_pll_33
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkout2_buf/O
+                         net (fo=6628, routed)        1.500     5.599    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X16Y149        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X16Y149        FDRE (Prop_fdre_C_Q)         0.398     5.997 r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.383     6.380    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X16Y148        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.350     1.350 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.471     3.821    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.434     5.331    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -2.995     2.336 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.484     3.821    clk_pll_33/inst/clk_out1_clk_pll_33
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkout1_buf/O
+                         net (fo=7157, routed)        1.390     5.287    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X16Y148        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism              0.125     5.412    
+    SLICE_X16Y148        FDRE (Setup_fdre_C_D)       -0.158     5.254    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                           6.380    
+                         clock arrival                          5.254    
+  -------------------------------------------------------------------
+                         relative delay                         1.126    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out2_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.350     1.350 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.471     3.821    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.434     5.331    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT1)
+                                                     -2.995     2.336 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.484     3.821    clk_pll_33/inst/clk_out2_clk_pll_33
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkout2_buf/O
+                         net (fo=6628, routed)        1.390     5.287    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X19Y145        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X19Y145        FDRE (Prop_fdre_C_Q)         0.304     5.591 r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.281     5.873    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X17Y145        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.416     1.416 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.602     4.018    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.536     5.635    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -3.173     2.461 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.557     4.018    clk_pll_33/inst/clk_out1_clk_pll_33
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkout1_buf/O
+                         net (fo=7157, routed)        1.500     5.599    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X17Y145        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism             -0.125     5.474    
+    SLICE_X17Y145        FDRE (Hold_fdre_C_D)         0.136     5.610    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                           5.873    
+                         clock arrival                          5.610    
+  -------------------------------------------------------------------
+                         relative delay                         0.263    
+
+
+
+Id: 4
+set_bus_skew -from [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]}]] -to [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]] 30.303
+Requirement: 30.303ns
+Endpoints: 4
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_out1_clk_pll_33   clk_out2_clk_pll_33   AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+                                                                            AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+                                                                                                            Slow         0.558     29.745
+
+
+Slack (MET) :             29.745ns  (requirement - actual skew)
+  Endpoint Source:        soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_pll_33)
+  Endpoint Destination:   soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out2_clk_pll_33)
+  Reference Source:       soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_pll_33)
+  Reference Destination:  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out2_clk_pll_33)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            30.303ns
+  Endpoint Relative Delay:    1.108ns
+  Reference Relative Delay:   0.250ns
+  Relative CRPR:              0.300ns
+  Actual Bus Skew:            0.558ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.416     1.416 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.602     4.018    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.536     5.635    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -3.173     2.461 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.557     4.018    clk_pll_33/inst/clk_out1_clk_pll_33
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkout1_buf/O
+                         net (fo=7157, routed)        1.500     5.599    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X9Y143         FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y143         FDRE (Prop_fdre_C_Q)         0.379     5.978 r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.510     6.488    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X10Y144        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out2_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.350     1.350 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.471     3.821    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.434     5.331    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT1)
+                                                     -2.995     2.336 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.484     3.821    clk_pll_33/inst/clk_out2_clk_pll_33
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkout2_buf/O
+                         net (fo=6628, routed)        1.391     5.288    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X10Y144        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism              0.125     5.413    
+    SLICE_X10Y144        FDRE (Setup_fdre_C_D)       -0.033     5.380    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                           6.488    
+                         clock arrival                          5.380    
+  -------------------------------------------------------------------
+                         relative delay                         1.108    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.350     1.350 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.471     3.821    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.434     5.331    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -2.995     2.336 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.484     3.821    clk_pll_33/inst/clk_out1_clk_pll_33
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkout1_buf/O
+                         net (fo=7157, routed)        1.391     5.288    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X8Y142         FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X8Y142         FDRE (Prop_fdre_C_Q)         0.319     5.607 r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.206     5.813    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X8Y144         FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out2_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.416     1.416 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.602     4.018    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.536     5.635    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT1)
+                                                     -3.173     2.461 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.557     4.018    clk_pll_33/inst/clk_out2_clk_pll_33
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkout2_buf/O
+                         net (fo=6628, routed)        1.501     5.600    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X8Y144         FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism             -0.125     5.475    
+    SLICE_X8Y144         FDRE (Hold_fdre_C_D)         0.089     5.564    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                           5.813    
+                         clock arrival                          5.564    
+  -------------------------------------------------------------------
+                         relative delay                         0.250    
+
+
+
+Id: 5
+set_bus_skew -from [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/src_gray_ff_reg[3]}]] -to [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]] 30.303
+Requirement: 30.303ns
+Endpoints: 4
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_out2_clk_pll_33   clk_out1_clk_pll_33   AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                                                                            AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/rd_pntr_cdc_inst/dest_graysync_ff_reg[0][1]/D
+                                                                                                            Slow         0.581     29.722
+
+
+Slack (MET) :             29.722ns  (requirement - actual skew)
+  Endpoint Source:        soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out2_clk_pll_33)
+  Endpoint Destination:   soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_pll_33)
+  Reference Source:       soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out2_clk_pll_33)
+  Reference Destination:  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_pll_33)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            30.303ns
+  Endpoint Relative Delay:    1.156ns
+  Reference Relative Delay:   0.275ns
+  Relative CRPR:              0.300ns
+  Actual Bus Skew:            0.581ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out2_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.416     1.416 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.602     4.018    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.536     5.635    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT1)
+                                                     -3.173     2.461 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.557     4.018    clk_pll_33/inst/clk_out2_clk_pll_33
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkout2_buf/O
+                         net (fo=6628, routed)        1.483     5.582    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X22Y151        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X22Y151        FDRE (Prop_fdre_C_Q)         0.398     5.980 r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.374     6.354    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X17Y151        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.350     1.350 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.471     3.821    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.434     5.331    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -2.995     2.336 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.484     3.821    clk_pll_33/inst/clk_out1_clk_pll_33
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkout1_buf/O
+                         net (fo=7157, routed)        1.376     5.274    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X17Y151        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism              0.125     5.399    
+    SLICE_X17Y151        FDRE (Setup_fdre_C_D)       -0.200     5.199    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                           6.354    
+                         clock arrival                          5.199    
+  -------------------------------------------------------------------
+                         relative delay                         1.156    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out2_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.350     1.350 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.471     3.821    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.434     5.331    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT1)
+                                                     -2.995     2.336 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.484     3.821    clk_pll_33/inst/clk_out2_clk_pll_33
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkout2_buf/O
+                         net (fo=6628, routed)        1.374     5.272    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X22Y152        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X22Y152        FDRE (Prop_fdre_C_Q)         0.319     5.591 r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.229     5.819    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X20Y153        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.416     1.416 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.602     4.018    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.536     5.635    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -3.173     2.461 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.557     4.018    clk_pll_33/inst/clk_out1_clk_pll_33
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkout1_buf/O
+                         net (fo=7157, routed)        1.485     5.584    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X20Y153        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism             -0.125     5.459    
+    SLICE_X20Y153        FDRE (Hold_fdre_C_D)         0.085     5.544    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                           5.819    
+                         clock arrival                          5.544    
+  -------------------------------------------------------------------
+                         relative delay                         0.275    
+
+
+
+Id: 6
+set_bus_skew -from [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]}]] -to [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]] 30.303
+Requirement: 30.303ns
+Endpoints: 4
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_out2_clk_pll_33   clk_out1_clk_pll_33   AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                                                                            AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grdch2.axi_rdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+                                                                                                            Slow         0.712     29.591
+
+
+Slack (MET) :             29.591ns  (requirement - actual skew)
+  Endpoint Source:        soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out2_clk_pll_33)
+  Endpoint Destination:   soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_pll_33)
+  Reference Source:       soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out2_clk_pll_33)
+  Reference Destination:  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_pll_33)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            30.303ns
+  Endpoint Relative Delay:    1.231ns
+  Reference Relative Delay:   0.205ns
+  Relative CRPR:              0.314ns
+  Actual Bus Skew:            0.712ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out2_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.416     1.416 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.602     4.018    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.536     5.635    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT1)
+                                                     -3.173     2.461 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.557     4.018    clk_pll_33/inst/clk_out2_clk_pll_33
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkout2_buf/O
+                         net (fo=6628, routed)        1.484     5.583    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X39Y146        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y146        FDRE (Prop_fdre_C_Q)         0.379     5.962 r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.594     6.556    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X38Y146        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.350     1.350 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.471     3.821    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.434     5.331    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -2.995     2.336 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.484     3.821    clk_pll_33/inst/clk_out1_clk_pll_33
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkout1_buf/O
+                         net (fo=7157, routed)        1.375     5.272    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X38Y146        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism              0.125     5.397    
+    SLICE_X38Y146        FDRE (Setup_fdre_C_D)       -0.073     5.324    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                           6.556    
+                         clock arrival                          5.324    
+  -------------------------------------------------------------------
+                         relative delay                         1.231    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out2_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.350     1.350 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.471     3.821    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.434     5.331    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT1)
+                                                     -2.995     2.336 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.484     3.821    clk_pll_33/inst/clk_out2_clk_pll_33
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkout2_buf/O
+                         net (fo=6628, routed)        1.375     5.272    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X39Y145        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X39Y145        FDRE (Prop_fdre_C_Q)         0.304     5.576 r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.222     5.799    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X38Y145        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.416     1.416 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.602     4.018    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.536     5.635    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -3.173     2.461 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.557     4.018    clk_pll_33/inst/clk_out1_clk_pll_33
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkout1_buf/O
+                         net (fo=7157, routed)        1.484     5.583    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X38Y145        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism             -0.125     5.458    
+    SLICE_X38Y145        FDRE (Hold_fdre_C_D)         0.136     5.594    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                           5.799    
+                         clock arrival                          5.594    
+  -------------------------------------------------------------------
+                         relative delay                         0.205    
+
+
+
+Id: 7
+set_bus_skew -from [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]}]] -to [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]] 30.303
+Requirement: 30.303ns
+Endpoints: 4
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_out1_clk_pll_33   clk_out2_clk_pll_33   AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                                                                            AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gread_ch.grach2.axi_rach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+                                                                                                            Slow         0.607     29.696
+
+
+Slack (MET) :             29.696ns  (requirement - actual skew)
+  Endpoint Source:        soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_pll_33)
+  Endpoint Destination:   soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out2_clk_pll_33)
+  Reference Source:       soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_pll_33)
+  Reference Destination:  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out2_clk_pll_33)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            30.303ns
+  Endpoint Relative Delay:    1.106ns
+  Reference Relative Delay:   0.214ns
+  Relative CRPR:              0.284ns
+  Actual Bus Skew:            0.607ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.416     1.416 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.602     4.018    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.536     5.635    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -3.173     2.461 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.557     4.018    clk_pll_33/inst/clk_out1_clk_pll_33
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkout1_buf/O
+                         net (fo=7157, routed)        1.412     5.511    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X43Y146        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X43Y146        FDRE (Prop_fdre_C_Q)         0.379     5.890 r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.508     6.397    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X46Y146        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out2_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.350     1.350 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.471     3.821    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.434     5.331    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT1)
+                                                     -2.995     2.336 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.484     3.821    clk_pll_33/inst/clk_out2_clk_pll_33
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkout2_buf/O
+                         net (fo=6628, routed)        1.302     5.199    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X46Y146        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism              0.125     5.324    
+    SLICE_X46Y146        FDRE (Setup_fdre_C_D)       -0.033     5.291    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                           6.397    
+                         clock arrival                          5.291    
+  -------------------------------------------------------------------
+                         relative delay                         1.106    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.350     1.350 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.471     3.821    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.434     5.331    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -2.995     2.336 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.484     3.821    clk_pll_33/inst/clk_out1_clk_pll_33
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkout1_buf/O
+                         net (fo=7157, routed)        1.303     5.200    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X44Y144        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X44Y144        FDRE (Prop_fdre_C_Q)         0.347     5.547 r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.190     5.737    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X45Y144        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out2_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.416     1.416 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.602     4.018    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.536     5.635    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT1)
+                                                     -3.173     2.461 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.557     4.018    clk_pll_33/inst/clk_out2_clk_pll_33
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkout2_buf/O
+                         net (fo=6628, routed)        1.413     5.512    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X45Y144        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism             -0.125     5.387    
+    SLICE_X45Y144        FDRE (Hold_fdre_C_D)         0.136     5.523    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                           5.737    
+                         clock arrival                          5.523    
+  -------------------------------------------------------------------
+                         relative delay                         0.214    
+
+
+
+Id: 8
+set_bus_skew -from [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]}]] -to [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]] 30.303
+Requirement: 30.303ns
+Endpoints: 4
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_out2_clk_pll_33   clk_out1_clk_pll_33   AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                                                                            AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwrch2.axi_wrch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+                                                                                                            Slow         0.651     29.652
+
+
+Slack (MET) :             29.652ns  (requirement - actual skew)
+  Endpoint Source:        soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out2_clk_pll_33)
+  Endpoint Destination:   soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_pll_33)
+  Reference Source:       soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out2_clk_pll_33)
+  Reference Destination:  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_pll_33)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            30.303ns
+  Endpoint Relative Delay:    1.110ns
+  Reference Relative Delay:   0.131ns
+  Relative CRPR:              0.328ns
+  Actual Bus Skew:            0.651ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out2_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.416     1.416 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.602     4.018    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.536     5.635    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT1)
+                                                     -3.173     2.461 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.557     4.018    clk_pll_33/inst/clk_out2_clk_pll_33
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkout2_buf/O
+                         net (fo=6628, routed)        1.501     5.600    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X9Y144         FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y144         FDRE (Prop_fdre_C_Q)         0.348     5.948 r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.409     6.357    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X10Y143        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.350     1.350 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.471     3.821    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.434     5.331    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -2.995     2.336 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.484     3.821    clk_pll_33/inst/clk_out1_clk_pll_33
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkout1_buf/O
+                         net (fo=7157, routed)        1.391     5.288    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X10Y143        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism              0.125     5.413    
+    SLICE_X10Y143        FDRE (Setup_fdre_C_D)       -0.167     5.246    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                           6.357    
+                         clock arrival                          5.246    
+  -------------------------------------------------------------------
+                         relative delay                         1.110    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out2_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.350     1.350 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.471     3.821    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.434     5.331    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT1)
+                                                     -2.995     2.336 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.484     3.821    clk_pll_33/inst/clk_out2_clk_pll_33
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkout2_buf/O
+                         net (fo=6628, routed)        1.391     5.288    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X9Y144         FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X9Y144         FDRE (Prop_fdre_C_Q)         0.304     5.592 r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.200     5.792    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X8Y143         FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out1_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.416     1.416 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.602     4.018    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.536     5.635    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -3.173     2.461 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.557     4.018    clk_pll_33/inst/clk_out1_clk_pll_33
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkout1_buf/O
+                         net (fo=7157, routed)        1.500     5.599    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X8Y143         FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism             -0.125     5.474    
+    SLICE_X8Y143         FDRE (Hold_fdre_C_D)         0.187     5.661    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                           5.792    
+                         clock arrival                          5.661    
+  -------------------------------------------------------------------
+                         relative delay                         0.131    
+
+
+
+Id: 9
+set_bus_skew -from [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]}]] -to [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]] 30.303
+Requirement: 30.303ns
+Endpoints: 4
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_out1_clk_pll_33   clk_out2_clk_pll_33   AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]/D
+                                                                            AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwdch2.axi_wdch/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+                                                                                                            Slow         0.581     29.722
+
+
+Slack (MET) :             29.722ns  (requirement - actual skew)
+  Endpoint Source:        soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_pll_33)
+  Endpoint Destination:   soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out2_clk_pll_33)
+  Reference Source:       soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_pll_33)
+  Reference Destination:  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out2_clk_pll_33)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            30.303ns
+  Endpoint Relative Delay:    1.052ns
+  Reference Relative Delay:   0.155ns
+  Relative CRPR:              0.316ns
+  Actual Bus Skew:            0.581ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.416     1.416 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.602     4.018    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.536     5.635    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -3.173     2.461 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.557     4.018    clk_pll_33/inst/clk_out1_clk_pll_33
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkout1_buf/O
+                         net (fo=7157, routed)        1.501     5.600    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X14Y147        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X14Y147        FDRE (Prop_fdre_C_Q)         0.433     6.033 r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.400     6.432    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X12Y147        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out2_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.350     1.350 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.471     3.821    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.434     5.331    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT1)
+                                                     -2.995     2.336 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.484     3.821    clk_pll_33/inst/clk_out2_clk_pll_33
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkout2_buf/O
+                         net (fo=6628, routed)        1.391     5.288    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X12Y147        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism              0.125     5.413    
+    SLICE_X12Y147        FDRE (Setup_fdre_C_D)       -0.033     5.380    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                           6.432    
+                         clock arrival                          5.380    
+  -------------------------------------------------------------------
+                         relative delay                         1.052    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.350     1.350 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.471     3.821    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.434     5.331    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -2.995     2.336 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.484     3.821    clk_pll_33/inst/clk_out1_clk_pll_33
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkout1_buf/O
+                         net (fo=7157, routed)        1.391     5.288    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X13Y146        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X13Y146        FDRE (Prop_fdre_C_Q)         0.304     5.592 r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.224     5.817    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X12Y146        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out2_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.416     1.416 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.602     4.018    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.536     5.635    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT1)
+                                                     -3.173     2.461 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.557     4.018    clk_pll_33/inst/clk_out2_clk_pll_33
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkout2_buf/O
+                         net (fo=6628, routed)        1.501     5.600    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X12Y146        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism             -0.125     5.475    
+    SLICE_X12Y146        FDRE (Hold_fdre_C_D)         0.187     5.662    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                           5.817    
+                         clock arrival                          5.662    
+  -------------------------------------------------------------------
+                         relative delay                         0.155    
+
+
+
+Id: 10
+set_bus_skew -from [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/src_gray_ff_reg[3]}]] -to [get_cells [list {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][0]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][1]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]} {AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]}]] 30.303
+Requirement: 30.303ns
+Endpoints: 4
+
+From Clock            To Clock              Endpoint Pin                    Reference Pin                   Corner  Actual(ns)  Slack(ns)
+--------------------  --------------------  ------------------------------  ------------------------------  ------  ----------  ---------
+clk_out1_clk_pll_33   clk_out2_clk_pll_33   AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][2]/D
+                                                                            AXI_CLK_CONVERTER/inst/gen_clock_conv.gen_async_conv.asyncfifo_axi/inst_fifo_gen/gaxi_full_lite.gwrite_ch.gwach2.axi_wach/grf.rf/gntv_or_sync_fifo.gcx.clkx/wr_pntr_cdc_inst/dest_graysync_ff_reg[0][3]/D
+                                                                                                            Slow         0.646     29.657
+
+
+Slack (MET) :             29.657ns  (requirement - actual skew)
+  Endpoint Source:        soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_pll_33)
+  Endpoint Destination:   soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out2_clk_pll_33)
+  Reference Source:       soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out1_clk_pll_33)
+  Reference Destination:  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                            (rising edge-triggered cell FDRE clocked by clk_out2_clk_pll_33)
+  Path Type:              Bus Skew (Max at Slow Process Corner)
+  Requirement:            30.303ns
+  Endpoint Relative Delay:    1.199ns
+  Reference Relative Delay:   0.181ns
+  Relative CRPR:              0.372ns
+  Actual Bus Skew:            0.646ns  (Endpoint Relative Delay - Reference Relative Delay - Relative CRPR)
+
+Endpoint path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.416     1.416 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.602     4.018    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.536     5.635    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -3.173     2.461 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.557     4.018    clk_pll_33/inst/clk_out1_clk_pll_33
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkout1_buf/O
+                         net (fo=7157, routed)        1.485     5.584    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X20Y153        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X20Y153        FDRE (Prop_fdre_C_Q)         0.433     6.017 r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.541     6.558    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X22Y153        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out2_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.350     1.350 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.471     3.821    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.434     5.331    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT1)
+                                                     -2.995     2.336 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.484     3.821    clk_pll_33/inst/clk_out2_clk_pll_33
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkout2_buf/O
+                         net (fo=6628, routed)        1.374     5.272    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X22Y153        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism              0.125     5.397    
+    SLICE_X22Y153        FDRE (Setup_fdre_C_D)       -0.037     5.360    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                           6.558    
+                         clock arrival                          5.360    
+  -------------------------------------------------------------------
+                         relative delay                         1.199    
+
+Reference path:
+    Location             Delay type                Incr(ns)  Path(ns)    Netlist Resource(s)
+  -------------------------------------------------------------------    -------------------
+                         (clock clk_out1_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.350     1.350 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.471     3.821    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.434     5.331    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT0)
+                                                     -2.995     2.336 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT0
+                         net (fo=1, routed)           1.484     3.821    clk_pll_33/inst/clk_out1_clk_pll_33
+    BUFGCTRL_X0Y0        BUFG (Prop_bufg_I_O)         0.077     3.898 r  clk_pll_33/inst/clkout1_buf/O
+                         net (fo=7157, routed)        1.375     5.273    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X20Y153        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+    SLICE_X20Y153        FDRE (Prop_fdre_C_Q)         0.347     5.620 r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         net (fo=1, routed)           0.209     5.829    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X22Y153        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------    -------------------
+
+                         (clock clk_out2_clk_pll_33 rise edge)
+                                                      0.000     0.000 r  
+    AC19                                              0.000     0.000 r  clk (IN)
+                         net (fo=0)                   0.000     0.000    clk
+    AC19                 IBUF (Prop_ibuf_I_O)         1.416     1.416 r  clk_IBUF_inst/O
+                         net (fo=3, routed)           2.602     4.018    clk_pll_33/inst/clk_in1
+    BUFGCTRL_X0Y5        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkin1_bufg/O
+                         net (fo=1, routed)           1.536     5.635    clk_pll_33/inst/clk_in1_clk_pll_33
+    PLLE2_ADV_X0Y2       PLLE2_ADV (Prop_plle2_adv_CLKIN1_CLKOUT1)
+                                                     -3.173     2.461 r  clk_pll_33/inst/plle2_adv_inst/CLKOUT1
+                         net (fo=1, routed)           1.557     4.018    clk_pll_33/inst/clk_out2_clk_pll_33
+    BUFGCTRL_X0Y1        BUFG (Prop_bufg_I_O)         0.081     4.099 r  clk_pll_33/inst/clkout2_buf/O
+                         net (fo=6628, routed)        1.483     5.582    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+    SLICE_X22Y153        FDRE                                         r  soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+                         clock pessimism             -0.125     5.457    
+    SLICE_X22Y153        FDRE (Hold_fdre_C_D)         0.191     5.648    soc_top/axi_clock_converter_0/axi_clock_converter_0_axi_clock_converter_v2_1_35_axi_clock_converter/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>/<hidden>
+  -------------------------------------------------------------------
+                         data arrival                           5.829    
+                         clock arrival                          5.648    
+  -------------------------------------------------------------------
+                         relative delay                         0.181    
+
+
+

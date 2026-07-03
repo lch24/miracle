@@ -1,0 +1,993 @@
+#-----------------------------------------------------------
+# Vivado v2025.2 (64-bit)
+# SW Build 6299465 on Fri Nov 14 12:34:56 MST 2025
+# IP Build 6300035 on Fri Nov 14 10:48:45 MST 2025
+# SharedData Build 6298862 on Thu Nov 13 04:50:51 MST 2025
+# Start of session at: Fri Jul  3 13:36:05 2026
+# Process ID         : 3299352
+# Current directory  : /home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3
+# Command line       : vivado -log soc_top.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source soc_top.tcl
+# Log file           : /home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/soc_top.vds
+# Journal file       : /home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/vivado.jou
+# Running On         : loong-arch-mini
+# Platform           : Ubuntu
+# Operating System   : Ubuntu 24.04.4 LTS
+# Processor Detail   : AMD Ryzen 9 9950X3D 16-Core Processor
+# CPU Frequency      : 5418.687 MHz
+# CPU Physical cores : 16
+# CPU Logical cores  : 32
+# Host memory        : 98761 MB
+# Swap memory        : 8589 MB
+# Total Virtual      : 107351 MB
+# Available Virtual  : 95780 MB
+#-----------------------------------------------------------
+source soc_top.tcl -notrace
+Command: read_checkpoint -auto_incremental -incremental /home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.srcs/utils_1/imports/synth_3/soc_top.dcp
+INFO: [Vivado 12-5825] Read reference checkpoint from /home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.srcs/utils_1/imports/synth_3/soc_top.dcp for incremental synthesis
+INFO: [Vivado 12-7989] Please ensure there are no constraint changes
+Command: synth_design -top soc_top -part xc7a200tfbg676-2
+Starting synth_design
+INFO: [IP_Flow 19-2162] IP 'axi_2x1_mux' is locked:
+* IP definition 'axi_interconnect (1.7)' for IP 'axi_2x1_mux' (customized with software release 2023.2) was not found in the IP Catalog.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7a200t'
+INFO: [Device 21-403] Loading part xc7a200tfbg676-2
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 7 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 3299435
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:02 ; elapsed = 00:00:02 . Memory (MB): peak = 2279.789 ; gain = 482.156 ; free physical = 31455 ; free virtual = 89924
+---------------------------------------------------------------------------------
+INFO: [Synth 8-11241] undeclared symbol 'nand_dma_ack_i', assumed default net type 'wire' [/home/lch/work/miracle/chiplab/IP/APB_DEV/apb_dev_top_with_nand.v:208]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:38]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:41]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:43]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:45]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:47]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:49]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:51]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:53]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:77]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:79]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:82]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:84]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:87]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:89]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:92]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:94]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:97]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:99]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:102]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:104]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:107]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:109]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:112]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:114]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:117]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:119]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:122]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:124]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:127]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:129]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:132]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:134]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:137]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:140]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:143]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:149]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:151]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:153]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:155]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:157]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:159]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:161]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:163]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:164]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:171]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:173]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:175]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:177]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:182]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:188]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:190]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:192]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:194]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:196]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:203]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:204]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:205]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:208]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:209]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:210]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:213]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:214]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:215]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:216]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:217]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:218]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:221]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:222]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:223]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:224]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:225]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:226]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:227]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:228]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:229]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:230]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:231]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:234]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:235]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:236]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:237]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:238]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:239]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:240]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:243]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:244]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:245]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:248]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:249]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:250]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:251]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:252]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:253]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:254]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:255]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:256]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:257]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:260]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:261]
+WARNING: [Synth 8-11145] root scope declaration is not allowed in Verilog 95/2K mode [/home/lch/work/miracle/chiplab/IP/MAC/utility.v:262]
+INFO: [Common 17-14] Message 'Synth 8-11145' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+INFO: [Synth 8-11241] undeclared symbol 'param_scs', assumed default net type 'wire' [/home/lch/work/miracle/chiplab/IP/SPI/godson_sbridge_spi.v:506]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 's_wready' is not allowed [/home/lch/work/miracle/chiplab/IP/LCD/lcd_ctrl.v:92]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 's_rdata' is not allowed [/home/lch/work/miracle/chiplab/IP/LCD/lcd_ctrl.v:303]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 's_rvalid' is not allowed [/home/lch/work/miracle/chiplab/IP/LCD/lcd_ctrl.v:304]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 's_rlast' is not allowed [/home/lch/work/miracle/chiplab/IP/LCD/lcd_ctrl.v:304]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 's_bvalid' is not allowed [/home/lch/work/miracle/chiplab/IP/LCD/lcd_ctrl.v:324]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 's_wready' is not allowed [/home/lch/work/miracle/chiplab/IP/PS2/ps2_ctrl.v:67]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 's_rdata' is not allowed [/home/lch/work/miracle/chiplab/IP/PS2/ps2_ctrl.v:459]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 's_rvalid' is not allowed [/home/lch/work/miracle/chiplab/IP/PS2/ps2_ctrl.v:460]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 's_rlast' is not allowed [/home/lch/work/miracle/chiplab/IP/PS2/ps2_ctrl.v:460]
+WARNING: [Synth 8-11121] redeclaration of ANSI port 's_bvalid' is not allowed [/home/lch/work/miracle/chiplab/IP/PS2/ps2_ctrl.v:480]
+WARNING: [Synth 8-6901] identifier 'rx_push' is used before its declaration [/home/lch/work/miracle/chiplab/IP/PS2/ps2_ctrl.v:174]
+WARNING: [Synth 8-6901] identifier 'rx_pop' is used before its declaration [/home/lch/work/miracle/chiplab/IP/PS2/ps2_ctrl.v:174]
+WARNING: [Synth 8-6901] identifier 'rx_shift_reg' is used before its declaration [/home/lch/work/miracle/chiplab/IP/PS2/ps2_ctrl.v:175]
+WARNING: [Synth 8-6901] identifier 'rx_pop' is used before its declaration [/home/lch/work/miracle/chiplab/IP/PS2/ps2_ctrl.v:179]
+WARNING: [Synth 8-6901] identifier 'rx_push' is used before its declaration [/home/lch/work/miracle/chiplab/IP/PS2/ps2_ctrl.v:179]
+WARNING: [Synth 8-6901] identifier 'rx_push' is used before its declaration [/home/lch/work/miracle/chiplab/IP/PS2/ps2_ctrl.v:184]
+WARNING: [Synth 8-6901] identifier 'rx_pop' is used before its declaration [/home/lch/work/miracle/chiplab/IP/PS2/ps2_ctrl.v:184]
+WARNING: [Synth 8-6901] identifier 'rx_shift_reg' is used before its declaration [/home/lch/work/miracle/chiplab/IP/PS2/ps2_ctrl.v:185]
+WARNING: [Synth 8-6901] identifier 'tx_busy' is used before its declaration [/home/lch/work/miracle/chiplab/IP/PS2/ps2_ctrl.v:218]
+WARNING: [Synth 8-6901] identifier 'tx_data_buf' is used before its declaration [/home/lch/work/miracle/chiplab/IP/PS2/ps2_ctrl.v:313]
+INFO: [Synth 8-6157] synthesizing module 'soc_top' [/home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v:36]
+INFO: [Synth 8-6157] synthesizing module 'IOBUF' [/opt/vivado/2025.2/Vivado/scripts/rt/data/unisim_comp.v:87566]
+INFO: [Synth 8-6155] done synthesizing module 'IOBUF' (0#1) [/opt/vivado/2025.2/Vivado/scripts/rt/data/unisim_comp.v:87566]
+INFO: [Synth 8-6157] synthesizing module 'debug_top' [/home/lch/work/miracle/chiplab/IP/DEBUG/debug_top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'uart_recv' [/home/lch/work/miracle/chiplab/IP/DEBUG/debug_top.v:80]
+INFO: [Synth 8-6155] done synthesizing module 'uart_recv' (0#1) [/home/lch/work/miracle/chiplab/IP/DEBUG/debug_top.v:80]
+INFO: [Synth 8-6157] synthesizing module 'uart_send' [/home/lch/work/miracle/chiplab/IP/DEBUG/debug_top.v:203]
+INFO: [Synth 8-6155] done synthesizing module 'uart_send' (0#1) [/home/lch/work/miracle/chiplab/IP/DEBUG/debug_top.v:203]
+INFO: [Synth 8-6157] synthesizing module 'trace_debug' [/home/lch/work/miracle/chiplab/IP/DEBUG/debug_top.v:317]
+INFO: [Synth 8-6155] done synthesizing module 'trace_debug' (0#1) [/home/lch/work/miracle/chiplab/IP/DEBUG/debug_top.v:317]
+INFO: [Synth 8-6155] done synthesizing module 'debug_top' (0#1) [/home/lch/work/miracle/chiplab/IP/DEBUG/debug_top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'debug_sram' [/home/lch/work/miracle/chiplab/IP/DEBUG/debug_sram.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'debug_sram' (0#1) [/home/lch/work/miracle/chiplab/IP/DEBUG/debug_sram.v:1]
+WARNING: [Synth 8-689] width (32) of port connection 'rdata' does not match port width (64) of module 'debug_sram' [/home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v:800]
+INFO: [Synth 8-6157] synthesizing module 'core_top' [/home/lch/work/miracle/chiplab/IP/myCPU/mycpu_top.v:1]
+INFO: [Synth 8-6157] synthesizing module 'if_stage' [/home/lch/work/miracle/chiplab/IP/myCPU/if_stage.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'if_stage' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/if_stage.v:4]
+INFO: [Synth 8-6157] synthesizing module 'id_stage' [/home/lch/work/miracle/chiplab/IP/myCPU/id_stage.v:3]
+INFO: [Synth 8-6157] synthesizing module 'decoder_6_64' [/home/lch/work/miracle/chiplab/IP/myCPU/tools.v:85]
+INFO: [Synth 8-6155] done synthesizing module 'decoder_6_64' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/tools.v:85]
+INFO: [Synth 8-6157] synthesizing module 'decoder_4_16' [/home/lch/work/miracle/chiplab/IP/myCPU/tools.v:26]
+INFO: [Synth 8-6155] done synthesizing module 'decoder_4_16' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/tools.v:26]
+INFO: [Synth 8-6157] synthesizing module 'decoder_2_4' [/home/lch/work/miracle/chiplab/IP/myCPU/tools.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'decoder_2_4' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/tools.v:1]
+INFO: [Synth 8-6157] synthesizing module 'decoder_5_32' [/home/lch/work/miracle/chiplab/IP/myCPU/tools.v:57]
+INFO: [Synth 8-6155] done synthesizing module 'decoder_5_32' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/tools.v:57]
+INFO: [Synth 8-6157] synthesizing module 'regfile' [/home/lch/work/miracle/chiplab/IP/myCPU/regfile.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'regfile' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/regfile.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'id_stage' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/id_stage.v:3]
+INFO: [Synth 8-6157] synthesizing module 'exe_stage' [/home/lch/work/miracle/chiplab/IP/myCPU/exe_stage.v:4]
+INFO: [Synth 8-6157] synthesizing module 'alu' [/home/lch/work/miracle/chiplab/IP/myCPU/alu.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'alu' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/alu.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'exe_stage' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/exe_stage.v:4]
+INFO: [Synth 8-6157] synthesizing module 'div' [/home/lch/work/miracle/chiplab/IP/myCPU/div.v:2]
+INFO: [Synth 8-6155] done synthesizing module 'div' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/div.v:2]
+INFO: [Synth 8-6157] synthesizing module 'mul' [/home/lch/work/miracle/chiplab/IP/myCPU/mul.v:120]
+INFO: [Synth 8-6157] synthesizing module 'BoothInterBase' [/home/lch/work/miracle/chiplab/IP/myCPU/mul.v:29]
+INFO: [Synth 8-6157] synthesizing module 'BoothBase' [/home/lch/work/miracle/chiplab/IP/myCPU/mul.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'BoothBase' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/mul.v:14]
+INFO: [Synth 8-6157] synthesizing module 'YDecoder' [/home/lch/work/miracle/chiplab/IP/myCPU/mul.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'YDecoder' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/mul.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'BoothInterBase' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/mul.v:29]
+INFO: [Synth 8-6157] synthesizing module 'WallaceTreeBase' [/home/lch/work/miracle/chiplab/IP/myCPU/mul.v:77]
+INFO: [Synth 8-6157] synthesizing module 'addr' [/home/lch/work/miracle/chiplab/IP/myCPU/mul.v:66]
+INFO: [Synth 8-6155] done synthesizing module 'addr' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/mul.v:66]
+INFO: [Synth 8-6155] done synthesizing module 'WallaceTreeBase' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/mul.v:77]
+INFO: [Synth 8-6155] done synthesizing module 'mul' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/mul.v:120]
+INFO: [Synth 8-6157] synthesizing module 'mem_stage' [/home/lch/work/miracle/chiplab/IP/myCPU/mem_stage.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'mem_stage' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/mem_stage.v:4]
+INFO: [Synth 8-6157] synthesizing module 'wb_stage' [/home/lch/work/miracle/chiplab/IP/myCPU/wb_stage.v:4]
+INFO: [Synth 8-6155] done synthesizing module 'wb_stage' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/wb_stage.v:4]
+INFO: [Synth 8-6157] synthesizing module 'my_csr' [/home/lch/work/miracle/chiplab/IP/myCPU/my_csr.v:4]
+	Parameter TLBNUM bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'my_csr' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/my_csr.v:4]
+INFO: [Synth 8-6157] synthesizing module 'axi_bridge' [/home/lch/work/miracle/chiplab/IP/myCPU/axi_bridge.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'axi_bridge' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/axi_bridge.v:1]
+INFO: [Synth 8-6157] synthesizing module 'addr_trans' [/home/lch/work/miracle/chiplab/IP/myCPU/addr_trans.v:3]
+	Parameter TLBNUM bound to: 32 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'tlb_entry' [/home/lch/work/miracle/chiplab/IP/myCPU/tlb_entry.v:1]
+INFO: [Synth 8-6157] synthesizing module 'encoder_32_5' [/home/lch/work/miracle/chiplab/IP/myCPU/tools.v:69]
+INFO: [Synth 8-6157] synthesizing module 'encoder_16_4' [/home/lch/work/miracle/chiplab/IP/myCPU/tools.v:38]
+INFO: [Synth 8-6157] synthesizing module 'encoder_4_2' [/home/lch/work/miracle/chiplab/IP/myCPU/tools.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'encoder_4_2' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/tools.v:14]
+INFO: [Synth 8-6155] done synthesizing module 'encoder_16_4' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/tools.v:38]
+INFO: [Synth 8-6155] done synthesizing module 'encoder_32_5' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/tools.v:69]
+WARNING: [Synth 8-693] zero replication count - replication ignored [/home/lch/work/miracle/chiplab/IP/myCPU/tlb_entry.v:135]
+WARNING: [Synth 8-693] zero replication count - replication ignored [/home/lch/work/miracle/chiplab/IP/myCPU/tlb_entry.v:136]
+WARNING: [Synth 8-693] zero replication count - replication ignored [/home/lch/work/miracle/chiplab/IP/myCPU/tlb_entry.v:139]
+WARNING: [Synth 8-693] zero replication count - replication ignored [/home/lch/work/miracle/chiplab/IP/myCPU/tlb_entry.v:148]
+INFO: [Synth 8-6155] done synthesizing module 'tlb_entry' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/tlb_entry.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'addr_trans' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/addr_trans.v:3]
+INFO: [Synth 8-6157] synthesizing module 'icache' [/home/lch/work/miracle/chiplab/IP/myCPU/icache.v:1]
+INFO: [Synth 8-6157] synthesizing module 'data_bank_sram' [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/realtime/data_bank_sram_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'data_bank_sram' (0#1) [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/realtime/data_bank_sram_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'tagv_sram' [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/realtime/tagv_sram_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'tagv_sram' (0#1) [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/realtime/tagv_sram_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'one_valid_n' [/home/lch/work/miracle/chiplab/IP/myCPU/tools.v:100]
+	Parameter n bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'one_valid_n' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/tools.v:100]
+INFO: [Synth 8-6157] synthesizing module 'lfsr' [/home/lch/work/miracle/chiplab/IP/myCPU/dcache.v:623]
+INFO: [Synth 8-6155] done synthesizing module 'lfsr' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/dcache.v:623]
+INFO: [Synth 8-6155] done synthesizing module 'icache' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/icache.v:1]
+INFO: [Synth 8-6157] synthesizing module 'dcache' [/home/lch/work/miracle/chiplab/IP/myCPU/dcache.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'dcache' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/dcache.v:1]
+INFO: [Synth 8-6157] synthesizing module 'btb' [/home/lch/work/miracle/chiplab/IP/myCPU/btb.v:1]
+INFO: [Synth 8-6157] synthesizing module 'one_valid_32' [/home/lch/work/miracle/chiplab/IP/myCPU/tools.v:147]
+INFO: [Synth 8-6155] done synthesizing module 'one_valid_32' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/tools.v:147]
+INFO: [Synth 8-6157] synthesizing module 'one_valid_16' [/home/lch/work/miracle/chiplab/IP/myCPU/tools.v:126]
+INFO: [Synth 8-6155] done synthesizing module 'one_valid_16' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/tools.v:126]
+INFO: [Synth 8-6155] done synthesizing module 'btb' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/btb.v:1]
+WARNING: [Synth 8-4446] all outputs are unconnected for this instance and logic may be removed [/home/lch/work/miracle/chiplab/IP/myCPU/mycpu_top.v:1057]
+INFO: [Synth 8-6157] synthesizing module 'perf_counter' [/home/lch/work/miracle/chiplab/IP/myCPU/perf_counter.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'perf_counter' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/perf_counter.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'core_top' (0#1) [/home/lch/work/miracle/chiplab/IP/myCPU/mycpu_top.v:1]
+WARNING: [Synth 8-689] width (9) of port connection 'intrpt' does not match port width (8) of module 'core_top' [/home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v:824]
+WARNING: [Synth 8-689] width (4) of port connection 'arlen' does not match port width (8) of module 'core_top' [/home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v:831]
+WARNING: [Synth 8-689] width (4) of port connection 'awlen' does not match port width (8) of module 'core_top' [/home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v:849]
+WARNING: [Synth 8-7071] port 'debug0_wb_inst' of module 'core_top' is unconnected for instance 'cpu_mid' [/home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v:822]
+WARNING: [Synth 8-7023] instance 'cpu_mid' of module 'core_top' has 49 connections declared, but only 48 given [/home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v:822]
+INFO: [Synth 8-6157] synthesizing module 'axi_2x1_mux' [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/realtime/axi_2x1_mux_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'axi_2x1_mux' (0#1) [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/realtime/axi_2x1_mux_stub.v:6]
+WARNING: [Synth 8-689] width (4) of port connection 'S00_AXI_ARID' does not match port width (1) of module 'axi_2x1_mux' [/home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v:895]
+WARNING: [Synth 8-689] width (4) of port connection 'S00_AXI_ARLEN' does not match port width (8) of module 'axi_2x1_mux' [/home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v:896]
+WARNING: [Synth 8-689] width (2) of port connection 'S00_AXI_ARLOCK' does not match port width (1) of module 'axi_2x1_mux' [/home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v:897]
+WARNING: [Synth 8-689] width (4) of port connection 'S00_AXI_RID' does not match port width (1) of module 'axi_2x1_mux' [/home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v:905]
+WARNING: [Synth 8-689] width (4) of port connection 'S01_AXI_ARID' does not match port width (1) of module 'axi_2x1_mux' [/home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v:938]
+WARNING: [Synth 8-689] width (2) of port connection 'S01_AXI_ARLOCK' does not match port width (1) of module 'axi_2x1_mux' [/home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v:940]
+WARNING: [Synth 8-689] width (4) of port connection 'S01_AXI_RID' does not match port width (1) of module 'axi_2x1_mux' [/home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v:948]
+WARNING: [Synth 8-689] width (4) of port connection 'M00_AXI_ARID' does not match port width (5) of module 'axi_2x1_mux' [/home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v:981]
+WARNING: [Synth 8-689] width (4) of port connection 'M00_AXI_ARLEN' does not match port width (8) of module 'axi_2x1_mux' [/home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v:982]
+WARNING: [Synth 8-689] width (2) of port connection 'M00_AXI_ARLOCK' does not match port width (1) of module 'axi_2x1_mux' [/home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v:983]
+WARNING: [Synth 8-315] illegal expression in output port connection [/home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v:985]
+INFO: [Synth 8-6157] synthesizing module 'axi_clock_converter_0' [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/realtime/axi_clock_converter_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'axi_clock_converter_0' (0#1) [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/realtime/axi_clock_converter_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'axi_slave_mux' [/home/lch/work/miracle/chiplab/IP/AMBA/axi_mux_syn.v:37]
+INFO: [Synth 8-6157] synthesizing module 'nb_sync_fifo_mux' [/home/lch/work/miracle/chiplab/IP/AMBA/axi_mux_syn.v:1309]
+INFO: [Synth 8-6155] done synthesizing module 'nb_sync_fifo_mux' (0#1) [/home/lch/work/miracle/chiplab/IP/AMBA/axi_mux_syn.v:1309]
+INFO: [Synth 8-6155] done synthesizing module 'axi_slave_mux' (0#1) [/home/lch/work/miracle/chiplab/IP/AMBA/axi_mux_syn.v:37]
+INFO: [Synth 8-6157] synthesizing module 'spi_flash_ctrl' [/home/lch/work/miracle/chiplab/IP/SPI/godson_sbridge_spi.v:34]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/lch/work/miracle/chiplab/IP/SPI/godson_sbridge_spi.v:434]
+INFO: [Synth 8-6157] synthesizing module 'simple_spi_top' [/home/lch/work/miracle/chiplab/IP/SPI/godson_sbridge_spi.v:526]
+INFO: [Synth 8-6157] synthesizing module 'spi_fifo4' [/home/lch/work/miracle/chiplab/IP/SPI/godson_sbridge_spi.v:839]
+	Parameter dw bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'spi_fifo4' (0#1) [/home/lch/work/miracle/chiplab/IP/SPI/godson_sbridge_spi.v:839]
+INFO: [Synth 8-226] default block is never used [/home/lch/work/miracle/chiplab/IP/SPI/godson_sbridge_spi.v:779]
+INFO: [Synth 8-6155] done synthesizing module 'simple_spi_top' (0#1) [/home/lch/work/miracle/chiplab/IP/SPI/godson_sbridge_spi.v:526]
+INFO: [Synth 8-6155] done synthesizing module 'spi_flash_ctrl' (0#1) [/home/lch/work/miracle/chiplab/IP/SPI/godson_sbridge_spi.v:34]
+INFO: [Synth 8-6157] synthesizing module 'confreg' [/home/lch/work/miracle/chiplab/IP/CONFREG/confreg_syn.v:43]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/lch/work/miracle/chiplab/IP/CONFREG/confreg_syn.v:254]
+INFO: [Synth 8-6155] done synthesizing module 'confreg' (0#1) [/home/lch/work/miracle/chiplab/IP/CONFREG/confreg_syn.v:43]
+WARNING: [Synth 8-689] width (4) of port connection 's_awlen' does not match port width (8) of module 'confreg' [/home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v:1496]
+WARNING: [Synth 8-689] width (2) of port connection 's_awlock' does not match port width (1) of module 'confreg' [/home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v:1499]
+WARNING: [Synth 8-689] width (4) of port connection 's_arlen' does not match port width (8) of module 'confreg' [/home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v:1519]
+WARNING: [Synth 8-689] width (2) of port connection 's_arlock' does not match port width (1) of module 'confreg' [/home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v:1522]
+INFO: [Synth 8-6157] synthesizing module 'ethernet_top' [/home/lch/work/miracle/chiplab/IP/MAC/ethernet_top.v:34]
+INFO: [Synth 8-6157] synthesizing module 'mac_top' [/home/lch/work/miracle/chiplab/IP/MAC/mac_top.v:34]
+INFO: [Synth 8-6157] synthesizing module 'RegFile2_64x16' [/home/lch/work/miracle/chiplab/IP/MAC/mac_top.v:411]
+INFO: [Synth 8-6155] done synthesizing module 'RegFile2_64x16' (0#1) [/home/lch/work/miracle/chiplab/IP/MAC/mac_top.v:411]
+INFO: [Synth 8-6157] synthesizing module 'MAC_AXI' [/home/lch/work/miracle/chiplab/IP/MAC/mac_axi.v:34]
+INFO: [Synth 8-6157] synthesizing module 'MAC' [/home/lch/work/miracle/chiplab/IP/MAC/mac.v:34]
+	Parameter CSRWIDTH bound to: 32 - type: integer 
+	Parameter DATAWIDTH bound to: 32 - type: integer 
+	Parameter DATADEPTH bound to: 32 - type: integer 
+	Parameter TFIFODEPTH bound to: 9 - type: integer 
+	Parameter RFIFODEPTH bound to: 9 - type: integer 
+	Parameter TCDEPTH bound to: 1 - type: integer 
+	Parameter RCDEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'DMA' [/home/lch/work/miracle/chiplab/IP/MAC/dma.v:34]
+	Parameter DATAWIDTH bound to: 32 - type: integer 
+	Parameter DATADEPTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'DMA' (0#1) [/home/lch/work/miracle/chiplab/IP/MAC/dma.v:34]
+INFO: [Synth 8-6157] synthesizing module 'TLSM' [/home/lch/work/miracle/chiplab/IP/MAC/tlsm.v:34]
+	Parameter DATAWIDTH bound to: 32 - type: integer 
+	Parameter DATADEPTH bound to: 32 - type: integer 
+	Parameter FIFODEPTH bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'TLSM' (0#1) [/home/lch/work/miracle/chiplab/IP/MAC/tlsm.v:34]
+INFO: [Synth 8-6157] synthesizing module 'TFIFO' [/home/lch/work/miracle/chiplab/IP/MAC/tfifo.v:34]
+	Parameter DATAWIDTH bound to: 32 - type: integer 
+	Parameter DATADEPTH bound to: 32 - type: integer 
+	Parameter FIFODEPTH bound to: 9 - type: integer 
+	Parameter CACHEDEPTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'TFIFO' (0#1) [/home/lch/work/miracle/chiplab/IP/MAC/tfifo.v:34]
+INFO: [Synth 8-6157] synthesizing module 'TC' [/home/lch/work/miracle/chiplab/IP/MAC/tc.v:34]
+	Parameter FIFODEPTH bound to: 9 - type: integer 
+	Parameter DATAWIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'TC' (0#1) [/home/lch/work/miracle/chiplab/IP/MAC/tc.v:34]
+INFO: [Synth 8-6157] synthesizing module 'BD' [/home/lch/work/miracle/chiplab/IP/MAC/bd.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'BD' (0#1) [/home/lch/work/miracle/chiplab/IP/MAC/bd.v:34]
+INFO: [Synth 8-6157] synthesizing module 'RC' [/home/lch/work/miracle/chiplab/IP/MAC/rc.v:34]
+	Parameter FIFODEPTH bound to: 9 - type: integer 
+	Parameter DATAWIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'RC' (0#1) [/home/lch/work/miracle/chiplab/IP/MAC/rc.v:34]
+INFO: [Synth 8-6157] synthesizing module 'RFIFO' [/home/lch/work/miracle/chiplab/IP/MAC/rfifo.v:34]
+	Parameter DATAWIDTH bound to: 32 - type: integer 
+	Parameter DATADEPTH bound to: 32 - type: integer 
+	Parameter FIFODEPTH bound to: 9 - type: integer 
+	Parameter CACHEDEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'RFIFO' (0#1) [/home/lch/work/miracle/chiplab/IP/MAC/rfifo.v:34]
+INFO: [Synth 8-6157] synthesizing module 'RLSM' [/home/lch/work/miracle/chiplab/IP/MAC/rlsm.v:34]
+	Parameter DATAWIDTH bound to: 32 - type: integer 
+	Parameter DATADEPTH bound to: 32 - type: integer 
+	Parameter FIFODEPTH bound to: 9 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'RLSM' (0#1) [/home/lch/work/miracle/chiplab/IP/MAC/rlsm.v:34]
+INFO: [Synth 8-6157] synthesizing module 'CSR' [/home/lch/work/miracle/chiplab/IP/MAC/csr.v:34]
+	Parameter CSRWIDTH bound to: 32 - type: integer 
+	Parameter DATAWIDTH bound to: 32 - type: integer 
+	Parameter DATADEPTH bound to: 32 - type: integer 
+	Parameter RFIFODEPTH bound to: 9 - type: integer 
+	Parameter RCDEPTH bound to: 2 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'CSR' (0#1) [/home/lch/work/miracle/chiplab/IP/MAC/csr.v:34]
+INFO: [Synth 8-6157] synthesizing module 'RSTC' [/home/lch/work/miracle/chiplab/IP/MAC/rstc.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'RSTC' (0#1) [/home/lch/work/miracle/chiplab/IP/MAC/rstc.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'MAC' (0#1) [/home/lch/work/miracle/chiplab/IP/MAC/mac.v:34]
+INFO: [Synth 8-6157] synthesizing module 'MAC2AXI' [/home/lch/work/miracle/chiplab/IP/MAC/mac2axi.v:34]
+	Parameter MAXIDATAWIDTH bound to: 32 - type: integer 
+	Parameter MAXIADDRESSWIDTH bound to: 32 - type: integer 
+	Parameter SAXIDATAWIDTH bound to: 32 - type: integer 
+	Parameter SAXIADDRESSWIDTH bound to: 32 - type: integer 
+	Parameter MACDATAWIDTH bound to: 32 - type: integer 
+	Parameter MACADDRESSWIDTH bound to: 32 - type: integer 
+	Parameter CSRDATAWIDTH bound to: 32 - type: integer 
+	Parameter CSRADDRESSWIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6157] synthesizing module 'MACDATA2AXI' [/home/lch/work/miracle/chiplab/IP/MAC/macdata2axi.v:34]
+	Parameter MAXIDATAWIDTH bound to: 32 - type: integer 
+	Parameter MAXIADDRESSWIDTH bound to: 32 - type: integer 
+	Parameter MACDATAWIDTH bound to: 32 - type: integer 
+	Parameter MACADDRESSWIDTH bound to: 32 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'MACDATA2AXI' (0#1) [/home/lch/work/miracle/chiplab/IP/MAC/macdata2axi.v:34]
+INFO: [Synth 8-6157] synthesizing module 'MACCSR2AXI' [/home/lch/work/miracle/chiplab/IP/MAC/maccsr2axi.v:34]
+	Parameter SAXIDATAWIDTH bound to: 32 - type: integer 
+	Parameter SAXIADDRESSWIDTH bound to: 32 - type: integer 
+	Parameter CSRDATAWIDTH bound to: 32 - type: integer 
+	Parameter CSRADDRESSWIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'MACCSR2AXI' (0#1) [/home/lch/work/miracle/chiplab/IP/MAC/maccsr2axi.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'MAC2AXI' (0#1) [/home/lch/work/miracle/chiplab/IP/MAC/mac2axi.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'MAC_AXI' (0#1) [/home/lch/work/miracle/chiplab/IP/MAC/mac_axi.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'mac_top' (0#1) [/home/lch/work/miracle/chiplab/IP/MAC/mac_top.v:34]
+INFO: [Synth 8-6157] synthesizing module 'dpram_512x32' [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/realtime/dpram_512x32_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'dpram_512x32' (0#1) [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/realtime/dpram_512x32_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'ethernet_top' (0#1) [/home/lch/work/miracle/chiplab/IP/MAC/ethernet_top.v:34]
+INFO: [Synth 8-6157] synthesizing module 'clk_pll_33' [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/realtime/clk_pll_33_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_pll_33' (0#1) [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/realtime/clk_pll_33_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'clk_wiz_0' [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'clk_wiz_0' (0#1) [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/realtime/clk_wiz_0_stub.v:6]
+INFO: [Synth 8-6157] synthesizing module 'axi_interconnect_0' [/home/lch/work/miracle/chiplab/IP/AXI/axi_interconnect_0.v:15]
+INFO: [Synth 8-6157] synthesizing module 'axi_async_fifo' [/home/lch/work/miracle/chiplab/IP/AXI/axi_interconnect_0.v:610]
+	Parameter DATA_WIDTH bound to: 55 - type: integer 
+	Parameter ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_async_fifo' (0#1) [/home/lch/work/miracle/chiplab/IP/AXI/axi_interconnect_0.v:610]
+INFO: [Synth 8-6157] synthesizing module 'axi_async_fifo__parameterized0' [/home/lch/work/miracle/chiplab/IP/AXI/axi_interconnect_0.v:610]
+	Parameter DATA_WIDTH bound to: 37 - type: integer 
+	Parameter ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_async_fifo__parameterized0' (0#1) [/home/lch/work/miracle/chiplab/IP/AXI/axi_interconnect_0.v:610]
+INFO: [Synth 8-6157] synthesizing module 'axi_async_fifo__parameterized1' [/home/lch/work/miracle/chiplab/IP/AXI/axi_interconnect_0.v:610]
+	Parameter DATA_WIDTH bound to: 6 - type: integer 
+	Parameter ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_async_fifo__parameterized1' (0#1) [/home/lch/work/miracle/chiplab/IP/AXI/axi_interconnect_0.v:610]
+INFO: [Synth 8-6157] synthesizing module 'axi_async_fifo__parameterized2' [/home/lch/work/miracle/chiplab/IP/AXI/axi_interconnect_0.v:610]
+	Parameter DATA_WIDTH bound to: 39 - type: integer 
+	Parameter ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_async_fifo__parameterized2' (0#1) [/home/lch/work/miracle/chiplab/IP/AXI/axi_interconnect_0.v:610]
+INFO: [Synth 8-6157] synthesizing module 'axi_async_fifo__parameterized3' [/home/lch/work/miracle/chiplab/IP/AXI/axi_interconnect_0.v:610]
+	Parameter DATA_WIDTH bound to: 73 - type: integer 
+	Parameter ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_async_fifo__parameterized3' (0#1) [/home/lch/work/miracle/chiplab/IP/AXI/axi_interconnect_0.v:610]
+INFO: [Synth 8-6157] synthesizing module 'axi_async_fifo__parameterized4' [/home/lch/work/miracle/chiplab/IP/AXI/axi_interconnect_0.v:610]
+	Parameter DATA_WIDTH bound to: 71 - type: integer 
+	Parameter ADDR_WIDTH bound to: 4 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'axi_async_fifo__parameterized4' (0#1) [/home/lch/work/miracle/chiplab/IP/AXI/axi_interconnect_0.v:610]
+INFO: [Synth 8-6155] done synthesizing module 'axi_interconnect_0' (0#1) [/home/lch/work/miracle/chiplab/IP/AXI/axi_interconnect_0.v:15]
+INFO: [Synth 8-6157] synthesizing module 'mig_axi_32' [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/realtime/mig_axi_32_stub.v:6]
+INFO: [Synth 8-6155] done synthesizing module 'mig_axi_32' (0#1) [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/realtime/mig_axi_32_stub.v:6]
+WARNING: [Synth 8-7071] port 'device_temp' of module 'mig_axi_32' is unconnected for instance 'mig_axi' [/home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v:1914]
+WARNING: [Synth 8-7023] instance 'mig_axi' of module 'mig_axi_32' has 66 connections declared, but only 65 given [/home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v:1914]
+INFO: [Synth 8-6157] synthesizing module 'dma_master' [/home/lch/work/miracle/chiplab/IP/DMA/dma.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'dma_master' (0#1) [/home/lch/work/miracle/chiplab/IP/DMA/dma.v:39]
+INFO: [Synth 8-6157] synthesizing module 'axi2apb_misc' [/home/lch/work/miracle/chiplab/IP/APB_DEV/apb_dev_top_with_nand.v:36]
+INFO: [Synth 8-6157] synthesizing module 'axi2apb_bridge' [/home/lch/work/miracle/chiplab/IP/AMBA/axi2apb.v:36]
+INFO: [Synth 8-226] default block is never used [/home/lch/work/miracle/chiplab/IP/AMBA/axi2apb.v:337]
+INFO: [Synth 8-6155] done synthesizing module 'axi2apb_bridge' (0#1) [/home/lch/work/miracle/chiplab/IP/AMBA/axi2apb.v:36]
+INFO: [Synth 8-6157] synthesizing module 'apb_mux2' [/home/lch/work/miracle/chiplab/IP/APB_DEV/apb_mux2.v:38]
+INFO: [Synth 8-6157] synthesizing module 'arb_2_1' [/home/lch/work/miracle/chiplab/IP/APB_DEV/apb_mux2.v:185]
+INFO: [Synth 8-6155] done synthesizing module 'arb_2_1' (0#1) [/home/lch/work/miracle/chiplab/IP/APB_DEV/apb_mux2.v:185]
+INFO: [Synth 8-6155] done synthesizing module 'apb_mux2' (0#1) [/home/lch/work/miracle/chiplab/IP/APB_DEV/apb_mux2.v:38]
+INFO: [Synth 8-6157] synthesizing module 'UART_TOP' [/home/lch/work/miracle/chiplab/IP/APB_DEV/URT/uart_top.v:36]
+INFO: [Synth 8-6157] synthesizing module 'uart_regs' [/home/lch/work/miracle/chiplab/IP/APB_DEV/URT/uart_regs.v:39]
+INFO: [Synth 8-6157] synthesizing module 'uart_transmitter' [/home/lch/work/miracle/chiplab/IP/APB_DEV/URT/uart_transmitter.v:36]
+INFO: [Synth 8-6157] synthesizing module 'uart_tfifo' [/home/lch/work/miracle/chiplab/IP/APB_DEV/URT/uart_tfifo.v:36]
+INFO: [Synth 8-6157] synthesizing module 'raminfr' [/home/lch/work/miracle/chiplab/IP/APB_DEV/URT/raminfr.v:34]
+	Parameter addr_width bound to: 4 - type: integer 
+	Parameter data_width bound to: 8 - type: integer 
+	Parameter depth bound to: 16 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'raminfr' (0#1) [/home/lch/work/miracle/chiplab/IP/APB_DEV/URT/raminfr.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'uart_tfifo' (0#1) [/home/lch/work/miracle/chiplab/IP/APB_DEV/URT/uart_tfifo.v:36]
+INFO: [Synth 8-6155] done synthesizing module 'uart_transmitter' (0#1) [/home/lch/work/miracle/chiplab/IP/APB_DEV/URT/uart_transmitter.v:36]
+INFO: [Synth 8-6157] synthesizing module 'uart_sync_flops' [/home/lch/work/miracle/chiplab/IP/APB_DEV/URT/uart_sync_flops.v:34]
+	Parameter width bound to: 1 - type: integer 
+	Parameter init_value bound to: 1'b1 
+INFO: [Synth 8-6155] done synthesizing module 'uart_sync_flops' (0#1) [/home/lch/work/miracle/chiplab/IP/APB_DEV/URT/uart_sync_flops.v:34]
+INFO: [Synth 8-6157] synthesizing module 'uart_receiver' [/home/lch/work/miracle/chiplab/IP/APB_DEV/URT/uart_receiver.v:36]
+INFO: [Synth 8-6157] synthesizing module 'uart_rfifo' [/home/lch/work/miracle/chiplab/IP/APB_DEV/URT/uart_rfifo.v:36]
+	Parameter fifo_width bound to: 11 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'uart_rfifo' (0#1) [/home/lch/work/miracle/chiplab/IP/APB_DEV/URT/uart_rfifo.v:36]
+INFO: [Synth 8-6155] done synthesizing module 'uart_receiver' (0#1) [/home/lch/work/miracle/chiplab/IP/APB_DEV/URT/uart_receiver.v:36]
+INFO: [Synth 8-6155] done synthesizing module 'uart_regs' (0#1) [/home/lch/work/miracle/chiplab/IP/APB_DEV/URT/uart_regs.v:39]
+INFO: [Synth 8-6155] done synthesizing module 'UART_TOP' (0#1) [/home/lch/work/miracle/chiplab/IP/APB_DEV/URT/uart_top.v:36]
+INFO: [Synth 8-6157] synthesizing module 'nand_module' [/home/lch/work/miracle/chiplab/IP/APB_DEV/nand_module.v:34]
+INFO: [Synth 8-6157] synthesizing module 'NAND_top' [/home/lch/work/miracle/chiplab/IP/APB_DEV/NAND/nand.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'NAND_top' (0#1) [/home/lch/work/miracle/chiplab/IP/APB_DEV/NAND/nand.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'nand_module' (0#1) [/home/lch/work/miracle/chiplab/IP/APB_DEV/nand_module.v:34]
+INFO: [Synth 8-6155] done synthesizing module 'axi2apb_misc' (0#1) [/home/lch/work/miracle/chiplab/IP/APB_DEV/apb_dev_top_with_nand.v:36]
+INFO: [Synth 8-6157] synthesizing module 'lcd_ctrl' [/home/lch/work/miracle/chiplab/IP/LCD/lcd_ctrl.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'lcd_ctrl' (0#1) [/home/lch/work/miracle/chiplab/IP/LCD/lcd_ctrl.v:1]
+WARNING: [Synth 8-689] width (4) of port connection 's_awlen' does not match port width (8) of module 'lcd_ctrl' [/home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v:2166]
+WARNING: [Synth 8-689] width (2) of port connection 's_awlock' does not match port width (1) of module 'lcd_ctrl' [/home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v:2169]
+WARNING: [Synth 8-689] width (4) of port connection 's_arlen' does not match port width (8) of module 'lcd_ctrl' [/home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v:2189]
+WARNING: [Synth 8-689] width (2) of port connection 's_arlock' does not match port width (1) of module 'lcd_ctrl' [/home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v:2192]
+INFO: [Synth 8-6157] synthesizing module 'ps2_ctrl' [/home/lch/work/miracle/chiplab/IP/PS2/ps2_ctrl.v:1]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/lch/work/miracle/chiplab/IP/PS2/ps2_ctrl.v:309]
+INFO: [Synth 8-155] case statement is not full and has no default [/home/lch/work/miracle/chiplab/IP/PS2/ps2_ctrl.v:435]
+INFO: [Synth 8-6155] done synthesizing module 'ps2_ctrl' (0#1) [/home/lch/work/miracle/chiplab/IP/PS2/ps2_ctrl.v:1]
+INFO: [Synth 8-6155] done synthesizing module 'soc_top' (0#1) [/home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v:36]
+WARNING: [Synth 8-7137] Register rf_rdata_r_reg in module trace_debug has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/lch/work/miracle/chiplab/IP/DEBUG/debug_top.v:592]
+WARNING: [Synth 8-7137] Register mem_rdata_r_reg in module trace_debug has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/lch/work/miracle/chiplab/IP/DEBUG/debug_top.v:597]
+WARNING: [Synth 8-7137] Register wnum_r_reg in module trace_debug has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/lch/work/miracle/chiplab/IP/DEBUG/debug_top.v:603]
+WARNING: [Synth 8-7137] Register wdata_r_reg in module trace_debug has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/lch/work/miracle/chiplab/IP/DEBUG/debug_top.v:604]
+WARNING: [Synth 8-7137] Register list_pc_r_reg in module trace_debug has both Set and reset with same priority. This may cause simulation mismatches. Consider rewriting code  [/home/lch/work/miracle/chiplab/IP/DEBUG/debug_top.v:609]
+WARNING: [Synth 8-6014] Unused sequential element csr_brk_reg was removed.  [/home/lch/work/miracle/chiplab/IP/myCPU/my_csr.v:767]
+WARNING: [Synth 8-6014] Unused sequential element read_respond_state_reg was removed.  [/home/lch/work/miracle/chiplab/IP/myCPU/axi_bridge.v:223]
+WARNING: [Synth 8-6014] Unused sequential element s0_fetch_r_reg was removed.  [/home/lch/work/miracle/chiplab/IP/myCPU/tlb_entry.v:110]
+WARNING: [Synth 8-6014] Unused sequential element s1_fetch_r_reg was removed.  [/home/lch/work/miracle/chiplab/IP/myCPU/tlb_entry.v:116]
+WARNING: [Synth 8-6014] Unused sequential element request_buffer_op_reg was removed.  [/home/lch/work/miracle/chiplab/IP/myCPU/icache.v:128]
+WARNING: [Synth 8-6014] Unused sequential element request_buffer_wstrb_reg was removed.  [/home/lch/work/miracle/chiplab/IP/myCPU/icache.v:132]
+WARNING: [Synth 8-6014] Unused sequential element request_buffer_wdata_reg was removed.  [/home/lch/work/miracle/chiplab/IP/myCPU/icache.v:133]
+WARNING: [Synth 8-3848] Net wr_type in module/entity icache does not have driver. [/home/lch/work/miracle/chiplab/IP/myCPU/icache.v:33]
+WARNING: [Synth 8-3848] Net wr_addr in module/entity icache does not have driver. [/home/lch/work/miracle/chiplab/IP/myCPU/icache.v:34]
+WARNING: [Synth 8-3848] Net wr_wstrb in module/entity icache does not have driver. [/home/lch/work/miracle/chiplab/IP/myCPU/icache.v:35]
+WARNING: [Synth 8-3848] Net wr_data in module/entity icache does not have driver. [/home/lch/work/miracle/chiplab/IP/myCPU/icache.v:36]
+WARNING: [Synth 8-6014] Unused sequential element rd_data_pre_sel_reg was removed.  [/home/lch/work/miracle/chiplab/IP/AMBA/axi_mux_syn.v:1243]
+WARNING: [Synth 8-6014] Unused sequential element buf_len_reg was removed.  [/home/lch/work/miracle/chiplab/IP/CONFREG/confreg_syn.v:212]
+WARNING: [Synth 8-6014] Unused sequential element buf_size_reg was removed.  [/home/lch/work/miracle/chiplab/IP/CONFREG/confreg_syn.v:213]
+WARNING: [Synth 8-6014] Unused sequential element buf_burst_reg was removed.  [/home/lch/work/miracle/chiplab/IP/CONFREG/confreg_syn.v:214]
+WARNING: [Synth 8-6014] Unused sequential element buf_lock_reg was removed.  [/home/lch/work/miracle/chiplab/IP/CONFREG/confreg_syn.v:215]
+WARNING: [Synth 8-6014] Unused sequential element buf_cache_reg was removed.  [/home/lch/work/miracle/chiplab/IP/CONFREG/confreg_syn.v:216]
+WARNING: [Synth 8-6014] Unused sequential element buf_prot_reg was removed.  [/home/lch/work/miracle/chiplab/IP/CONFREG/confreg_syn.v:217]
+WARNING: [Synth 8-6014] Unused sequential element des1_reg_proc.ft22_reg was removed.  [/home/lch/work/miracle/chiplab/IP/MAC/tlsm.v:673]
+WARNING: [Synth 8-6014] Unused sequential element wadg_0_r_reg was removed.  [/home/lch/work/miracle/chiplab/IP/MAC/rfifo.v:384]
+WARNING: [Synth 8-6014] Unused sequential element wadg_r_reg was removed.  [/home/lch/work/miracle/chiplab/IP/MAC/rfifo.v:385]
+WARNING: [Synth 8-6014] Unused sequential element wad_reg was removed.  [/home/lch/work/miracle/chiplab/IP/MAC/rfifo.v:412]
+WARNING: [Synth 8-6014] Unused sequential element stat_reg was removed.  [/home/lch/work/miracle/chiplab/IP/MAC/rfifo.v:424]
+WARNING: [Synth 8-6014] Unused sequential element write_dma_to_ddr_reg was removed.  [/home/lch/work/miracle/chiplab/IP/DMA/dma.v:436]
+WARNING: [Synth 8-6014] Unused sequential element apb_wr_size_reg was removed.  [/home/lch/work/miracle/chiplab/IP/AMBA/axi2apb.v:201]
+WARNING: [Synth 8-6014] Unused sequential element rbit_in_reg was removed.  [/home/lch/work/miracle/chiplab/IP/APB_DEV/URT/uart_receiver.v:115]
+WARNING: [Synth 8-6014] Unused sequential element NAND_ACK_reg was removed.  [/home/lch/work/miracle/chiplab/IP/APB_DEV/NAND/nand.v:424]
+WARNING: [Synth 8-6014] Unused sequential element ps2_data_prev_reg was removed.  [/home/lch/work/miracle/chiplab/IP/PS2/ps2_ctrl.v:142]
+WARNING: [Synth 8-3848] Net EJTAG_TDO in module/entity soc_top does not have driver. [/home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v:91]
+WARNING: [Synth 8-3848] Net UART_RI in module/entity soc_top does not have driver. [/home/lch/work/miracle/chiplab/chip/soc_demo/loongson/soc_top.v:663]
+WARNING: [Synth 8-7129] Port s_awlen[3] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awlen[2] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awlen[1] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awlen[0] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awsize[2] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awsize[1] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awsize[0] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awburst[1] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awburst[0] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awlock[1] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awlock[0] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awcache[3] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awcache[2] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awcache[1] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awcache[0] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awprot[2] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awprot[1] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awprot[0] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wid[3] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wid[2] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wid[1] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wid[0] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wdata[31] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wdata[30] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wdata[29] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wdata[28] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wdata[27] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wdata[26] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wdata[25] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wdata[24] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wdata[23] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wdata[22] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wdata[21] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wdata[20] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wdata[19] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wdata[18] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wdata[17] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wdata[16] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wdata[15] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wdata[14] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wdata[13] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wdata[12] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wdata[11] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wdata[10] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wdata[9] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wdata[8] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wstrb[3] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wstrb[2] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wstrb[1] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wstrb[0] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arlen[3] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arlen[2] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arlen[1] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arlen[0] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arsize[2] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arsize[1] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arsize[0] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arburst[1] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arburst[0] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arlock[1] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arlock[0] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arcache[3] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arcache[2] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arcache[1] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arcache[0] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arprot[2] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arprot[1] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_arprot[0] in module ps2_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awlen[7] in module lcd_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awlen[6] in module lcd_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awlen[5] in module lcd_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awlen[4] in module lcd_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awlen[3] in module lcd_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awlen[2] in module lcd_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awlen[1] in module lcd_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awlen[0] in module lcd_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awsize[2] in module lcd_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awsize[1] in module lcd_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awsize[0] in module lcd_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awburst[1] in module lcd_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awburst[0] in module lcd_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awlock in module lcd_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awcache[3] in module lcd_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awcache[2] in module lcd_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awcache[1] in module lcd_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awcache[0] in module lcd_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awprot[2] in module lcd_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awprot[1] in module lcd_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_awprot[0] in module lcd_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wid[3] in module lcd_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wid[2] in module lcd_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wid[1] in module lcd_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wid[0] in module lcd_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wdata[31] in module lcd_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wdata[30] in module lcd_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wdata[29] in module lcd_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wdata[28] in module lcd_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wdata[27] in module lcd_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wdata[26] in module lcd_ctrl is either unconnected or has no load
+WARNING: [Synth 8-7129] Port s_wdata[25] in module lcd_ctrl is either unconnected or has no load
+INFO: [Common 17-14] Message 'Synth 8-7129' appears 100 times and further instances of the messages will be disabled. Use the Tcl command set_msg_config to change the current settings.
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 2623.008 ; gain = 825.375 ; free physical = 31044 ; free virtual = 89519
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2623.008 ; gain = 825.375 ; free physical = 31045 ; free virtual = 89520
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2623.008 ; gain = 825.375 ; free physical = 31045 ; free virtual = 89520
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00.2 ; elapsed = 00:00:00.2 . Memory (MB): peak = 2623.008 ; gain = 0.000 ; free physical = 31047 ; free virtual = 89522
+INFO: [Netlist 29-17] Analyzing 12 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/axi_2x1_mux/axi_2x1_mux/axi_2x1_mux_in_context.xdc] for cell 'u_axi_2x1_mux'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/axi_2x1_mux/axi_2x1_mux/axi_2x1_mux_in_context.xdc] for cell 'u_axi_2x1_mux'
+Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/icache/data_ram_way[0].data_ram_bank[0].u'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/icache/data_ram_way[0].data_ram_bank[0].u'
+Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/icache/data_ram_way[0].data_ram_bank[1].u'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/icache/data_ram_way[0].data_ram_bank[1].u'
+Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/icache/data_ram_way[0].data_ram_bank[2].u'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/icache/data_ram_way[0].data_ram_bank[2].u'
+Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/icache/data_ram_way[0].data_ram_bank[3].u'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/icache/data_ram_way[0].data_ram_bank[3].u'
+Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/icache/data_ram_way[1].data_ram_bank[0].u'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/icache/data_ram_way[1].data_ram_bank[0].u'
+Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/icache/data_ram_way[1].data_ram_bank[1].u'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/icache/data_ram_way[1].data_ram_bank[1].u'
+Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/icache/data_ram_way[1].data_ram_bank[2].u'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/icache/data_ram_way[1].data_ram_bank[2].u'
+Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/icache/data_ram_way[1].data_ram_bank[3].u'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/icache/data_ram_way[1].data_ram_bank[3].u'
+Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/dcache/data_ram_way[0].data_ram_bank[0].u'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/dcache/data_ram_way[0].data_ram_bank[0].u'
+Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/dcache/data_ram_way[0].data_ram_bank[1].u'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/dcache/data_ram_way[0].data_ram_bank[1].u'
+Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/dcache/data_ram_way[0].data_ram_bank[2].u'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/dcache/data_ram_way[0].data_ram_bank[2].u'
+Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/dcache/data_ram_way[0].data_ram_bank[3].u'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/dcache/data_ram_way[0].data_ram_bank[3].u'
+Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/dcache/data_ram_way[1].data_ram_bank[0].u'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/dcache/data_ram_way[1].data_ram_bank[0].u'
+Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/dcache/data_ram_way[1].data_ram_bank[1].u'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/dcache/data_ram_way[1].data_ram_bank[1].u'
+Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/dcache/data_ram_way[1].data_ram_bank[2].u'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/dcache/data_ram_way[1].data_ram_bank[2].u'
+Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/dcache/data_ram_way[1].data_ram_bank[3].u'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/data_bank_sram/data_bank_sram/data_bank_sram_in_context.xdc] for cell 'cpu_mid/dcache/data_ram_way[1].data_ram_bank[3].u'
+Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/dpram_512x32/dpram_512x32/dpram_512x32_in_context.xdc] for cell 'ETHERNET_TOP/dpram_512x32_tx'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/dpram_512x32/dpram_512x32/dpram_512x32_in_context.xdc] for cell 'ETHERNET_TOP/dpram_512x32_tx'
+Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/dpram_512x32/dpram_512x32/dpram_512x32_in_context.xdc] for cell 'ETHERNET_TOP/dpram_512x32_rx'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/dpram_512x32/dpram_512x32/dpram_512x32_in_context.xdc] for cell 'ETHERNET_TOP/dpram_512x32_rx'
+Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32/mig_axi_32_in_context.xdc] for cell 'mig_axi'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/mig_axi_32_loongson/mig_axi_32/mig_axi_32_in_context.xdc] for cell 'mig_axi'
+Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33/clk_pll_33_in_context.xdc] for cell 'clk_pll_33'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/clk_pll_33/clk_pll_33/clk_pll_33_in_context.xdc] for cell 'clk_pll_33'
+Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/tagv_sram/tagv_sram/tagv_sram_in_context.xdc] for cell 'cpu_mid/icache/tagv_ram_way[0].u'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/tagv_sram/tagv_sram/tagv_sram_in_context.xdc] for cell 'cpu_mid/icache/tagv_ram_way[0].u'
+Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/tagv_sram/tagv_sram/tagv_sram_in_context.xdc] for cell 'cpu_mid/icache/tagv_ram_way[1].u'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/tagv_sram/tagv_sram/tagv_sram_in_context.xdc] for cell 'cpu_mid/icache/tagv_ram_way[1].u'
+Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/tagv_sram/tagv_sram/tagv_sram_in_context.xdc] for cell 'cpu_mid/dcache/tagv_ram_way[0].u'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/tagv_sram/tagv_sram/tagv_sram_in_context.xdc] for cell 'cpu_mid/dcache/tagv_ram_way[0].u'
+Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/tagv_sram/tagv_sram/tagv_sram_in_context.xdc] for cell 'cpu_mid/dcache/tagv_ram_way[1].u'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/tagv_sram/tagv_sram/tagv_sram_in_context.xdc] for cell 'cpu_mid/dcache/tagv_ram_way[1].u'
+Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/clk_wiz_0_loongson/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_pll_1'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/IP/xilinx_ip/2023.2/clk_wiz_0_loongson/clk_wiz_0/clk_wiz_0_in_context.xdc] for cell 'clk_pll_1'
+Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/axi_clock_converter_0/axi_clock_converter_0/axi_clock_converter_0_in_context.xdc] for cell 'AXI_CLK_CONVERTER'
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/.Xil/Vivado-3299352-loong-arch-mini/axi_clock_converter_0/axi_clock_converter_0/axi_clock_converter_0_in_context.xdc] for cell 'AXI_CLK_CONVERTER'
+Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc]
+WARNING: [Vivado 12-507] No nets matched 'EJTAG_TCK_IBUF'. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:192]
+WARNING: [Vivado 12-627] No clocks matched 'clk_pll_i'. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:248]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:248]
+WARNING: [Vivado 12-627] No clocks matched 'clk_out2_clk_pll_33'. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:248]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:248]
+WARNING: [Vivado 12-627] No clocks matched 'clk_out2_clk_pll_33'. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:249]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:249]
+WARNING: [Vivado 12-627] No clocks matched 'clk_pll_i'. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:249]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:249]
+WARNING: [Vivado 12-627] No clocks matched 'clk_pll_i'. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:250]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:250]
+WARNING: [Vivado 12-627] No clocks matched 'clk_out1_clk_pll_33'. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:250]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:250]
+WARNING: [Vivado 12-627] No clocks matched 'clk_out2_clk_pll_33'. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:251]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:251]
+WARNING: [Vivado 12-627] No clocks matched 'clk_out2_clk_pll_33'. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:252]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:252]
+WARNING: [Vivado 12-627] No clocks matched 'clk_out2_clk_pll_33'. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:253]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:253]
+WARNING: [Vivado 12-627] No clocks matched 'clk_out1_clk_pll_33'. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:253]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:253]
+WARNING: [Vivado 12-627] No clocks matched 'clk_out1_clk_pll_33'. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:254]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:254]
+WARNING: [Vivado 12-627] No clocks matched 'clk_out2_clk_pll_33'. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:254]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:254]
+WARNING: [Vivado 12-627] No clocks matched 'clk_out2_clk_pll_33'. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:255]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:255]
+WARNING: [Vivado 12-627] No clocks matched 'clk_out2_clk_pll_33'. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:256]
+INFO: [Vivado 12-626] No clocks found. Please use 'create_clock' or 'create_generated_clock' command to create clocks. [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc:256]
+Finished Parsing XDC File [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc]
+WARNING: [Project 1-498] One or more constraints failed evaluation while reading constraint file [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc] and the design contains unresolved black boxes. These constraints will be read post-synthesis (as long as their source constraint file is marked as used_in_implementation) and should be applied correctly then. You should review the constraints listed in the file [.Xil/soc_top_propImpl.xdc] and check the run log file to verify that these constraints were correctly applied.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [/home/lch/work/miracle/chiplab/fpga/loongson/soc_up.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/soc_top_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/soc_top_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 2727.473 ; gain = 0.000 ; free physical = 31048 ; free virtual = 89524
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 12 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 12 instances
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00.08 ; elapsed = 00:00:00.08 . Memory (MB): peak = 2739.395 ; gain = 0.000 ; free physical = 31037 ; free virtual = 89513
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'AXI_CLK_CONVERTER' at clock pin 'm_axi_aclk' is different from the actual clock period '30.303', this can lead to different synthesis results.
+WARNING: [Timing 38-316] Clock period '100.000' specified during out-of-context synthesis of instance 'u_axi_2x1_mux' at clock pin 'INTERCONNECT_ACLK' is different from the actual clock period '30.303', this can lead to different synthesis results.
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2739.395 ; gain = 941.762 ; free physical = 29858 ; free virtual = 88333
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7a200tfbg676-2
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 2747.398 ; gain = 949.766 ; free physical = 29857 ; free virtual = 88333
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:13 ; elapsed = 00:00:12 . Memory (MB): peak = 2747.398 ; gain = 949.766 ; free physical = 29857 ; free virtual = 88332
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Preparing Guide Design
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Doing Graph Differ : Time (s): cpu = 00:00:15 ; elapsed = 00:00:14 . Memory (MB): peak = 2769.680 ; gain = 972.047 ; free physical = 28997 ; free virtual = 87479
+---------------------------------------------------------------------------------
+soc_top__GCB1soc_top__GCB0lcd_ctrl__GC0core_top__GB2core_top__GB1core_top__GB0---------------------------------------------------------------------------------
+Finished Preparing Guide Design : Time (s): cpu = 00:00:15 ; elapsed = 00:00:15 . Memory (MB): peak = 2769.680 ; gain = 972.047 ; free physical = 28721 ; free virtual = 87204
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:16 . Memory (MB): peak = 2769.680 ; gain = 972.047 ; free physical = 28390 ; free virtual = 86873
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Mimic Skeleton from Reference
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Mimic Skeleton from Reference : Time (s): cpu = 00:00:17 ; elapsed = 00:00:16 . Memory (MB): peak = 2769.680 ; gain = 972.047 ; free physical = 28159 ; free virtual = 86642
+---------------------------------------------------------------------------------
+
+
+Incremental Synthesis Report Summary:
+
+1. Incremental synthesis run: yes
+
+   Stitch points used : changed
+
+
+2. Change Summary
+
+Report Incremental Modules: 
++-+----------------+------------+----------+----------+
+| |Changed Modules |Replication |Instances |Changed % |
++-+----------------+------------+----------+----------+
++-+----------------+------------+----------+----------+
+
+
+   Full Design Size (number of cells) : 137030
+   Resynthesis Design Size (number of cells) : 12
+   Resynth % : 0.0088,  Reuse % : 99.9912
+
+3. Reference Checkpoint Information
+
++--------------------------------------------------------------------------------------------------------------------------+
+| DCP Location:  | /home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.srcs/utils_1/imports/synth_3/soc_top.dcp |
++--------------------------------------------------------------------------------------------------------------------------+
+
+
++--------------------------------+------------------------------+
+|         DCP Information        |             Value            |
++--------------------------------+------------------------------+
+| Vivado Version                 |                    v2025.2 |
+| DCP State                      |                              |
++--------------------------------+------------------------------+
+
+
+
+Report RTL Partitions: 
++------+----------------------+------------+----------+
+|      |RTL Partition         |Replication |Instances |
++------+----------------------+------------+----------+
+|1     |core_top__GB0_#REUSE# |           1|         0|
+|2     |core_top__GB1_#REUSE# |           1|         0|
+|3     |core_top__GB2_#REUSE# |           1|         0|
+|4     |lcd_ctrl__GC0_#REUSE# |           1|         0|
+|5     |soc_top__GCB0_#REUSE# |           1|         0|
+|6     |soc_top__GCB1_#REUSE# |           1|         0|
++------+----------------------+------------+----------+
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 740 (col length:100)
+BRAMs: 730 (col length: RAMB18 100 RAMB36 50)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7077] IncrSyn: subsequent runs will still be incremental as the reference run was parallel and that data is reused
+WARNING: [Synth 8-3917] design soc_top has port lcd_cs driven by constant 0
+WARNING: [Synth 8-3917] design soc_top has port lcd_rd driven by constant 1
+WARNING: [Synth 8-3917] design soc_top has port lcd_t_clk driven by constant 0
+WARNING: [Synth 8-3917] design soc_top has port lcd_t_cs_rst driven by constant 1
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:24 . Memory (MB): peak = 2781.773 ; gain = 984.141 ; free physical = 25602 ; free virtual = 84141
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Stitch Unchanged AreaOpt Partitions
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Stitch Unchanged AreaOpt Partitions : Time (s): cpu = 00:00:32 ; elapsed = 00:00:29 . Memory (MB): peak = 2785.691 ; gain = 988.059 ; free physical = 25920 ; free virtual = 84457
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:35 ; elapsed = 00:00:32 . Memory (MB): peak = 2822.742 ; gain = 1025.109 ; free physical = 25832 ; free virtual = 84416
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:35 ; elapsed = 00:00:32 . Memory (MB): peak = 2822.742 ; gain = 1025.109 ; free physical = 25832 ; free virtual = 84416
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+WARNING: [Synth 8-7077] IncrSyn: subsequent runs will still be incremental as the reference run was parallel and that data is reused
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:35 ; elapsed = 00:00:32 . Memory (MB): peak = 2831.758 ; gain = 1034.125 ; free physical = 25829 ; free virtual = 84412
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Stitch Unchanged Partitions
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Stitch Unchanged Partitions : Time (s): cpu = 00:00:35 ; elapsed = 00:00:32 . Memory (MB): peak = 2831.758 ; gain = 1034.125 ; free physical = 25824 ; free virtual = 84408
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:39 ; elapsed = 00:00:36 . Memory (MB): peak = 2971.406 ; gain = 1173.773 ; free physical = 25656 ; free virtual = 84279
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:39 ; elapsed = 00:00:36 . Memory (MB): peak = 2971.406 ; gain = 1173.773 ; free physical = 25656 ; free virtual = 84279
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:39 ; elapsed = 00:00:37 . Memory (MB): peak = 2971.406 ; gain = 1173.773 ; free physical = 25640 ; free virtual = 84263
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:39 ; elapsed = 00:00:37 . Memory (MB): peak = 2971.406 ; gain = 1173.773 ; free physical = 25640 ; free virtual = 84263
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:40 ; elapsed = 00:00:37 . Memory (MB): peak = 2991.250 ; gain = 1193.617 ; free physical = 25640 ; free virtual = 84263
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:40 ; elapsed = 00:00:37 . Memory (MB): peak = 2991.250 ; gain = 1193.617 ; free physical = 25640 ; free virtual = 84263
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+----------------------+----------+
+|      |BlackBox name         |Instances |
++------+----------------------+----------+
+|1     |axi_2x1_mux           |         1|
+|2     |axi_clock_converter_0 |         1|
+|3     |clk_pll_33            |         1|
+|4     |clk_wiz_0             |         1|
+|5     |mig_axi_32            |         1|
+|6     |dpram_512x32          |         2|
+|7     |data_bank_sram        |        16|
+|8     |tagv_sram             |         4|
++------+----------------------+----------+
+
+Report Cell Usage: 
++------+--------------------+------+
+|      |Cell                |Count |
++------+--------------------+------+
+|1     |axi_2x1_mux         |     1|
+|2     |axi_clock_converter |     1|
+|3     |clk_pll             |     1|
+|4     |clk_wiz             |     1|
+|5     |data_bank_sram      |    16|
+|21    |dpram_512x32        |     2|
+|23    |mig_axi             |     1|
+|24    |tagv_sram           |     4|
+|28    |BUFG                |     2|
+|29    |CARRY4              |  1132|
+|30    |LUT1                |   518|
+|31    |LUT2                |  1691|
+|32    |LUT3                |  2422|
+|33    |LUT4                |  2070|
+|34    |LUT5                |  3719|
+|35    |LUT6                |  9672|
+|36    |MUXF7               |   430|
+|37    |MUXF8               |    64|
+|38    |RAM128X1D           |     8|
+|39    |RAM16X1D            |     1|
+|40    |RAM32M              |   152|
+|41    |RAM32X1D            |    55|
+|42    |RAMB18E1            |     1|
+|43    |FDCE                |   230|
+|44    |FDPE                |     2|
+|45    |FDRE                | 11612|
+|46    |FDSE                |   707|
+|47    |IBUF                |    28|
+|48    |IOBUF               |    16|
+|49    |OBUF                |    79|
+|50    |OBUFT               |     1|
++------+--------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:40 ; elapsed = 00:00:37 . Memory (MB): peak = 2991.250 ; gain = 1193.617 ; free physical = 25640 ; free virtual = 84263
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 12 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:35 ; elapsed = 00:00:35 . Memory (MB): peak = 2995.164 ; gain = 1081.145 ; free physical = 30729 ; free virtual = 89352
+Synthesis Optimization Complete : Time (s): cpu = 00:00:40 ; elapsed = 00:00:39 . Memory (MB): peak = 2995.164 ; gain = 1197.531 ; free physical = 30729 ; free virtual = 89352
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00.12 ; elapsed = 00:00:00.12 . Memory (MB): peak = 2995.164 ; gain = 0.000 ; free physical = 30741 ; free virtual = 89364
+INFO: [Netlist 29-17] Analyzing 1859 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.01 . Memory (MB): peak = 3039.273 ; gain = 0.000 ; free physical = 30760 ; free virtual = 89383
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 232 instances were transformed.
+  IOBUF => IOBUF (IBUF, OBUFT): 16 instances
+  RAM128X1D => RAM128X1D (MUXF7(x2), RAMD64E(x4)): 8 instances
+  RAM16X1D => RAM32X1D (RAMD32(x2)): 1 instance 
+  RAM32M => RAM32M (RAMD32(x6), RAMS32(x2)): 152 instances
+  RAM32X1D => RAM32X1D (RAMD32(x2)): 55 instances
+
+Synth Design complete | Checksum: ecb0ea67
+INFO: [Common 17-83] Releasing license: Synthesis
+238 Infos, 311 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:44 ; elapsed = 00:00:44 . Memory (MB): peak = 3039.309 ; gain = 1415.824 ; free physical = 30763 ; free virtual = 89386
+INFO: [Common 17-2834] synth_design peak Physical Memory [PSS] (MB): overall = 6643.445; main = 2122.495; forked = 4917.340
+INFO: [Common 17-2834] synth_design peak Virtual Memory [VSS] (MB): overall = 14691.262; main = 3039.277; forked = 11913.570
+Write ShapeDB Complete: Time (s): cpu = 00:00:00.05 ; elapsed = 00:00:00.02 . Memory (MB): peak = 3063.285 ; gain = 0.000 ; free physical = 30760 ; free virtual = 89386
+INFO: [Common 17-1381] The checkpoint '/home/lch/work/miracle/chiplab/fpga/loongson/2023.2/system_run.runs/synth_3/soc_top.dcp' has been generated.
+INFO: [Vivado 12-24828] Executing command : report_utilization -file soc_top_utilization_synth.rpt -pb soc_top_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Jul  3 13:36:53 2026...
